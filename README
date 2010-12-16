@@ -8,6 +8,4 @@ This is the website, built with Ruby 1.8 and Ruby on Rails 2.3, which displayed 
 The website had associated scripts to connect to affiliate networks and pull new item/promo data, as well as account transactions. The website works in conjunction with a browser plugin.
 
 ==Note==
-Due to the proprietary nature of some aspects of this project, some code has been clipped or excluded.
-
--Daniel Harcsztark
+Due to the proprietary restrictions, some code in this repository has been clipped, rolled back, or excluded.
