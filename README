@@ -1,13 +1,13 @@
-==CashPal
+=CashPal=
 
 CashPal was created as a seamless way to connect online shoppers with cash-back savings.
 
-==Abstract
+==Abstract==
 This is the website, built with Ruby 1.8 and Ruby on Rails 2.3, which displayed current promotions, deals and coupons to users. It also allowed them to login to their account, check their balance, pending cash-back and purchases, as well as withdraw available cash to their bank account.
 
 The website had associated scripts to connect to affiliate networks and pull new item/promo data, as well as account transactions. The website works in conjunction with a browser plugin.
 
-==Note
+==Note==
 Due to the proprietary nature of some aspects of this project, some code has been clipped or excluded.
 
 -Daniel Harcsztark
