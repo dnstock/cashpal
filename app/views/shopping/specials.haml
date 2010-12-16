@@ -1,0 +1,57 @@
+#deals-coupons-pages
+  #links
+    %p#ttl Need Assistance?
+    %p= link_to('Grab your free copy of Cash<span class="cao-blue">Add</span>On', web_url(:download), :id=>'get-cao')
+    %ul
+      %li= link_to('How does cash back work?', web_url(:help))
+      %li= link_to('Frequently Asked Questions', web_url(:faq))
+  #h1
+    %h1= @h1_title
+    %p#abstract= @h1_abstract
+  #deals-coupons-sidebar
+    #dealbox.cloud
+      .ttl>
+        %span Tags for Deals &amp; Coupons
+      .body.tag-cloud-style= get_tag_cloud(@deal_coupon_tags)
+      .end
+    #storebox.cloud
+      .ttl>
+        %span Find savings for your favorite stores
+      .body
+        #popular-stores
+          %ul= get_popular_store_links(@popular_stores, 6)
+        .clear
+        #store-tags
+          .tagttl Browse store tags
+          .tag-cloud-style= get_tag_cloud(@store_tags)
+      .end
+  .cloudp-550
+    .start
+    .body
+      #deals-coupons
+        #ttl= "Popular #{params[:type].pluralize}"
+        %ul
+          -#%li= eval("get_#{params[:type].downcase.pluralize}(@specials,50)")
+          - @specials[0..50].each do |r|
+            %li
+              %table
+                %tr
+                  - if( params[:type] == 'Deal' )
+                    %td
+                      .title= link_to(r.title, redirect_deal_url(r))
+                      .cashback= link_to("+ #{number_to_percentage(r.affiliate.cashback_to_user,:precision=>1)} Cash Back at #{r.affiliate.name}", shopping_url(r.affiliate))
+                      .priceline= get_prices(r)
+                      .discounts= get_discounts(r)
+                      .tags= get_tags(r)
+                      .description= r.description
+                    %td.image= image_tag( file_exists?('/public/images/deals/'+r.product_image) ? 'deals/'+r.product_image : get_store_logo(r.affiliate,true) )
+                  - elsif( params[:type] == 'Coupon' )
+                    %td
+                      .coupon-code= link_to(r.coupon_code, redirect_coupon_url(r))
+                      .meta= get_meta(r)
+                      .tags= get_tags(r)
+                      .coupon-title= r.title
+                      .coupon-description= r.description
+                    %td.image.logo-cashback= link_to( get_logo_with_cashback(r), shopping_url(r.affiliate) )
+    .end
+  .clear

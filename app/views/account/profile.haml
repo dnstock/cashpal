@@ -1,0 +1,22 @@
+- if flash[:notice]
+  .errorExplanation= flash[:notice]
+#update-email
+  - form_remote_tag(:update => "update-email", :url => account_url(:update_email), :complete => "if(request.status==403){alert('your session has expired, please login'); window.location.reload();}") do
+    %p#ttl Change Contact Details
+    %p Your contact email is used to contact you about your account, it must be valid.
+    %p= "Current contact email: #{current_user.email}"
+    %p
+      Change contact email:
+      = text_field_tag('tf_newemail', params[:tf_newemail])
+      = @error_message_newemail
+    %p
+      = @output
+      = @output_error
+      = submit_tag 'Save', :onclick => "this.disabled=true; $('update-email').onsubmit();"
+    %p= error_messages_for 'users'
+#show-balance-in-addon
+  -#= render_component(account_url(:update_show_balance_in_addon))
+#update-password
+  -#= render_component(account_url(:update_password))
+#update-payment-email
+  -#= render_component(account_url(:update_payment_email))

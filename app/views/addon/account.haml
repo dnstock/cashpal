@@ -1,0 +1,44 @@
+<table border=0 cellspacing="5">
+<tr>
+	<td class ="blackheader">User ID  </td>
+	<td class ="text" align="right"><%= @user.login %></td>
+</tr>
+<%if @show_balance_info_in_addon.eql?('Y') -%>
+<tr>
+	<td class = "blackheader">Cash Available</td>
+	<td class ="text" align="right">$<%= show_2_decimal_places(round_to_2decimal(@user_commission_summary.available || 0).to_s) || 0%></td>
+</tr>
+<tr>
+	<td class ="blackheader">Additional Pending Funds</td>
+	<td class ="text" align="right">$<%= show_2_decimal_places(round_to_2decimal(@user_commission_summary.pending || 0).to_s) || 0 %></td>
+</tr>
+<%end -%>
+<tr><td colspan="2" align="left"><span class="text">Cashback from online purchases generally <br/> take up to 7 days to appear in your account</span></td></tr>
+<tr><td colspan="2" align="left">
+<span class="text">
+Cash Available: Cash that has been earned and is now credited in your account.
+</span></td></tr>
+<tr><td colspan="2" align="left">
+	<span class="text">
+		Pending Funds: Cash that is designated for you as cashback but is awaiting final status 
+		approval from the site where you had purchased.  It often takes about 30 days for cash 
+		to move to Cash Available status.
+	</span></td></tr>
+	  <tr>
+  	
+  </tr>
+<%if @is_site_admin.eql?('Y') -%>
+	<tr><td colspan="2"><br/><hr/><br/></td></tr>
+	<tr>
+		<td class ="blackheader">Current number of registered users</td>
+		<td class ="text" align="right"><%= @res['nru'] %></td>
+	</tr>
+	<tr>
+		<td class ="blackheader">Current number of installed clients</td>
+		<td class ="text" align="right"><%= @res1['no'] %></td>
+	</tr>
+<%end -%>
+</table>
+
+<%= error_messages_for 'users' %>
+<%= render_component(:controller => 'addon', :action => 'invisible_validate_user') %>

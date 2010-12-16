@@ -1,0 +1,25 @@
+= help_nav
+-# save: ip, host, browser, res, os, username (if logged in)
+- form_tag( {:controller => 'addon', :action => 'feedback'}, :id => 'contact-form' ) do
+-   fields_for :feedback do |f|
+  %fieldset
+    %legend Please use the form below to contact us.
+    %p If you would like to give us feedback, suggest a new features, or report a bug, head over to our <a href="">UserVoice forum</a>.
+    %ol
+      %li<
+        %label{:for=>:'contact-topic'} Topic
+        %select{:name=>:topic, :id=>:'contact-topic'}
+          = get_contact_form_options
+      %li<
+        %label{:for=>:'contact-name'} Name
+        = f.text_field(:name)
+      %li<
+        %label{:for=>:'contact-email'} Email
+        = f.text_field(:email)
+      %li<
+        %label{:for=>:'contact-username'} Username
+        = f.text_field(:username)
+      %li<
+        %label{:for=>:'contact-message'} Message
+        = text_area(:message, :'contact-message', { :cols=>40, :rows=>5 } )
+    %button{:type=>:submit} Send

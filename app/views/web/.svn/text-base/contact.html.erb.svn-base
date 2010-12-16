@@ -1,0 +1,33 @@
+<%= help_nav %>
+<% # save: ip, host, browser, res, os, username (if logged in) %>
+<% form_for( :feedback, @feedback, :html => { :id => 'contact-form' } ) do |f| %>
+  <fieldset>
+    <legend>Please use the form below to contact us.</legend>
+    <p>If you would like to give us feedback, suggest a new features, or report a bug, head over to our <a href="">UserVoice forum</a>.</p>
+    <ol>
+      <li>
+        <label>Topic</label>
+        <select name="topic" id="contact-topic">
+          <%= get_contact_form_options %>
+        </select>
+      </li>
+      <li>
+        <label>Name</label>
+        <%= f.text_field(:name) %>
+      </li>
+      <li>
+        <label>Email</label>
+        <%= f.text_field(:email) %>
+      </li>
+      <li>
+        <label>Username</label>
+        <%= f.text_field(:username) %>
+      </li>
+      <li>
+        <label>Message</label>
+        <%= f.text_area(:message) %>
+      </li>
+    </ol>
+    <button type="submit">Send</button>
+  </fieldset>
+<% end %>

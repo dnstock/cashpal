@@ -1,0 +1,10 @@
+!!! XML
+!!!
+%html
+  %head
+    %title Aggregators, Importers, etc.
+    = stylesheet_link_tag "reset", "main", :media => "all"
+  %body{:style => 'margin: 10px;background-color:#E1F8FB;' }
+    %h1{:style => 'margin-bottom: 20px' } <u>Aggregators &amp; Importers</u>
+    #content
+      = yield

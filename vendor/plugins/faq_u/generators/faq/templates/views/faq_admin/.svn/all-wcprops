@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/cashaddon_website/!svn/ver/24/vendor/plugins/faq_u/generators/faq/templates/views/faq_admin
+END
+_form.haml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/cashaddon_website/!svn/ver/24/vendor/plugins/faq_u/generators/faq/templates/views/faq_admin/_form.haml
+END
+edit.haml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/cashaddon_website/!svn/ver/24/vendor/plugins/faq_u/generators/faq/templates/views/faq_admin/edit.haml
+END
+index.haml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/cashaddon_website/!svn/ver/24/vendor/plugins/faq_u/generators/faq/templates/views/faq_admin/index.haml
+END
+new.haml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/cashaddon_website/!svn/ver/24/vendor/plugins/faq_u/generators/faq/templates/views/faq_admin/new.haml
+END

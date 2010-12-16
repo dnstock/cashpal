@@ -1,0 +1,14 @@
+statusbarpanel#cbat-status-button {
+  list-style-image: url("chrome://cao/content/icon-small.png");
+}
+
+statusbarpanel#cbat-status-button[status="tracking_on"] {
+  list-style-image: url("chrome://cao/content/icon-small-tracking.png");
+}
+
+statusbarpanel#cbat-status-button[status="tracking_off"] {
+  list-style-image: url("chrome://cao/content/icon-small.png");
+}
+
+
+

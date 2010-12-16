@@ -1,0 +1,64 @@
+<table border="0" width="100%" align="center" cellpadding="0" cellspacing="0"  > <!-- height ="700px"  style ="background-color: rgb(247, 247, 247 );" -->
+    		<tr>
+    			<td rowspan="99"><img src="/images/transparent.gif" width="5" height="1" /></td>
+    			<td align="left" colspan="2" style ="width: 135px;vertical-align: top;">
+					<!-- img src="/images/transparent.gif" height="5" width="0"/><br>
+    				<img src="/images/transparent.gif" height="5" width="0"/>
+					<img src="/images/transparent.gif" height="5" width="0"/>
+					<img src="/images/transparent.gif" height="5" width="0"/ -->
+					<table border="0" cellspacing="0" cellpadding="0">
+						<tr><td><br/></td></tr>
+						<tr>
+							<td style="padding-bottom:10;"><%= link_to "Edit Profile", { :controller=>"account", :action=>"update" }, :class=>"green_underlined" %></td>
+						</tr>
+						<tr>
+							<td style="padding-bottom:10;"><%= link_to "Account Balance", { :controller=>"account", :action=>"balance" }, :class=>"green_underlined" %></td>
+						</tr>
+						<tr>
+							<td style="padding-bottom:10;width:115px;"><%= link_to "Request Payment", { :controller=>"account", :action=>"request_payment" }, :class=>"green_underlined" %></td>
+						</tr>
+					</table>
+				
+				</td>
+    			<td rowspan="99"><img src="/images/transparent.gif" width="5" height="1" /></td>
+    			
+			</tr>
+			<tr>
+				<td style="padding-left:10"></td>
+				<td align="right" style="padding-right:10"></td>
+				
+			</tr>
+				
+			<tr><td align="left" colspan="2" style ="width: 135px;">
+					
+				</td>
+				
+			</tr>
+			
+			<tr>
+				<td style="padding-left:10"></td>
+				<td align="right" style="padding-right:10"></td>
+				
+			</tr>
+			
+			<tr><td align="left" colspan="2" style ="width: 135px;">
+				
+				</td>
+			
+			</tr>
+			
+			<tr>
+				<td colspan="2" align="left" style="padding-left:10">
+				
+			
+				</td>
+			</tr>	
+			<tr>
+				<td colspan="2" align="right" style="padding-right:10"><img src="/images/transparent.gif" height="0" width="0"/>	
+					<br><br><br></td>
+					
+			</tr>
+			<tr><td colspan="2"><br/></td>
+			
+			</tr>	
+		  </table>

@@ -1,0 +1,8 @@
+#cashback-plus
+  %h3 The Cash Back <span>PLUS</span>
+  %p Any time you visit an Online store, just glance over at the CashAddOn Plus icon to see if you're saving...
+  %ul
+    %li#plus-active When you see the plus icon you can rest assured.<br/>You're getting cash back from every purchase.
+    %li#plus-standby= "No cash back is currently available from this merchant.<br/>Check out our stores in #{link_to('Cash Back Shopping', shopping_url)}."
+    %li#plus-error You are not logged in or there was a technical error.<br/>Click the icon and login to start earning cash back.
+  %span#screenshot CashAddOn in the Firefox browser

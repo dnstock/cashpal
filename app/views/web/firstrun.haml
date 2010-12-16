@@ -1,0 +1,21 @@
+#firstrun-page
+  %h1 Welcome to CashAddOn
+  #last-step Just <span>one step</span> left before you start earning cash back forever!
+  #signup= image_tag('install-signup.png', :size=>'440x444', :alt=>'CashAddOn sign-up page')
+  #panel
+    #do The CashAddOn window should be opened,<br/><span>it looks like the screenshot to the right.</span>
+    #sub If it didn't open automatically, or if you closed it, just click<br/><span>...it's the CashAddOn icon in your Firefox statusbar.</span>
+    #register Choose a username and password, enter your email address, and click 'Sign Up'.
+    #done= "That's it, now you'll be earning cash back every time you shop at one of our #{link_to('cash back stores', shopping_url)}."
+    #account
+      %p <strong>Your Account:</strong><br/>Once you sign up through the Firefox add-on you can login to your account on our website to track your activity, view your history, or request a payment.
+      %p <strong>Multiple Installations:</strong><br/>Remember to install CashAddOn on any computer you use, you can't save unless it's installed. You only need to register once, then sign in with the same account and you can keep track of all your cash back earnings on our website.
+  .clear
+  #screenshot= image_tag('cashaddon-icons-explained.png', :size=>'509x514', :alt=>'CashAddOn Icons, Explained')
+  #explained
+    %span CashAddOn Icons, Explained
+  #icons
+    #p1 You'll notice a small, new icon in your statusbar.
+    #p2 It's there to notify you of when you're automatically earning cash back.
+    #p3 Here's what each icon means... <span>(scroll down)</span>
+  .clear

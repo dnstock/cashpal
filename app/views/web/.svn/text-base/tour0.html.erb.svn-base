@@ -1,0 +1,40 @@
+<%= render :partial => 'tour_nav' %>
+<div id="tour-content">
+  <div id="screencast" style="display:none">
+    <img src="/images/screencast.gif">
+  </div>
+  <%= render :partial => 'fficonbox' %>
+  <% cao_download_link %>
+  <div>
+    <p class="ttl dark xxl">Let <span class="cao xxl">cash<span class="cao-blue">add</span>on</span> work for you.</p>
+    <!--
+    <p class="p">We're obsessed with helping you find the <span class="blue">best deal</span>, then making it <span class="green">better</span>.</p>
+    -->
+    <p class="p">We go beyond a mere bargain-hunting website.</p>
+    <p class="p"><span class="cao lg">cash<span class="cao-blue">add</span>on</span> <span class="green">follows</span> you to those stores you love shopping at so you'll <em>never</em> miss a cash back opportunity. It's what make us <span class="blue">unique</span>.*</p>
+    <p class="p">Just download and login once and you'll earn all those beautiful green <span class="blue">CashBack savings</span>. <em>Automatically.</em></p>
+    <p class="p">Use your newfound <span class="green">green</span> to help your favorite charity, refill that piggy bank, or buy more stuff.</p>
+    <p class="p">No vouchers, no rebates, no reward points... just <span class="green">cash</span>.</p>
+    <p class="p"><span class="lite-green strong">Cold hard <span class="green">cash</span></span> to do with as you please.</p>
+  </div>
+  <div>
+    <p class="ttl dark">So let's get you started...</p>
+    <p class="p">First, if you're not using Firefox, <a href="http://www.firefox.com">grab a copy for yourself</a>, you'll need it.</p>
+    <p class="p">Next, click the "GET <span class="cao lg">cash<span class="cao-blue">add</span>on</span>" link to the right.
+    <p class="p">It's 100% free and takes less than a minute to download.</p>
+  </div>
+  <div>
+    <p class="p">There, aren't you feeling <span class="green">happier</span> already?</p>
+  </div>
+  <div>
+    <p class="p dark lg">Now restart Firefox and we'll pick up from there...</p>
+  </div>
+  <!--
+  So before you add another item to your cart, add CashAddon.
+  The only cost is shopping without it.
+  -->
+  <div>
+    <p class="note">* We do not track or store the websites you visit, or any of your web activity.</p>
+    <% # <p class="note m">Refer to our <a href="privacy">Privacy Policy</a> to be sure.</p> %>
+  </div>
+</div>

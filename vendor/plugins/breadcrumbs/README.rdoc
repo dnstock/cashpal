@@ -1,0 +1,58 @@
+= Simplified Breadcrumbs
+
+A nice way to add breadcrumbs to your application. Antonio Cangiano 
+posted a link in the Ruby on Rails weblog to a post which talked about 
+adding breadcrumbs to your Rails application. I've been doing this with 
+helpers, but as the post says this is "Easy and flexible". So I've 
+created the plugin.
+
+== Changes
+
+Changed breadcrumb method to accept 3 options: <tt>:wrap_with_tag</tt>, 
+<tt>:class</tt> and <tt>:separator</tt>.
+
+* <tt>:wrap_with_tag</tt> - An HTML tag to wrap each breadcrumb entry with (ie. li, p, etc.).
+* <tt>:class</tt> - An HTML class to give to the tag specified in the +:wrap_with_tag+ option.
+* <tt>:separator</tt> - Acts the same as the old breadcrumb method worked.
+
+== Example
+
+  ##
+  # app/controllers/application.rb
+  #
+  class ApplicationController < ActionController::Base
+
+    add_breadcrumb 'Home', :root_path
+
+  end
+
+  ##
+  # app/controllers/things_controller.rb
+  #
+  class ThingsController < ApplicationController
+
+    add_breadcrumb 'Things', :things_path
+    add_breadcrumb 'Create a new thing', '', :only => [:new, :create]
+    add_breadcrumb 'Edit a thing', '', :only => [:edit, :update]
+
+    def show
+      @thing = Thing.find(params[:id])
+      add_breadcrumb @thing.name, thing_path(@thing)
+    end
+
+  end
+
+  ##
+  # app/views/layouts/application.html.erb
+  #
+  <%= breadcrumb %>
+  <%= breadcrumb(:separator => '=>') %>
+  <%= breadcrumb(:wrap_with_tag => 'li') %>
+
+== Acknowledgments
+
+- Przemyslaw Kowalczyk for his post http://szeryf.wordpress.com/2008/06/13/easy-and-flexible-breadcrumbs-for-rails/
+- Original code by: Francesc Esplugas Marti
+- Updated Syntax by Greg Bell: http://github.com/gregbell/simplified_breadcrumbs/tree/master
+
+Copyright (c) 2008-2009 Francesc Esplugas, released under the MIT license

@@ -1,0 +1,20 @@
+- form_for( @login, :html => { :id => 'login-form' } ) do |f|
+  = f.error_messages
+  - field_set_tag breadcrumbs(:is_page_title => true, :separator => '') do
+    %ol
+      %li
+        = f.label(:login, 'Username')
+        = f.text_field(:login)
+      %li
+        = f.label(:password)
+        = f.password_field(:password)
+      %li#remember-me
+        = f.check_box(:remember_me)
+        %p
+          Keep me signed in
+          %span Don't check this box if you are on a public computer (ex: cafe, library, ...)
+    = submit_tag 'Sign In'
+    = link_to "Forgot your username or password?", forgotpw_path, :id => :forgot
+  #register
+    %p.cao-green= 'To sign up for a free account, please ' + link_to('download our Firefox plug-in', web_path(:download), :class => 'cao-green') + '.'
+    %p#why-no-reg= link_to "Why can't I sign up on the website?", web_path(:help)

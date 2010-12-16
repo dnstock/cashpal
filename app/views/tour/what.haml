@@ -1,0 +1,23 @@
+= render :partial => 'fficonbox'
+.split
+  %p.ttl.dark.xxl Shopping.
+  %p.p Whether it's to fulfill needs or desires, we all buy stuff.
+  %p.p That's why we created CashAddOn, with the <span class="cao-blue">Cash Back </span><span class="green">Plus</span>.
+  %p.p The Plus is always with you and can save you money!
+  %p.p Whenever you shop just glance at the bottom of your browser.
+  %p.p If you see the green Plus, you're saving on every purchase.
+.split
+  %p.ttl.dark.xxl Let <span class="cao xxl">cash<span class="cao-blue">add</span>on</span> work for you.
+  %p.p Consider us your personal shopping assistant.
+  %p.p We won't just tell you when cash back savings is available.
+  %p.p= "You'll <em>automatically</em> earn cash back just for #{link_to('shopping', shopping_url)}."
+  %p.p We go beyond a mere bargain-hunting website.
+  %p.p With the Plus, cash back savings is always at your fingertips.
+.split
+  %p.ttl.dark And best of all, the money you save is <em>yours</em>.
+  %p.p Use your newfound green to help your favorite charity, refill that piggy bank, or buy more stuff.
+  %p.p No vouchers, no rebates, no reward points... just cash.
+  %p.p.dark.lg Cold hard cash to do with as you please.
+.split
+  %p#faq= "Psst... for some common questions and answers, head to our #{link_to('FAQ page', help_url)}."
+= link_to 'How CashAddOn works for you', tour_url(:how), :id => 'find-out-more'

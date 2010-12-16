@@ -1,0 +1,57 @@
+#cashback-shopping
+  #links
+    %p#ttl Need Assistance?
+    %p= link_to('Grab your free copy of Cash<span class="cao-blue">Add</span>On', web_url(:download), :id=>'get-cao')
+    %ul
+      %li= link_to('How does cash back work?', web_url(:help))
+      %li= link_to('Frequently Asked Questions', web_url(:faq))
+  #h1
+    %h1 Earn cash back on every purchase. Automatically.
+    %p#abstract Download <a href="#">CashAddon</a> then shop at one of the stores below. <br/>It's really that simple.
+  #popular-stores
+    %span#bg-end
+    %h2 Popular Stores
+    %ul
+      %li<
+        %a{:href=>'#'}= image_tag('/images/stores/small/ebay.gif', :alt=>'eBay.com') + '<br/>eBay <span>(1.5%)</span>'
+      %li<
+        %a{:href=>'#'}= image_tag('/images/stores/small/drugstore.gif', :alt=>'drugstore.com') + '<br/>drugstore.com <span>(7%)</span>'
+      %li<
+        %a{:href=>'#'}= image_tag('/images/stores/small/priceline.gif', :alt=>'Priceline.com') + '<br/>Priceline.com <span>(1%)</span>'
+      %li<
+        %a{:href=>'#'}= image_tag('/images/stores/small/buy.gif', :alt=>'Buy.com') + '<br/>Buy.com <span>(2%)</span>'
+      %li<
+        %a{:href=>'#'}= image_tag('/images/stores/small/shutterfly.gif', :alt=>'Shutterfly.com') + '<br/>Shutterfly <span>(4%)</span>'
+      %li<
+        %a{:href=>'#'}= image_tag('/images/stores/small/mcafee.gif', :alt=>'McAfee.com') + '<br/>McAfee <span>(10%)</span>'
+  #stores
+    %ul#stores
+      %li#ttl <b id="bg-end"></b><span>Cash Back</span>Click on a store for deals and coupons
+      %li <a href="#"><span>8%</span>1-800 PetMeds</a>
+      %li <a href="#"><span>5%</span>Bare Necessities</a>
+      %li <a href="#"><span>2%</span>Buy.com USA and Buy.com CA</a>
+      %li <a href="#"><span>7%</span>drugstore.com</a>
+      %li <a href="#"><span>1.5%</span>eBay</a>
+      %li <a href="#"><span>4%</span>Florsheim.com</a>
+      %li <a href="#"><span>14%</span>Flower.com</a>
+      %li <a href="#"><span>1.4%</span>Fujitsu Computer Systems Corporation</a>
+      %li <a href="#"><span>5%</span>LandscapeUSA.com</a>
+      %li <a href="#"><span>7%</span>Luggage OnLine</a>
+      %li <a href="#"><span>2.5%</span>Lumber Liquidators</a>
+      %li <a href="#"><span>10%</span>McAfee</a>
+      %li <a href="#"><span>1%</span>Priceline</a>
+      %li <a href="#"><span>4%</span>Shutterfly.com</a>
+      %li <a href="#"><span>2%</span>TechDepot.com</a>
+  #deals
+    %span#bg-end
+    %h2 Recent Deals
+    %ul
+      %li deal 1
+      %li deal 2
+  #coupons
+    %span#bg-end
+    %h2 Recent Coupons
+    %ul
+      %li coupon 1
+      %lu coupon 2
+  .clear

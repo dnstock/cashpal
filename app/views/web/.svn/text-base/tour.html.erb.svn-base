@@ -1,0 +1,5 @@
+<% # FYI: default Tour start page set in 'breadcrumbs' function %>
+<%= render :partial => 'tour_nav' %>
+<div id="tour-content">
+  <%= render_tour_content %>
+</div>

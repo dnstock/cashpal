@@ -1,0 +1,33 @@
+#search-panel
+  #container
+    %form{:action => :search}
+      %ul
+        %li= text_field_tag(:q)
+        %li<
+          %select{:name=>'section', :id=>'section'}
+            %option Deals
+            %option Coupons
+            %option{:selected=>'true'} Stores
+        %li= submit_tag('Search', :id=>'submit')
+    %ul#options
+      %li<
+        %select#category
+          %option{:value=>'all'} All Categories
+          %option Apparel
+          %option Auction
+          %option Computers
+          %option Electronics
+          %option Health & Beauty
+          %option Home & Garden
+          %option Pets
+          %option Travel
+      %li<
+        %select#view
+          %option{:value=>'list'} List View
+          %option{:value=>'gallery'} Gallery View
+      %li<
+        %select#sort
+          %option{:value=>0} Sort Alphabetically
+          %option{:value=>1} Sort by Cash Back Percent
+          %option{:value=>2} Sort by Most Popular
+          %option{:value=>3} Sort by Newest

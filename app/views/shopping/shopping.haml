@@ -1,0 +1,31 @@
+#cashback-shopping
+  #links
+    %p#ttl Need Assistance?
+    %p= link_to('Grab your free copy of Cash<span class="cao-blue">Add</span>On', web_url(:download), :id=>'get-cao')
+    %ul
+      %li= link_to('How does cash back work?', web_url(:help))
+      %li= link_to('Frequently Asked Questions', web_url(:faq))
+  #h1
+    %h1 Earn cash back on every purchase. Automatically.
+    %p#abstract Download <a href="#">CashAddon</a> then shop at one of the stores below. <br/>It's really that simple.
+  #popular-stores
+    %span#bg-end
+    %h2 Popular Stores
+    %ul= get_popular_store_links(@popular_stores)
+  #stores
+    %ul
+      %li#ttl <b id="bg-end"></b><span>Cash Back</span>Click on a store for deals and coupons
+      = get_store_links(@stores)
+  #tag-cloud
+    .ttl= link_to("View tags for stores, deals, &amp; coupons", tag_url) + "Store Tags"
+    .body.tag-cloud-style= get_tag_cloud(@tags)
+    .end
+  #deals-coupons
+    .ttl<
+      %span Recent Deals &amp; Coupons
+    .body
+      %ul
+        %li deal 1
+        %li deal 2
+    .end
+  .clear

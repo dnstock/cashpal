@@ -1,0 +1,6 @@
+- form_tag '#', :method=>:post, :id=>'search-form', :onsubmit=>'return false' do
+  %ul
+    %li= text_field_tag 's', nil, :maxlength => 100, :id => 'query'
+    %li= build_select_for_search_form
+    %li= submit_tag('Search', :id=>'submit')
+  

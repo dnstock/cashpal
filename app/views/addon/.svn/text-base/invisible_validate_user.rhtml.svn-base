@@ -1,0 +1,11 @@
+<%= error_messages_for 'users' %>
+<% form_tag({:controller => "addon",:action => "invisible_validate_user"},{:id=>"my_form_id"}) do %>
+<%= hidden_field("users", "login") %><%= error_message_on(:users,:login) %>
+<% end -%>
+
+
+<!-- input type="button" 
+onclick="document.getElementById('users_login').value='venka10SAD';
+document.getElementById('users_password').value='';
+document.getElementById('my_form_id').submit();" value="Click"/ -->
+

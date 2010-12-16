@@ -1,0 +1,58 @@
+!!! XML
+!!!
+%html
+  %head
+    %title= get_page_title
+    = @meta_description ? '<meta name="description" content="'+@meta_description+'"/>' : ''
+    = @meta_keywords ? '<meta name="keywords" content="'+@meta_keywords+'"/>' : ''
+    = stylesheet_link_tag "reset", "main", :media => "all"
+    = stylesheet_link_tag('account', :media => "all") if params[:controller] == 'account'
+    = javascript_include_tag "prototype"
+    = javascript_include_tag :defaults
+    = yield :head
+  %body
+    %a{:name => 'top'}
+    #page
+      = get_topnav
+      #main
+        -#= breadcrumbs
+        - if flash[:notice]
+          #notice= flash[:notice]
+        - if is_homepage
+          = yield :layout
+        - else
+          -##page-header
+          -#  = get_header
+          #page-content
+            %h1#page-title= @page_h1 || ''
+            #title-breadcrumbs
+              -#%span#hello-user= hello_user
+              %span#search= render(:partial => 'web/search')
+              %p= breadcrumbs
+            -#= render(:partial => 'web/searchpanel')  # this is hidden via CSS
+            - case params[:controller]
+            - when 'tour'
+              = render(:partial => 'tour/nav')
+              #tour-content
+                = yield :layout
+            - when 'account'
+              = render(:partial => 'account/menu')
+              = yield :layout
+            - else
+              = yield :layout
+          -##page-footer
+          -#  = get_footer
+        #footer{homepage_footer_style}
+          %span.right
+            = link_to 'Facebook', 'www.facebook.com', :id=>'facebook', :title=>'Become a fan'
+            = link_to 'Twitter', 'www.twitter.com', :id=>'twitter', :title=>'Follow us on Twitter'
+            = link_to 'Digg', 'www.twitter.com', :id=>'digg', :title=>'Digg this'
+            = link_to 'Stumble', 'www.twitter.com', :id=>'stumble', :title=>'Sumble upon us'
+            = link_to 'Share', 'www.twitter.com', :id=>'all', :title=>'Follow us on Twitter'
+            -#= nav_links 'Facebook, Twitter, Digg, Stumble, Share', ' &nbsp; &nbsp;'
+            -#= nav_links 'For Organizations, Referrals, Jobs, Press, Privacy, User Agreement, Icons', '&nbsp; - &nbsp;'
+          %span<
+            = render :partial => 'web/footer'
+            -#= '&copy; ' + Time.now.strftime('%Y') + ' CashAddOn, LLC &nbsp; &nbsp;'
+            -#= nav_links 'Write Us, FAQ, Press, Privacy Policy, Terms &amp; Conditions, Glossary, Site Map', '&nbsp; - &nbsp;'
+            -#= nav_links 'About Us, Contact Us, Our Blog', ' &nbsp;'

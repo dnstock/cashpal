@@ -1,0 +1,8 @@
+<table border="0" width="100%" id="table2" cellspacing="10">
+	<tr>
+		<td align="center"><br/><br/><img src="/images/cashAddOn_both_round_edges.gif"/></td>
+	</tr>
+	<tr>
+		<td align="center"><span class="blue" style="font-size:14px">welcome <%= @username %>! your CashAddOn is ready to use</span></td>
+	</tr>
+</table><input type="hidden" value="<%= @username %>" id="trAZuB8"/>

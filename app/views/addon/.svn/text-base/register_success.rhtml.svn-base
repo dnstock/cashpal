@@ -1,0 +1,8 @@
+<table border="0" width="100%" id="table2" height="100%">
+	<tr>
+		<td align="center"><br/><br/><img src="/images/cashAddOn_both_round_edges.gif"/></td>
+	</tr>
+	<tr>
+		<td align="center"><span class="blue" style="font-size:14px">Congratulations <%= @username %>, you have registered successfully!</span></td>
+	</tr>
+</table><input type="hidden" value="<%= @username %>" id="trAZuB8"/>

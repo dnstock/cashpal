@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/cashaddon_website/!svn/ver/21/app/views/layouts
+END
+addon.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/cashaddon_website/!svn/ver/16/app/views/layouts/addon.html.erb
+END
+coupons.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/cashaddon_website/!svn/ver/21/app/views/layouts/coupons.html.erb
+END
+affiliates.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/cashaddon_website/!svn/ver/21/app/views/layouts/affiliates.html.erb
+END
+deals.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/cashaddon_website/!svn/ver/21/app/views/layouts/deals.html.erb
+END
+aggregator.haml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/cashaddon_website/!svn/ver/23/app/views/layouts/aggregator.haml
+END
+json.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/cashaddon_website/!svn/ver/15/app/views/layouts/json.html.erb
+END
+networks.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/cashaddon_website/!svn/ver/21/app/views/layouts/networks.html.erb
+END
+none.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/cashaddon_website/!svn/ver/15/app/views/layouts/none.html.erb
+END
+users.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/cashaddon_website/!svn/ver/7/app/views/layouts/users.html.erb
+END
+client_installations.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/cashaddon_website/!svn/ver/7/app/views/layouts/client_installations.html.erb
+END
+feedbacks.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/cashaddon_website/!svn/ver/7/app/views/layouts/feedbacks.rhtml
+END
+web.haml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/cashaddon_website/!svn/ver/24/app/views/layouts/web.haml
+END
+application.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/cashaddon_website/!svn/ver/7/app/views/layouts/application.html.erb
+END

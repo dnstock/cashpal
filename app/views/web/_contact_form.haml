@@ -1,0 +1,23 @@
+#contact-form
+  - if( @sent )
+    #thank-you
+      #ttl Thank you for writing us, we love feedback.
+      #reply If necessary, we'll follow up with you as soon as we can.
+      #download= "Don't forget to download #{link_to('CashAddOn for Firefox', download_url)} if you don't have it yet."
+  - else
+    - remote_form_for @contact, :update => 'contact-form', :builder => Formtastic::SemanticFormBuilder, :url=>contact_url do |f|
+      #ttl We want to hear what you have to say. If you love or hate our add-on, have a suggestion, or think that we should be working together, let us know.
+      - unless @errors.blank?
+        .form-field-error= "<h2>Oops. You forgot to fill in some information.</h2>Please make sure the #{@errors.count} fields marked in red are completed."
+      - f.inputs do
+        = f.hidden_field(:origin, :value=>'website')
+        = f.input :name
+        = f.input :email
+        %li{:class => @subject_error}
+          = f.label :subject
+          = select_with_grouped_options(@contact, :subject, @contact.available_subjects, @contact.subject)
+        = f.input :body, :label => 'Message'
+        = f.commit_button 'Send'
+    - if @errors.blank?
+      :javascript
+        document.getElementById("new_contact").reset()

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!-- <?xml-stylesheet href="chrome://global/skin/" type="text/css"?> -->
+<window id="loading_window" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+xmlns:html="http://www.w3.org/1999/xhtml" >
+<html:body >
+<html:table border="0" width="100%" id="table2" cellspacing="10">
+	<html:tr>
+		<html:td align="center"><html:br/><html:br/><html:img src="chrome://cao/content/cashAddOn_both_round_edges_new.png"/></html:td>
+	</html:tr>
+	<html:tr>
+		<html:td align="center"><html:img src="chrome://cao/content/ajax-loader.gif"/>
+    <!-- <html:span class="blue" style="font-size:14px">Your content is loading...</html:span> --></html:td>
+	</html:tr>
+</html:table>
+</html:body>
+</window>

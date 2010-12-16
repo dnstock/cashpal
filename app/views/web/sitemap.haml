@@ -1,0 +1,73 @@
+#sitemap
+  %ul
+    %li
+      = link_to('Home', root_url)
+      %br Visit our homepage
+    %li 
+      = link_to('Download CashAddOn for Firefox', download_url)
+      %br 100% free addon for your browser
+    %li 
+      = link_to('Cash Back Shopping', shopping_url)
+      %br Discover your savings
+    %li 
+      = link_to('Deals', deal_url)
+      %br Find great deals
+    %li
+      = link_to('Coupons', coupon_url)
+      %br Find money-saving coupons
+    %li 
+      = link_to('Tags', tag_url)
+      %br Find your savings by interest
+  %ul
+    %li
+      = link_to('Our Blog', 'http://blog.cashaddon.com')
+      %br Read about what's keeping us busy
+    %li 
+      = link_to('Help / FAQ', help_url)
+      %br Common questions and answers
+    %li 
+      = link_to('Write Us', contact_url)
+      %br We'd love to hear from you
+    %li 
+      = link_to('About Us', web_url(:company))
+      %br Find out more about us
+    %li 
+      = link_to('Press', 'mailto:press@cashaddon.com')
+      %br Press inquiries are always welcome
+    %li 
+      = link_to('Privacy Policy', web_url(:privacy))
+      %br Read about how we use the data on our site
+    %li 
+      = link_to('User Agreement', web_url(:terms))
+      %br Read about our relationship with the user
+  %ul
+    - unless(current_user)
+      %li 
+        = link_to('Login', user_sessions_url)
+        %br Get access to your account
+      %li
+        = link_to('Forgot Password', forgotpw_url)
+        %br Forgot your username or password? Go here
+    - else
+      %li 
+        = link_to('My Account', account_url)
+        %br Go to an overview of your account
+      %li
+        = link_to('Cash Back Summary', account_url(:cashback))
+        %br A summary of new and old cash back you have earned
+      %li
+        = link_to('Recent Activity', account_url(:activity))
+        %br Re-discover what site and links you clicked
+      %li
+        = link_to('Request Payment', account_url(:payments))
+        %br Request a payment method and view payment history
+      %li
+        = link_to('Update My Profile', account_url(:profile))
+        %br Update thinks like your name and password
+      %li
+        = link_to('Account Help', account_url(:help))
+        %br Get help geared with the account section
+      %li
+        = link_to('Logout', logout_url)
+        %br Good idea when leaving public computers
+  .clear

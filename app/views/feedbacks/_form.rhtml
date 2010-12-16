@@ -1,0 +1,22 @@
+<%= error_messages_for 'feedback' %>
+
+<!--[form:feedback]-->
+<p><label for="feedback_msg_timestamp">Msg timestamp</label><br/>
+<%= datetime_select 'feedback', 'msg_timestamp'  %></p>
+
+<p><label for="feedback_msg_subject">Msg subject</label><br/>
+<%= text_field 'feedback', 'msg_subject'  %></p>
+
+<p><label for="feedback_rating">Rating</label><br/>
+<%= text_field 'feedback', 'rating'  %></p>
+
+<p><label for="feedback_message">Message</label><br/>
+<%= text_field 'feedback', 'message'  %></p>
+
+<p><label for="feedback_os">Os</label><br/>
+<%= text_field 'feedback', 'os'  %></p>
+
+<p><label for="feedback_browser">Browser</label><br/>
+<%= text_field 'feedback', 'browser'  %></p>
+<!--[eoform:feedback]-->
+

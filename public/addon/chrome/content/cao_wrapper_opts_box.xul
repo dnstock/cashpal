@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<window 
+  id="caoOptionsWindowWrapper" 
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" 
+  title="Cash AddOn Options"
+  xmlns:html="http://www.w3.org/1999/xhtml"
+  width="540"
+  height="545">   
+
+<browser id="winBrowser" />
+<script type="text/javascript">
+<![CDATA[
+try{
+window.open('chrome://cao/content/cao_opts_box.xul', 'cashaddon_opts_box', 'chrome');
+window.close();
+}catch(e){ alert(e); }
+]]>
+</script>
+</window>

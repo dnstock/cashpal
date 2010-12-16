@@ -1,0 +1,12 @@
+<% loginbox_init %>
+<div id="loginbox" style="display:none">
+<% form_for @login do |f| %>
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td valign="bottom"><strong>Login</strong> (<a href="" onclick="alert('Please download the addon to register');">new user?</a>)<br/><%= f.text_field :login, :class=>'loginbox-input' %></td>
+      <td valign="bottom"><strong>Password</strong> (<%= link_to "forgot?" , "/password_resets/new" %>)<br/><%= f.password_field :password, :class=>'loginbox-input' %></td>
+      <td valign="top"><a href="#" id="loginbox-close" onclick="showlogin(0)">Close</a>&nbsp;<br/><%= f.submit 'Sign In', :id=>'loginbox-submit' %></td>
+    </tr>
+  </table>
+<% end %>
+</div>

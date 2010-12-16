@@ -1,0 +1,74 @@
+<% form_tag({ :controller=>"account", :action=>"request_payment"},{:id=>"request_payment_form"}) do  -%>
+
+
+<table border="0">
+<tbody>
+<tr>
+<td><img src="/images/transparent.gif" width="120" height="5" /></td>
+
+<td>
+
+<br>
+
+<table border="1" class ="green" style ="text-align:center;">
+<tbody>
+<tr>
+<td class ="green" style ="text-align:center;"><span class ="blackheader">Request Payment</span><img src="/images/transparent.gif" width="5" height="5" /></td></tr>
+
+<td>
+ 
+<table style="border-collapse: collapse; text-align:left; margin-left:auto; margin-right:auto; width:400px;" align="left" border="0" cellpadding="0" cellspacing="0">
+                  <tbody>
+        <tr><td><br></td></tr>
+    
+                    
+                    <tr>
+                      <td class ="blackheader" style ="text-align:right;">Total Available Funds:  $</td>
+                       <td class ="text" style ="text-align:left;"><%= @user_commission_summary.available || 0 %></td>
+                    </tr>
+                    <tr>
+                      <td class ="blackheader"  style ="text-align:right;">
+                        Request Payment of:  $</td>
+                        <td class ="text" style ="text-align:left;"><input type="text" name="payment_request" style="text-align:left"></td>
+                    </tr>
+                    <tr>
+                      <td class ="blackheader" style ="text-align:right;">Payment Email:&nbsp;&nbsp;</td>
+                      <td class ="text" style ="text-align:left;"><%=@user.payment_email %></td>
+                    </tr>
+                    <tr>
+                      <td class ="blackheader"  style ="text-align:right;">Deposit Payment To:&nbsp;&nbsp;</td>
+                      <td class ="text" style ="text-align:left;"><select id="payment_provider" name="payment_provider">
+                          <option value="PayPal">
+                          PayPal
+                          </option>
+                        </select>
+                        <input type="button" onclick="this.disabled=true; document.getElementById('request_payment_form').submit();" value="OK">
+					  </td>
+                    </tr>
+					<tr><td colspan="2"><br/></td></tr>
+					<%if flash[:errors] -%>
+					<tr><td colspan="2" align="right"><span class="errors"><%= flash[:errors] %></span></td></tr>
+					<%end -%>
+					<%if flash[:notice] -%>
+					<tr><td colspan="2" align="right"><span class="flash"><%= flash[:notice] %></span></td></tr>
+					<%end -%>
+                    <!-- tr><td><a href="paymethod.rhtml">Add Payment Method</a></td></tr -->
+                    <tr><td><br></td></tr>
+                    <tr><td><br></td></tr>
+                    <tr><td><br></td></tr>
+                    <tr><td><br></td></tr>
+                    
+                  </tbody>
+                </table>
+</td>
+</tr>
+ </tbody>
+</table>
+
+</td>
+</tr>
+ </tbody>
+</table>
+
+                                
+<% end -%>

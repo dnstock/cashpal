@@ -1,0 +1,24 @@
+#hp-main
+  -#%ul
+  -#  %li#h1 Cash Back Savings Made Easy
+  -#  %li Automatically earn cash back while you shop
+  -#  %li The cash you save is yours, use it however you want
+  -#  %li<
+  -#    Ebay, Buy.com, Priceline... many more
+  -#    = link_to 'CashBack Stores', :stores
+  -#  %li Download once. Save forever.
+  = link_to('<span>Get CashAddOn - the free Firefox add-on that earns you cash back.</span>', download_url, :id=>:download)
+#hp-savings<
+  = image_tag('hp-secret-to-savings.png', :size=>'680x38', :alt=>'CashAddOn members know the secret to savings. Are you among them?')
+  -#= homepage_counter
+#hp-links
+  #news
+    %h3 News &amp; Updates
+    %p<
+      = homepage_news
+  #pipe
+  = link_to('Take the Tour<br/><span>Relax. Explore.</span>', tour_url, :id=>'tour')
+  = link_to 'Browse through the current deals', deal_url, { :id => 'deals' }
+  = link_to 'Boost your savings with coupons', coupon_url, { :id => 'coupons' }
+  -#%a#video{:href=>''} Watch a video about CashAddon
+  -#%a#forum{:href=>'forums'} Reclaim your cash! Take the tour.

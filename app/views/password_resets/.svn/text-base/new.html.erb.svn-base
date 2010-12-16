@@ -1,0 +1,25 @@
+<%  if not flash[:notice] -%>
+<% form_tag forgotpw_path, :id => 'resetpw-form' do %>
+  <fieldset>
+    <legend><%= breadcrumbs(:is_page_title => true, :separator => '') %></legend>
+    <p>Enter your username or email address and your password will be sent to you.</p>
+    <ol>
+      <li>
+        <label for="login">Username or Email Address</label>
+        <%= text_field_tag "login" %>
+      </li>
+    </ol>
+    <button type="submit">Reset my password</button>
+  </fieldset>
+  <div id="login">
+    <p class="cao-green">Actually, I remember my password, <%= link_to 'take me to the sign in page', web_path(:login) %>.</p>
+  </div>
+<% end -%>
+<%  if flash[:errors]
+      print 'Errors(1): ' + flash[:errors]
+    end
+  else
+    print flash[:notice]
+  end
+  flash[:notice] = nil
+%>

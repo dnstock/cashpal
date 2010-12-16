@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!DOCTYPE overlay SYSTEM "chrome://cao/locale/cao.dtd">
+<overlay id="cao" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" xmlns:html="http://www.w3.org/1999/xhtml">
+                         
+  <script type="application/x-javascript" src="chrome://cao/content/prototype.js" /> 
+  <script type="application/x-javascript" src="chrome://cao/content/json.js" />
+  <script type="application/x-javascript" src="chrome://cao/content/webtoolkit.url.js" /> 
+  <script type="application/x-javascript" src="chrome://cao/content/common.js" />
+  <script type="application/x-javascript" src="chrome://cao/content/merchants.js" />
+  <script type="application/x-javascript" src="chrome://cao/content/initialize.js" /> 
+  <script type="application/x-javascript" src="chrome://cao/content/cbat.js" /> 
+  
+  
+  <statusbar id="status-bar">
+    <statusbarpanel id="cbat-status-button" 
+      
+      onclick="window.open('chrome://cao/content/cao_opts_box.xul', 'cashaddon_opts_box', 'chrome');"
+      ondoubleclick="window.open('chrome://cao/content/cao_opts_box.xul', 'cashaddon_opts_box', 'chrome');"
+      hidden="false"
+      class="statusbarpanel-iconic"
+      tooltiptext="Site not supported by CashAddOn">
+      <image src="chrome://cao/content/status-minus.bmp" alt="Click to configure CashAddOn"/>
+    </statusbarpanel> 
+    <!-- tooltiptext="Site not supported by CashAddOn" -->
+    
+    <statusbarpanel id="cbat-status-button-tracking-on" 
+      
+      onclick="window.open('chrome://cao/content/cao_opts_box.xul', 'cashaddon_opts_box', 'chrome');"
+      ondoubleclick="window.open('chrome://cao/content/cao_opts_box.xul', 'cashaddon_opts_box', 'chrome');"
+      hidden="true"
+      class="statusbarpanel-iconic"
+      tooltiptext="CashAddOn - Cash back available with this merchant">
+      <image src="chrome://cao/content/status-plus.bmp" alt="Click to configure CashAddOn"/>
+    </statusbarpanel>	
+    <!-- tooltiptext="CashAddOn - Cash back available with this merchant" -->	
+    
+    <statusbarpanel id="cbat-status-button-disabled" 
+      
+      onclick="window.open('chrome://cao/content/cao_opts_box.xul', 'cashaddon_opts_box', 'chrome');"
+      ondoubleclick="window.open('chrome://cao/content/cao_opts_box.xul', 'cashaddon_opts_box', 'chrome');"
+      hidden="true"
+      class="statusbarpanel-iconic"
+      tooltiptext="CashAddOn has been disabled - please login and ensure the browser is accepting cookies">
+      <image src="chrome://cao/content/status-disabled.bmp" alt="Click to configure CashAddOn"/>
+    </statusbarpanel>	
+    <!-- tooltiptext="Browser is not accepting cookies - CashAddOn has been disabled"  -->
+    
+    <!-- browser id="redirectBrowserInvisible"  height="0" width="0" hidden="false" / -->
+    <browser id="redirectBrowser99"  height="0" width="0" hidden="false" /> 
+    <browser id="redirectBrowser0"  height="0" width="0" hidden="false" /> 
+    <caption label="|" hidden="true"/>
+    <browser id="redirectBrowser1"  height="0" width="0" hidden="false" />   
+    <caption label="|" hidden="true" />
+    <browser id="redirectBrowser2"  height="0" width="0" hidden="false" /> 
+    <caption label="|" hidden="true" />
+    <browser id="redirectBrowser3"  height="0" width="0" hidden="false" />  
+    <caption label="|" hidden="true" />
+    <browser id="redirectBrowser4"  height="0" width="0" hidden="false" />  
+    <browser id="refreshMerchants"  height="0" width="0" hidden="false" />  
+	</statusbar>
+	
+	
+  <script type="application/x-javascript" src="chrome://cao/content/postoverlay.js" /> 
+  
+  
+  
+</overlay>

@@ -1,0 +1,56 @@
+
+<% form_for(@users) do |f| %> <!-- addon/register -->
+
+
+<table border="0" style="width:440px;">
+  <tr><td colspan="2"><img src="/images/transparent.gif" height="1" width="440"/></td></tr>
+
+  <tr>
+    <td colspan="2" class ="text"><div id="signin_link_div">
+      Thank you for downloading the CashAddOn! Please <b>Sign Up</b> below to create an account,
+    or click the <b>Sign In</b> tab if you already have an account. </div>
+    </td>
+  </tr>
+  <tr><td colspan="2"><br/></td></tr>
+  <tr><td colspan="2" class="errors"><%= f.error_messages %></td></tr>
+  <tr>
+    <td class ="blackheader">User ID:</td>
+    <td align="right"><%= f.text_field :login %></td>
+  </tr>
+  <tr>
+    <td class ="blackheader">Password:</td>
+    <td align="right"><%= f.password_field :password %></span></td>
+  </tr>
+  <tr>
+    <td class ="blackheader">Confirm Password:</td>
+    <td align="right"><%= f.password_field :password_confirmation %></td>
+  </tr>
+  <tr>
+    <td class ="blackheader">Email:</td>
+    <td align="right"><%= f.text_field :email %></td>
+  </tr>
+<tr>
+<td class ="text" colspan="2" ><input type="checkbox" onClick="if(this.checked==true){$('submitCmdButton').disabled=false;}else{$('submitCmdButton').disabled=true;}"/>I Agree to Terms and Conditions of CashAddOn found here 
+
+</td>
+</tr>
+
+  <tr>
+    <td></td>
+    <td align="right">
+    <input name="commit" type="submit" value="Sign Up!" id="submitCmdButton" disabled="true"/>
+
+    </td>
+  </tr>
+  <!--
+  <tr>
+    <td colspan="2" class ="text">
+      <hr />
+    <font color="red">The CashAddOn service is temporarily disabled, but we plan to relaunch the new service November 1 with a new version. Thank you for your patience.
+    -CashAddOn </font>
+    </td>
+  </tr>
+  -->
+</table>
+
+<% end %>

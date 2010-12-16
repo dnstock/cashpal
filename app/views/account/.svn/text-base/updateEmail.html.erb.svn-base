@@ -1,0 +1,67 @@
+<%= form_remote_tag( 
+	:update => "updateEmailDIV", 
+	:url => { :controller => "account" , :action => "updateEmail" } , 
+	:html => { :id => "updateEmailForm" },
+	:complete => "if(request.status==403){alert('your session has expired, please login'); window.location.reload();}") 
+%>
+
+
+<table style ="text-align: middle;" border="0" cellspacing="0" cellpadding="5" width="100%">
+    <tbody>
+    	<tr>
+    		<td>
+    			<span class ="blackheader">&nbsp;Change Contact Details</span>
+				&nbsp;<hr align="left" width="280px" size="1" color="#94a4b1">
+				<span class="text">Your contact email is used to contact you.</span><br>
+				<span class="text">Your contact email must always be valid.</span><br><br>			
+  	 		</td>
+    	</tr>
+    	<tr>
+    		<td style="padding-right:10px;"><span class="labels">Contact Email: </span>
+			<span class ="labels"><%= @users.email %></span>
+			</td>
+		</tr>
+		<tr>
+			<td><span class="labels">New Contact Email: </span>
+			<%= text_field_tag("tf_newemail",params[:tf_newemail],{ :style=>"size:18;" , :onclick=>"this.value='';" }) %>
+			<!-- /td>
+			<td -->
+			<span class="red12"/><%= @error_message_newemail %></span></td>
+		</tr>
+		<tr>
+			<td valign="middle" colspan="2">
+				<table border="0" cellpadding="0" cellspacing="0" style="text-align: right;" width="280px;">
+					<tr>
+					<td align="left"><span class="green12"/><%= @output %>
+						</span><span class="red12"/><%= @output_error %></span>
+					</td>
+					<td align="right" >
+						<input type="submit" value="Save" onclick="this.disabled=true; $('updateEmailForm').onsubmit();" />
+					</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+    </tbody>
+</table>
+<%= error_messages_for 'users' %>
+<!--
+<table style ="text-align: left;" border="0" cellspacing="0" cellpadding="0">
+    <tbody>
+    	<tr>
+    		<td>
+		    <span class="labels">Contact Email1:</span>
+		    &nbsp;&nbsp;<span class ="labels"><%= @users.email%></span><br><br>
+		    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		    &nbsp;
+			<%= text_field_tag("tf_newemail",params[:tf_newemail],{ :style=>"size:18;" , :onclick=>"this.value='';" }) %><%= error_message_on :users,:email %>
+			<br>
+		    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		    <%= @output %><input type="submit" value="Save" onclick="this.disabled=true; $('updateEmailForm').onsubmit();" />
+		    <br/>
+			<br/>
+    </tbody>
+</table>
+-->
+</form>

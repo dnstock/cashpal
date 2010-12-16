@@ -1,0 +1,28 @@
+#tag-page
+  - if(@showall)
+    .big-cloud
+      .ttl Find deals, coupons and stores that match your interests
+      .body.tag-cloud-style= get_tag_cloud(@all_tags)
+      .end
+  - else
+    = link_to 'view all tags', tag_url, :id => 'view-all'
+    #results= "Here's what we found for the <span>#{params[:name]}</span> tag"
+    - if(@deals.blank? && @coupons.blank?)
+      #no-deals-coupons No deals or coupons match this tag.
+    - else
+      #deals-coupons
+        .ttl<
+          %span Deals &amp; Coupons
+        .body
+          %ul
+            %li deal 1
+            %li deal 2
+        .end
+    - if(@stores.blank?)
+      #no-stores No stores match this tag.
+    - else
+      #stores
+        %ul
+          %li#ttl <b id="bg-end"></b><span>Cash Back</span>Click on a store for deals and coupons
+          = get_store_links(@stores)
+  .clear

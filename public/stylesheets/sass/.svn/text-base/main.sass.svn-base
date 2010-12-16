@@ -1,0 +1,1468 @@
+//  Document   : main.sass
+//  Created on : Mar 4, 2009, 9:25:04 PM
+//  Author     : Dan Harcsztark
+//  Description:
+//      Sass rendition of the main stylesheet file for the front-end website.
+
+!section_spacing = 15px
+
+// BASIC LAYOUTS //
+.clear
+  :clear both
+.right
+  :float right
+.grey
+  :color #666
+.em
+  :font-style italic
+.strong
+  :font-weight 700
+button
+  :cursor pointer
+.cao-green, .text-green
+  :color #447505
+.cao-lite-green, .text-lite-green
+  :color #599a06
+.cao-blue
+  :color #3c7099
+a
+  :color #3c7099
+  &:hover
+    :color #ff8c00
+// TYPOGRAPHY //
+// Success, notice and error boxes
+.error, .notice, .success
+  padding: .8em
+  margin-bottom: 1em
+  border: 2px solid #ddd
+.error
+  background: #FBE3E4
+  color: #8a1f11
+  border-color: #FBC2C4
+  a
+    color: #8a1f11
+.notice
+  background: #FFF6BF
+  color: #514721
+  border-color: #FFD324
+  a
+    color: #514721
+.success
+  background: #E6EFC2
+  color: #264409
+  border-color: #C6D880
+  a
+    color: #264409
+h1#page-title
+  :display none
+// Errors:
+.errorExplanation
+  :font-size 13px
+  :color #8a1f11
+  :border 2px solid #FBC2C4
+  :background #FBE3E4 url(../images/cancel.png) 15px center no-repeat
+  :padding
+    :left 60px
+    :top 3px
+    :bottom 3px
+    :right 3px
+  :margin-bottom 15px
+  h2
+    :color #cc0000
+  ul
+    :list-style circle inside
+    :color #cc0000
+// MAIN CONTENT //
+body
+  :margin 0
+  :background
+    :color white
+  :color black
+  :font
+    :family Arial
+    :size   15px
+    :weight 400
+  :background white url(../images/grass.png) bottom center repeat-x
+  :background-attachment fixed
+textarea, input, select
+  :font
+    :family Arial
+    :size   13px
+#page
+  :margin 5px auto
+  :width 950px
+#header-hp
+  :background transparent url(../images/cashaddon-hdr.png) top left no-repeat
+  :height 73px
+#header
+  :background transparent url(../images/cashaddon-hdrs.png) top left no-repeat
+  :height 113px
+#header, #header-hp
+  :font-size 12px
+  a
+    :color white
+    :text-decoration none
+    &:hover
+      :color yellow
+  #logo
+    //:border 1px solid black
+    :display block
+    :width 205px
+    :height 27px
+    :font-weight bold
+    :padding
+      :top  46px
+      :left 85px
+  #loginbox00
+    :float right
+    :color #f3f3f3
+    :margin
+      :top 8px
+      :right 3px
+    :font
+      :size 12px
+      :weight 700
+    li
+      :float left
+      a
+        :color #f3f3f3
+        :border 1px solid transparent
+        :padding 3px 3px
+        //:padding-top 3px
+        &:hover
+          :background-color white
+          // old bgcolor: #5E8AAD
+          :color #365268
+          :border 1px solid #587E9B
+          :border-bottom 3px solid #587E9B
+          :border-top 0
+    #welcome
+      :background transparent url(../images/ico-welcome.gif) 0px 0px no-repeat
+      :padding-left 18px
+    #welcome, #cash
+      :padding
+        :bottom 2px
+        :right 5px
+      :margin-right 5px
+      :border-right 1px solid #cfcfcf
+  #loginbox0
+    :background #3f719a url(../images/loginbox.gif) bottom left no-repeat
+    :float right
+    :margin-top 4px
+    a
+      :display block
+      :color #D6E1E9
+      :padding 3px 17px 5px 10px
+      :background transparent url(../images/loginbox-bullet.gif) right center no-repeat
+      &:hover
+        :color yellow
+  #loginbox
+    :float right
+    :margin
+      :top 6px
+      :right 3px
+    td
+      :font-size 11px
+      :color #e3e3e3
+    .loginbox-input
+      :font-size 11px
+      :border 1px solid #ccc
+      :background-color #f3f3f3
+      :width 120px
+      :margin
+        :right 5px
+        :top 1px
+      &:hover
+        :background-color white
+      &:focus
+        :background-color white
+    #loginbox-submit
+      :font-size 11px
+      :border 1px solid #ccc
+      :margin
+        :right 8px
+        :top 1px
+    #loginbox-close
+      :float right
+      :text-align right
+      :display inline
+      :font-size 9px
+      :color #ffd3d3
+  #get-cashaddon
+    :float right
+  #topnav
+    //:border 1px solid #ccc
+    :float right
+    :clear right
+    :background transparent url(../images/topnav-end.gif) 100% -1px no-repeat
+    :padding-right 8px
+    :height 26px
+    li
+      :float left
+      :padding 8px 16px
+      :border-top 1px solid #bed5e7
+      :background #5e8aad url(../images/topnav-pipe.gif) right center no-repeat
+    #start
+      :padding 8px 0
+      :border 0
+      :background transparent url(../images/topnav-start.gif) top left no-repeat
+    #end
+      :background #5e8aad
+      // compensate for width of topnav-end.gif
+      :padding-right= 16px - 3px
+    #ico
+      :padding-left 8px
+      span
+        :background transparent url(../images/topnav-forums.gif) left center no-repeat
+        :padding-left 20px
+    #search
+      //:border 1px solid red
+      :padding
+        :top 7px
+        :bottom 5px
+        :left 10px
+      // include #end
+      :background #5e8aad
+      :padding-right= 10px - 3px
+#breadcrumbs
+  :position relative
+  :float right
+  :color #666
+  :font-size 10px
+  :margin
+    :right 10px
+    :bottom -10px
+  a
+    :text-decoration none
+    :color #3c7099
+    &:hover
+      :color #ff8c00
+  .crumb-link
+    :background transparent url(../images/crumb-bullet.gif) left center no-repeat
+    :padding-left 9px
+    :margin-left 4px
+
+!start_of_page_content = 18px
+#title-breadcrumbs
+  :margin
+    :top -36px
+    :left 10px
+    :right 10px
+    :bottom = !start_of_page_content + 6px
+  p
+    :font-size = 18px
+    a
+      :color #447505
+      :text-decoration none
+      &:hover
+        :text-decoration underline
+    // first-crumb is alias of crumb-hp
+    #crumb-hp, #first-crumb
+      :background transparent url(../images/hp-bullet.gif) left center no-repeat
+      :padding-left 18px
+    // last-crumb is alias of crumb-title
+    .crumb-link, #crumb-title, #last-crumb
+      :background transparent url(../images/title-bullet.gif) left center no-repeat
+      :padding-left 12px
+      :margin-left 6px
+    #crumb-title, #last-crumb
+      :color #447505
+      :font-weight 700
+  #hello-user
+    :float right
+    :color white
+    :font-size 13px
+    a
+      :background transparent url(../images/cao-avatar-nav.gif) left 2px no-repeat
+      :text-decoration none
+      :color #447505
+      :height 22px
+      :padding
+        :left 30px
+        :top 4px
+        :bottom 3px
+      &:hover
+        :text-decoration underline
+  #search
+    :float right
+    :margin
+      :top -4px
+      :right -5px
+    li
+      :float left
+    #query, #section, #submit
+      :font
+        :size 14px
+        :weight 700
+      :border 2px solid #A8CF74
+      :background #efefef
+      :color #333
+    #query
+      :width 180px
+      :border-right 0
+      :padding 3px
+      :padding-left 22px
+      :background #efefef url(../images/search-icon.gif) 6px 5px no-repeat
+    #section, #submit
+      :padding 2px
+    #query:hover, #query:focus, #section:hover, #submit:hover
+      :background-color #ffffea
+      :border
+        :top 2px solid #9BBF6B
+        :left 2px solid #9BBF6B
+        :bottom 2px solid #9BBF6B
+#search-panel
+  :display none
+  :background transparent url(../images/search-panel.png) top left no-repeat
+  :width 950px
+  :height 63px
+  :margin
+    :top -44px
+    :left -15px
+    :bottom 10px
+  :font-size 12px
+  #container
+    :position relative
+    :top 16px
+    :clear both
+    :padding 0 25px
+  li
+    :float left
+  select
+    :background #eee
+    :font-size 12px
+    :border 1px solid #888
+    :color #333
+    &:hover
+      :background-color #ecf7fc
+  #options
+    :float left
+    li
+      :margin-right 10px
+    #category
+      :font-weight 700
+  form
+    :float right
+    :margin-top -1px
+    #q
+      :width 200px
+      :border 0
+      :border
+        :top 1px solid #888
+        :left 1px solid #888
+        :bottom 1px solid #888
+      :padding 2px
+      :padding-left 20px
+      :background #eee url(../images/search-icon.gif) 5px 4px no-repeat
+      :font-size 12px
+    #section
+      :padding 1px 0
+      :margin
+        :right 2px
+        :top 0
+    #submit
+      :border 1px solid #888
+      :background #eee
+      :color #333
+      :padding 1px 4px
+      :font-size 12px
+    #q:hover, #q:focus, #submit:hover
+      :background-color #ecf7fc
+#footer
+  :clear both
+  :border-top 1px solid #D0F4FE
+  :background transparent url(../images/trans-btm.png) top left no-repeat
+  :padding
+    :top 10px
+    :left 6px
+    :right 6px
+    :bottom 30px
+  :margin
+    :bottom 80px
+  :font-size 11px
+  a
+    :text-decoration none
+    :color black
+    &:hover
+      :text-decoration underline
+      :color #ff8c00
+  .right
+    a
+      :background transparent url(../images/share-icons.png) top left no-repeat
+      :margin-left 6px
+      :padding 2px 0
+    #facebook
+      :background-position 0px 1px
+      :padding-left 18px
+    #twitter
+      :background-position 0px -18px
+      :padding-left 16px
+    #digg
+      :background-position 0px -37px
+      :padding-left 20px
+    #stumble
+      :background-position 0px -57px
+      :padding-left 20px
+    #all
+      :background-position 0px -78px
+      :padding-left 20px
+// TAG CLOUD //
+!tag_cloud_1 = .8em
+!tag_cloud_step = .2em
+.tag-cloud-style
+  .level-1
+    :font-size= !tag_cloud_1
+  .level-2
+    :font-size= !tag_cloud_1 + !tag_cloud_step
+  .level-3
+    :font-size= !tag_cloud_1 + (!tag_cloud_step * 2)
+  .level-4
+    :font-size= !tag_cloud_1 + (!tag_cloud_step * 3)
+  .level-5
+    :font-size= !tag_cloud_1 + (!tag_cloud_step * 4)
+  .level-6
+    :font-size= !tag_cloud_1 + (!tag_cloud_step * 5)
+// HOMEPAGE LAYOUT //
+#hp-main
+  :background transparent url(../images/hp-cashback-made-easy.png) top left no-repeat
+  :width 950px
+  :height 275px
+  :margin
+    :top = !section_spacing
+  ul
+    :padding
+      :top 73px
+      :left 35px
+    :line-height 180%
+    :font
+      :size 16px
+      :weight 700
+    :color #2a3f50
+    :list-style
+      :image url(../images/hpbullet.gif)
+      :position inside
+    a
+      :color #2a3f50
+      :text-decoration none
+      &:hover
+        :text-decoration underline
+    #h1
+      :display none
+  a#download
+    //:border 1px solid black
+    :background transparent url(../images/hp-download-cashaddon.png) top left no-repeat
+    :display block
+    :position relative
+    :top 131px
+    :left 78px
+    :width 472px
+    :height 141px
+    :color transparent
+    span
+      // IE doesn't honor color:transparent
+      :visibility hidden
+    &:hover
+      :background transparent url(../images/hp-download-cashaddon-hov.png) top left no-repeat
+#hp-savings
+  :background transparent url(../images/hp-blackbar.gif) top left no-repeat
+  :width 950px
+  :height 38px
+  :text-align center
+#hp-links
+  //:border 1px solid red
+  :width 950px
+  :height= 93px - 10px
+  :background transparent url(../images/hp-links-bg.gif) top left no-repeat
+  :padding-top 15px
+  a
+    :display block
+    :text-decoration none
+  a#video, a#forum
+    //:border 1px solid green
+    :width= 301px - 35px
+    :height= 29px - 7px
+    :margin-left 15px
+    :padding
+      :top 7px
+      :left 35px
+    :color #365268
+    :font
+      :weight 700
+      :size 14px
+  a#deals, a#coupons
+    :width= 301px - 42px
+    :height= 35px - 10px
+    :margin-left 15px
+    :padding
+      :top 10px
+      :left 42px
+    :color #365268
+    :font
+      :weight 700
+      :size 14px
+  a#video
+    :background transparent url(../images/but-hpvideo.gif) top left no-repeat
+    :margin-bottom 7px
+    &:hover
+      :background transparent url(../images/but-hpvideo-hov.gif) top left no-repeat
+  a#forum
+    :background transparent url(../images/but-hpforum.gif) top left no-repeat
+    &:hover
+      :background transparent url(../images/but-hpforum-hov.gif) top left no-repeat
+  a#deals
+    :background transparent url(../images/but-hp-deals.png) top left no-repeat
+    :margin
+      :top -5px
+      :bottom 7px
+    &:hover
+      :background transparent url(../images/but-hp-deals-hov.png) top left no-repeat
+  a#coupons
+    :background transparent url(../images/but-hp-deals.png) top left no-repeat
+    &:hover
+      :background transparent url(../images/but-hp-deals-hov.png) top left no-repeat
+  a#refer, a#tour
+    :float right
+    //:border-right 1px solid orange
+    :display block
+    :width= 215px - 70px
+    :line-height 100%
+    :color #447505
+    :font-size 20px
+    span
+      :color #599a06
+      :font
+        :size 12px
+        :weight 700
+  a#refer
+    :height= 63px - 12px
+    :padding
+      :left 70px
+      :top 12px
+    :background transparent url(../images/but-hprefer.gif) top left no-repeat
+    &:hover
+      :background transparent url(../images/but-hprefer-hov.gif) top left no-repeat
+  a#tour
+    :margin-top -8px
+    :height= 73px - 22px
+    :padding
+      :left 75px
+      :top 22px
+    :background transparent url(../images/but-hptour.png) top left no-repeat
+    &:hover
+      :background transparent url(../images/but-hptour-hov.png) top left no-repeat
+    span
+      :padding-left 20px
+  #pipe
+    :float right
+    :height 55px
+    :width 1px
+    :background-color #ccc
+    :margin 4px 30px
+  #news
+    //:border 1px solid chocolate
+    :float right
+    :width 310px
+    :margin-right 15px
+    :font-size 12px
+    h3
+      :margin-bottom 3px
+    p
+      :line-height 135%
+    a
+      :display inline
+      :color #146634
+      &:hover
+        :text-decoration underline
+// SUBPAGES LAYOUT //
+!side_margins = 15px
+!content_width = 950px - (!side_margins * 2)
+#page-header
+  :margin-top = !section_spacing - 12px
+#transparent
+  :background-color #fff
+  // for IE
+  :filter alpha(opacity=60)
+  // CSS3 standard
+  :opacity 0.6
+#page-content
+  :background transparent url(../images/trans-bg.png) left repeat-y
+  :padding = 5px !side_margins 20px !side_margins
+  :min-height 300px
+  :line-height 18px
+#page-footer
+// TERMS AND PRIVACY PAGES //
+#policies
+  :margin
+    :left 15px
+    :right 15px
+    :bottom 15px
+  :width 600px
+  h1, .strong
+    :color #447505
+  h1
+    :font-size 16px
+    :margin
+      :top 30px
+      :bottom 15px
+  p
+    :line-height 130%
+    :margin-bottom 15px
+  .strong
+    :margin-bottom 6px
+  .footer
+    :margin-top 25px
+    a
+      :margin-right 10px
+      :padding 3px 10px
+      :border 1px solid #ccc
+      :color #23618F
+      :text-decoration none
+      :background-color #FFFFEA
+      :font
+        :weight 700
+      &:hover
+        :color #ff8c00
+        :background-color #D1F5FE
+        :border 1px solid grey
+// SUB PAGES //
+// STYLIZED FORMS //
+#login-form
+  legend
+    :color #365268
+    :font
+      :weight 700
+      :size 18px
+    :padding 5px
+    :padding-bottom 20px
+  ol
+    :margin-bottom 20px
+    li
+      :clear both
+      :margin 0 0 .75em
+  label
+    :display block
+    :float left
+    :line-height 1.6em
+    :margin-right 10px
+    :text-align right
+    :width 90px
+    :color #365268
+    :font-weight 700
+    &:after
+      :content ':'
+  input[type="text"], input[type="password"]
+    :width 250px
+    :padding 3px
+    :border 2px solid #c6c6c6
+    &:focus
+      :background #ffffee
+      :border 2px solid #BBDAFD
+  input[type="checkbox"]
+    :margin-left 100px
+    :float left
+  input[type="submit"]
+    :cursor pointer
+    :background #F0F0F0 url(../images/raquo.gif) 93px 8px no-repeat
+    :border 2px solid #666
+    :color #333
+    :font
+      :size 14px
+      :weight bold
+    :letter-spacing .3em
+    :margin
+      :left 100px
+      :right 70px
+    :padding 3px 15px 3px 6px
+    :text-transform uppercase
+    &:hover
+      :background #ffd100 url(../images/raquo.gif) 93px 8px no-repeat
+  #remember-me p
+    :padding-top 1px
+    :color #365268
+    :font
+      :size 12px
+      :weight 700
+    span
+      :margin-left 3px
+      :padding 2px 5px
+      :background-color #f7f7f7
+      :border-left 2px solid #ccc
+      :border-top 1px solid #e7e7e7
+      :border-right 1px solid #e7e7e7
+      :border-bottom 1px solid #e7e7e7
+  #forgot
+    :font
+      :size 12px
+      :weight 700
+  #register
+    :margin
+      :top 60px
+      :bottom 40px
+      :left 10px
+    :font-weight 700
+    p
+      :margin-top 6px
+    #why-no-reg
+      :font-size 12px
+      :margin-left 3px
+#resetpw-form
+  legend
+    :border 1px solid red
+    :font-size 18px
+    :padding 5px
+    :padding-bottom 20px
+  p
+    :border 1px solid red
+    :padding 15px 0 20px 15px
+    :width 530px
+  ol
+    :border 1px solid orange
+    :margin-bottom 20px
+    li
+      :border 1px solid green
+      :clear both
+      :margin 0 0 .75em
+  label
+    :border 1px solid blue
+    :width 300px
+    :float left
+    :line-height 1.6em
+    :margin-right 10px
+    :text-align right
+    &:after
+      :content ':'
+  input[type="text"]
+    :width 250px
+    :padding 3px
+    :border 2px solid #c6c6c6
+    &:focus
+      :background #ffffee
+      :border 2px solid #BBDAFD
+  button
+    :background #F0F0F0 url(../images/raquo.gif) 253px 9px no-repeat
+    :border 2px solid #666
+    :color #333
+    :font
+      :size 14px
+      :weight bold
+    :letter-spacing .3em
+    :margin
+      :left 100px
+      :right 80px
+    :padding 3px 15px 3px 6px
+    :text-transform uppercase
+    &:hover
+      :background #ffd100 url(../images/raquo.gif) 253px 9px no-repeat
+  #login
+    :margin
+      :top 35px
+      :bottom 25px
+    p
+      :margin-top 6px
+#contact-form
+  legend
+    :font-size 18px
+    :padding-top 5px
+  p
+    :padding 15px 0 20px 15px
+    :width 530px
+  li
+    :clear both
+    :margin 0 0 .75em
+  label
+    :display block
+    :float left
+    :line-height 1.6
+    :margin-right 10px
+    :text-align right
+    :width 120px
+    &:after
+      :content ':'
+  input, textarea, select
+    :width 400px
+    :padding 3px
+    :border 2px solid #c6c6c6
+    &:focus
+      :background #ffffee
+      :border 2px solid #BBDAFD
+  select
+    :width 410px
+  textarea
+    :line-height 1.3em
+    :padding 0 3px
+    :height 200px
+  button
+    :background #F0F0F0 url(../images/raquo.gif) 70px 9px no-repeat
+    :border 2px solid #666
+    :color #333
+    :font
+      :size 14px
+      :weight bold
+    :letter-spacing .3em
+    :margin-left 130px
+    :padding 3px 15px 3px 6px
+    :text-transform uppercase
+    &:hover
+      :background #ffd100 url(../images/raquo.gif) 70px 9px no-repeat
+// ABOUT US PAGE //
+#about-content
+  :background transparent url(../images/cao-hills.png) top right no-repeat
+  :height 450px
+  #take-tour, #download-cashaddon
+    :display block
+    :width 295px
+    :height 31px
+    :margin 25px 0
+    :padding
+      :top 11px
+      :left 25px
+    :font-size 18px
+    :text-decoration none
+  #take-tour
+    :background transparent url(../images/tour-button.gif) left center no-repeat
+  #download-cashaddon
+    :background transparent url(../images/dlcao-button.gif) left center no-repeat
+    :margin-bottom 5px
+  #free-addon
+    :width 320px
+    :font
+      :size 13px
+      :weight 700
+    :text-align center
+    :color #447505
+    span
+      :display block
+      :color #666
+      :font-size 12px
+  #cao-hills
+    :float right
+// TOUR NAV //
+!tour_button_margin_right = 35px
+!tour_button_padding_top = 10px
+!tour_button_padding_left = 15px
+// don't edit these: //
+!tour_button_width = 174px - !tour_button_padding_left
+!tour_button_height = 39px - !tour_button_padding_top
+!tour_nav_width = (174px * 4) + (!tour_button_margin_right * 3)
+#tour-nav
+  :width = !tour_nav_width
+  :height = 39px + 11px
+  :background transparent url(../images/tour-nav-bg.gif) top left repeat-x
+  :margin 25px auto 10px auto
+  li
+    :float left
+    :margin-right = !tour_button_margin_right
+    :height = 39px + 11px
+    a
+      :display block
+      :width = !tour_button_width
+      :padding
+        :top = !tour_button_padding_top
+        :left = !tour_button_padding_left
+      :font-size 18px
+      :background #f3f3f3 url(../images/tour-nav-button.gif) top left no-repeat
+      :color #505050
+      :height = !tour_button_height
+      :text-decoration none
+      &:hover
+        :background #e3e3e3 url(../images/tour-nav-button-hov.gif) top left no-repeat
+        :color #000
+    &#on
+      :background #ccc url(../images/tour-nav-button-on.gif) bottom left no-repeat
+      //:color #7e7900
+      :font-weight 700
+    &.last
+      :margin-right 0px
+// TOUR PAGE //
+#tour-content
+  #download-cashaddon
+    :float right
+    :clear right
+    :margin
+      :top 20px
+      :right 50px
+  #find-out-more
+    :margin 0 auto
+    :display block
+    :width 295px
+    :height 31px
+    :padding
+      :top 11px
+      :left 25px
+    :font-size 18px
+    :text-decoration none
+    :background transparent url(../images/tour-button.gif) left center no-repeat
+    //:background transparent url(../images/dlcao-button.gif) left center no-repeat
+
+// ABOUT US & TOUR PAGES //
+#tour-content, #about-content
+  div 
+    :margin-bottom 12px
+    &.split
+      :width 440px
+  p
+    :font-weight 400
+  a
+    :color #3c7099
+    &:hover
+      :color #ff8c00
+  .ttl
+    :font-size 17px
+    :line-height 1.1em
+  .p
+    :color #444
+    :line-height 1.4em
+  .lg
+    :font-size 16px
+  .xl
+    :font-size 19px
+  .xxl
+    :font-size 24px
+  .lite
+    :color #666
+  .dark
+    :color #323232
+  .strong
+    :font-weight 700
+  .green
+    :color #4c9758
+  .lite-green
+    :color #5caf6a
+  .blue
+    :color #4b81ab
+  .green-xl
+    :color #5caf6a
+    :font-size 28px
+    :font-variant small-caps
+    :font-style italic
+    :padding
+      :left 50px
+      :bottom 8px
+  #cashaddon-leaf
+    :background transparent url(../images/cashaddon-leaf.png) top left no-repeat
+    :padding-top 10px
+  .cao
+    :color #444
+    :font-weight 700
+    :font-variant small-caps
+  .note
+    :color #666
+    :font-size 12px
+    :line-height 1.2em
+  .m
+    :margin-left 8px
+  .m-lg
+    :margin-left 18px
+  #screencast
+    :float right
+  #cashback-plus
+    :float right
+    :width 420px
+    :height 306px
+    //:border 1px solid #ccc
+    :background #f3f3f3 url(../images/cash-back-plus-box.gif) top left no-repeat
+    p
+      :padding 8px 12px
+      :font-size 14px
+      :line-height 140%
+    h3
+      //:background #666 url(../images/blackbg.gif) top left repeat-x
+      :color white
+      //:height 16px
+      :padding 8px 12px
+      :font
+        :size 16px
+        :weight 400
+      :text-transform uppercase
+      span
+        :font-weight 700
+        :color #CEE9FF
+    ul
+      :margin 3px
+      li
+        //:line-height 130%
+        :padding 11px 3px 11px 40px
+        :border-top 1px solid #656565
+      #plus-active
+        :background transparent url(../images/plus-active.gif) 10px center no-repeat
+      #plus-standby
+        :background transparent url(../images/plus-standby.gif) 10px center no-repeat
+      #plus-error
+        :background transparent url(../images/plus-error.gif) 10px center no-repeat
+    #screenshot
+      :display block
+      :font-size 13px
+      :color #666
+      :padding
+        :top 5px
+        :left 12px
+        
+  //.green1 {color:#70bf7e}
+  //.grey1 {color:#666}
+  //.blue1 {color:#446680}
+
+// CASH BACK SHOPS PAGE //
+!left_col_width = 180px
+!right_col_width = 200px
+// below variable spaces out the page now that the mid column no longer includes featured stores
+!mid_col_right_margin = 65px
+// !featured_stores_width = 170px (this is now in the right column)
+!featured_stores_width = 0px
+!mid_col_width = !content_width - !left_col_width - !right_col_width - !mid_col_right_margin
+!stores_list_width = !mid_col_width - !featured_stores_width
+#cao-reminder
+  :padding 8px 10px
+  :font-weight 700
+  :text-align center
+  :border 1px dashed #86c732
+  //:background #ffffee url(../images/cao-icons.gif) 10px center no-repeat
+  :background-color #ffe
+  :margin-bottom 10px
+  :color #666
+  span
+    :color #3c7099
+  a
+    :text-decoration none
+    :color #3c7099
+    :background transparent url(../images/crumb-bullet.gif) right center no-repeat
+    :margin-left 5px
+    :padding-right 8px
+    &:hover
+      :color #ff8c00
+// VARIABLES
+// 6px = 2*3px padding * 2, 2px = 2*1px border
+!popular_store_width = 150px + 6px + 2px
+#cashback-shopping, #tag-page
+  a
+    :text-decoration none
+    :color #3c7099
+    &:hover
+      :color #ff8c00
+  h2
+    :font-size 12px
+    :color #555
+    :padding 3px
+    :border-bottom 1px solid #ccc
+  #bg-end
+    :float right
+    :background transparent url(../images/cb-sect-bg-right.gif) top left no-repeat
+    :width 10px
+    :height 23px
+  #links
+    :line-height 1em
+    a:hover
+      :text-decoration underline
+      :color #3c7099
+    :float right
+    //:border 2px solid #DCDCDC
+    :background #effbf9 url(../images/cb-links-box.gif) top left no-repeat
+    :font-size 13px
+    :width 280px
+    :height 70px
+    #ttl
+      :color #666
+      :background-color #DCDCDC
+      :font
+        :weight 700
+        :size 10px
+      :padding
+        :left 3px
+      :display none
+    ul
+      :padding
+        :top 2px
+        :left 20px
+      li
+        :padding 3px 15px
+        :background transparent url(../images/cb-links-bullet2.gif) left 5px no-repeat
+    #get-cao
+      :display block
+      :padding 5px 0px 5px 15px
+      :font-weight 700
+      :background transparent url(../images/cb-links-bullet.gif) right 8px no-repeat
+      :width 235px
+  #h1
+    :background transparent url(../images/cb-h1-box.gif) top left no-repeat
+    :height 63px
+    :margin-bottom 10px
+    :padding
+      :top 7px
+      :left 15px
+    h1
+      :font-size 17px
+      :color #365d03
+    #abstract
+      :margin
+        :top 2px
+        :left 5px
+      :color #666
+      :font
+        :size 13px
+        :weight 700
+  #stores, #deals, #coupons
+    :float left
+  #stores
+    :width 424px
+    :margin
+      :right 22px
+    li
+      :padding 10px 5px
+      :border-top 1px solid #ccc
+      span
+        :float right
+        :color #ff8c00
+        :font-weight 700
+      a
+        :text-decoration none
+        :color #255a85
+        &:hover
+          :font-weight 700
+      &:hover
+        :font-weight 700
+        :background-color #F1F8E9
+    #ttl
+      :color #555
+      :font-weight 700
+      //:border 2px solid #eee
+      :border 0
+      :padding 3px 5px 3px 10px
+      :font-size 12px
+      :background #d7edf9 url(../images/ico-merchant.gif) left center no-repeat
+    #ttl span
+      :color #555
+      //:background transparent url(../images/ico-cashback.gif) left center no-repeat
+      //:padding-left 18px
+    #bg-end
+      :margin
+        :top -3px
+        :right -5px
+  #deals, #coupons
+    :width= 230px
+    ul
+      :padding 3px
+  #deals
+    :margin-right 10px
+    h2
+      :background #d7edf9 url(../images/ico-dealbag.gif) top left no-repeat
+      :padding-left 25px
+  #coupons
+    h2
+      :background #d7edf9 url(../images/ico-scissors.gif) top left no-repeat
+      :padding-left 25px
+  #popular-stores
+    :float right
+    :clear right
+    :width= 3 * !popular_store_width
+    :margin-bottom 10px
+    h2
+      :padding-left 25px
+      :background #d7edf9 url(../images/ico-star.gif) top left no-repeat
+    ul
+      li
+        :float left
+        :padding 3px
+        :text-align center
+        a
+          :display block
+          :border 1px solid #86c732
+          :height 60px
+          :width 150px
+          :font-size 13px
+          :padding-top 5px
+          img
+            :margin-bottom 5px
+  #tag-cloud, #deals-coupons
+    :float right
+    :clear right
+    :margin-bottom 10px
+    :width 472px
+    .end
+      :height 12px
+    .body
+      :padding 10px
+      :padding-bottom 0
+      :border-left 2px solid #E0E0E0
+      :border-right 2px solid #E0E0E0
+    .ttl
+      :padding 5px
+      :color #555
+      :font
+        :size 12px
+        :weight 700
+      a
+        :float right
+        :font-weight 400
+        :margin-right 10px
+  #tag-cloud
+    .end
+      :background transparent url(../images/tagcloud-472.gif) top left no-repeat
+    .ttl
+      :padding-left 40px
+      :background transparent url(../images/tagcloud-472.gif) bottom left no-repeat
+  #deals-coupons
+    .end
+      :background transparent url(../images/cloud-472.gif) top left no-repeat
+    .ttl
+      :padding-left 10px
+      :background transparent url(../images/cloud-472.gif) bottom left no-repeat
+      span
+        :padding-left 20px
+        :background transparent url(../images/ico-cashback.gif) left center no-repeat
+#cashback-shops
+  h2
+    :font-size 16px
+    :color #365d03
+  #left
+    :width = !left_col_width
+  #right
+    :width = !right_col_width
+  #left, #right
+    :float left
+    .cao
+      :font
+        :variant small-caps
+        :weight 700
+    ul
+      :padding
+        :top 2px
+        :left 8px
+      :font-size 15px
+      :margin-bottom 20px
+      li
+        :margin 4px 0
+      a
+        :text-decoration none
+        :color #3c7099
+        &:hover
+          :color #ff8c00
+      #learn-more
+        :display block
+        :margin-top 5px
+        :width 82px
+        :background transparent url(../images/crumb-bullet.gif) right center no-repeat
+  #mid
+    :float left
+    :width = !mid_col_width
+    :margin-right = !mid_col_right_margin
+    a
+      :text-decoration none
+      :color #3c7099
+      &:hover
+        :color #ff8c00
+    #abstract
+      :margin
+        :top 4px
+        :left 20px
+      :color #666
+      :font
+        :size 13px
+        :weight 700
+    #popular-stores
+      :margin-top 10px
+      ul
+        li
+          :float left
+          :padding 3px
+          :text-align center
+          a
+            :display block
+            :border 1px solid #86c732
+            :height 60px
+            :width 150px
+            :font-size 13px
+            :padding-top 5px
+            img
+              :margin-bottom 5px
+    #search
+      :clear both
+      :padding 10px 0
+      #q
+        :width 346px
+        :border 0
+        :border-top 1px solid #86c732
+        :border-left 1px solid #86c732
+        :border-bottom 1px solid #86c732
+        :padding 3px
+        :padding-left 22px
+        :background transparent url(../images/search-icon.gif) left center no-repeat
+      #submit
+        :border 1px solid #86c732
+        :background-color #DCF3B9
+        :color #365d03
+        :padding 2px 4px
+      #q:hover, #q:focus
+        :background-color #ffffea
+      #view
+        :border 1px solid #86c732
+        :background #DCF3B9 url(../images/ico-list.gif) 3px 3px no-repeat
+        :color #365d03
+        :margin-top 5px
+        :font-size 12px
+        :padding
+          :left 18px
+        option
+          :padding 2px 0 0px 18px
+        .list
+          :background transparent url(../images/ico-list.gif) 2px 3px no-repeat
+        .gallery
+          :background transparent url(../images/ico-gallery.gif) 2px 3px no-repeat
+      #alpha
+        :float right
+        :margin
+          :top 6px
+          :right 3px
+        :border-left 0px solid #ccc
+        :font-size 12px
+        a
+          :text-decoration none
+          :padding 0 2px
+          :border-right 0px solid #ccc
+    #featured
+      :float right
+      :width = !featured_stores_width
+      :text-align center
+      :padding-top 15px
+      //:border 1px solid orange
+    #stores
+      //:border 1px solid purple
+      :width = !stores_list_width
+      :margin-bottom 15px
+      li
+        :padding 10px 5px
+        :border-top 1px solid #ccc
+        span
+          :float right
+          :color #ff8c00
+          :font-weight 700
+        a
+          :text-decoration none
+          :color #255a85
+          &:hover
+            :font-weight 700
+        &:hover
+          :font-weight 700
+          :background-color #F1F8E9
+      #ttl
+        :border 2px solid #eee
+        :padding 3px 5px 3px 23px
+        :background #e3e3e3 url(../images/ico-merchant.gif) 3px center no-repeat
+      #ttl, #ttl span
+        :color #555
+        :font
+          :weight 700
+          :size 13px
+      #ttl span
+        :background transparent url(../images/ico-cashback.gif) left center no-repeat
+        :padding-left 18px
+    #legend
+      :width = !mid_col_width - 200px
+      :padding 5px
+      :margin 10px 0
+      :background-color #f3f3f3
+      :color #444
+      :border-top 1px solid #ccc
+// HELP NAV //
+#help-nav
+  :float right
+  :width 280px
+  :padding-bottom 9px
+  :background #f7f7f7 url(../images/helpbox-btm.gif) bottom left no-repeat
+  p
+    :background transparent url(../images/helpbox-top.gif) top left no-repeat
+    :height = 35px - 6px
+    :color #3c7099
+    :font
+      :size 15px
+      :weight 700
+    :padding
+      :top 6px
+      :left 10px
+  ul
+    :background transparent url(../images/helpbox-bg.gif) left repeat-y
+    :line-height 220%
+    :padding
+      :left 4px
+      :right 4px
+    li
+      :border-bottom 1px dashed #ccc
+      :padding
+        :left 15px
+      a
+        :text-decoration none
+      span
+        :color #3c7099
+        :font-weight 700
+      &:last-child
+        :border 0
+#tag-page
+  .big-cloud
+    :margin 0 auto
+    :width 850px
+    :margin-bottom 25px
+    .end
+      :height 12px
+      :background transparent url(../images/tagcloud-850.gif) top left no-repeat
+    .body
+      :padding 10px
+      :padding-bottom 0
+      :border-left 2px solid #E0E0E0
+      :border-right 2px solid #E0E0E0
+      :line-height 200%
+    .ttl
+      :background transparent url(../images/tagcloud-850.gif) bottom left no-repeat
+      :padding 5px
+      :padding-left 40px
+      :color #555
+      :font
+        :size 12px
+        :weight 700
+      a
+        :float right
+        :font-weight 400
+        :margin-right 10px
+  #results
+    :margin-bottom 20px
+    :background transparent url(../images/ico-tag.gif) 3px 2px no-repeat
+    :padding-left 35px
+    :font-weight 700
+    :color #555
+    span
+      :color #3c7099
+      :font-style italic
+  #view-all
+    :float right
+    :font-size 13px
+    :background transparent url(../images/crumb-bullet.gif) 80px center no-repeat
+    :padding 0px 15px 1px 5px
+    :border 1px solid #ccc
+    &:hover
+      :color #3c7099
+      :background-color #E5F9FB
+      :border 1px solid #666
+  #no-stores, #no-deals-coupons
+    :font
+      :style italic
+      :weight 700
+    :color #333
+    :padding 10px
+  #no-deals-coupons
+    :float right
+    :width 462px
+    :padding-left 0
+#cashback-store-page
+  #h1
+    :color #447505
+    :font
+      :size 22px
+      :weight 700
+    :margin-bottom 5px
+    a
+      :font-size 13px
+      :margin-left 10px
+      :padding-left 10px
+      :border-left 1px solid #ccc
+  #description
+    :color #666
+    :font-size 13px
+    :line-height 1.1em
+    :margin 0 15px

@@ -1,0 +1,42 @@
+#cashback-store-page
+  #left-col
+    #store-details.cloudp-250
+      .start
+      .body
+        #logo= link_to( image_tag(get_store_logo(@store), :alt => @store.name), redirect_store_url(@store))
+        #cashback
+          %p= link_to(number_to_percentage(@store.cashback_to_user, :precision => 1), redirect_store_url(@store))
+          %p Cash Back
+        #tags= '<span>Tags:</span>'+get_tags(@store)
+        #shop-now= link_to('Shop Now', redirect_store_url(@store))
+        #terms= "<span>Conditions:</span><ul>#{get_cashback_terms(@store)}</ul>" unless @store.cashback_terms.blank?
+      .end
+    #tag-cloud.cloud-250
+      .start
+        #ttl Store Tags
+      .body.tag-cloud-style= get_tag_cloud(@tags)
+      .end
+  #h1= @store.name + link_to('Visit Website &raquo;', redirect_store_path(@store))
+  #description= @store.description
+  #deals-coupons.cloudp-650
+    .start
+    .body
+      #section1
+        #ttl= "Deals for #{@store.name}"
+        %ul
+          %li deal 1
+          %li deal 2
+          %li deal 3
+          %li deal 4
+          %li deal 5
+      #section2
+        #ttl= "Coupons for #{@store.name}"
+        %ul
+          %li coupon 1
+          %li coupon 2
+          %li coupon 3
+          %li coupon 4
+          %li coupon 5
+      .clear
+    .end
+  .clear

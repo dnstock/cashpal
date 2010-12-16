@@ -1,0 +1,24 @@
+<div id="about-content">
+  <div id="cashaddon-leaf">
+    <p class="green-xl">we're green</p>
+    <p class="p m-lg">Yep, we're <span class="green">green conscious</span>, and forever <span class="blue">eco-friendly</span>.</p>
+    <p class="p">In fact, we're <span class="blue">obsessed</span> with help you make your green <span class="green">do more</span>.</p>
+    <p class="p">We make cash-back savings <span class="blue">easy</span>, and it's totally <em>economically</em>-friendly.</p>
+    <p class="p">We'll give part of the <span class="green">green</span> you spend online right back to you, <span class="blue">good as new</span>.</p>
+  </div>
+  <div>
+    <p class="p">Welcome to a place where <em>everything</em> you buy is on sale.</p>
+    <p class="p lite">Where bargains only get better and you always save more.</p>
+  </div>
+  <div>
+    <p class="ttl">Welcome to a world with <span class="cao xl">cash<span class="cao-blue">add</span>on</span></p>
+    <p class="p lg lite">Home of the <span class="green">always-save-more</span> motto.</p>
+  </div>
+  <div>
+    <p><a href="#" id="take-tour">Take our tour and get started</a></p>
+  </div>
+  <div>
+    <p><a href="#" id="download-cashaddon">Download CASH<strong>ADD</strong>ON Now</a></p>
+    <p id="free-addon"><span>Free Firefox add-on. No ads, no spyware. Just savings.</span></p>
+  </div>
+</div>

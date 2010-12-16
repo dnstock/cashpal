@@ -1,0 +1,6 @@
+#loginbox00
+  %ul
+    %li#welcome= "Welcome, <strong>#{current_user.login}</strong>"
+    %li#cash $14.85 ($42.18)
+    %li= link_to('My Account', account_path)
+    %li= link_to('Logout', logout_path)

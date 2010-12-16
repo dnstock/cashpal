@@ -1,0 +1,143 @@
+<table style="text-align: left; width: 90%;" border="0" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;">
+        <table style="text-align: left; width: 90%;" border="0" cellpadding="2" cellspacing="2">
+          <tbody>
+            <tr>
+              <td style="vertical-align: top;"></td>
+              <td style="vertical-align: top;">
+                <table style="text-align: left; width: 100%;" border="0" cellpadding="2" cellspacing="2">
+                  <tbody>
+                  	<tr>
+                      <td style="vertical-align: top;">
+                        <table style="border-collapse: collapse; text-align: left;" border="1" bordercolor="#c5cbd7" 
+							cellpadding="2" cellspacing="0" width="100%">
+							<tr>
+								<th colspan="4" align="left" class ="labelgreen">Summary of Cash Back</th>
+							</tr>
+							<tr>
+								<th style="background-color: rgb(204, 204, 204);" class="columnheading">Pending</th>
+								<th style="background-color: rgb(204, 204, 204);" class="columnheading">Total Earned</th>
+								<th style="background-color: rgb(204, 204, 204);" class="columnheading">Total Paid</th>
+								<th style="background-color: rgb(204, 204, 204);" align="right" class="columnheading">Available</th>
+							</tr>
+							<tr>
+								<td align="right" class="data"><%= show_2_decimal_places(round_to_2decimal(@user_commission_summary.pending || 0).to_s) || 0 %></td>
+								<td align="right" class="data"><%= show_2_decimal_places(round_to_2decimal(@user_commission_summary.earned || 0).to_s) || 0%></td>
+								<td align="right" class="data"><%= show_2_decimal_places(round_to_2decimal(@user_commission_summary.paid || 0).to_s) || 0%></td>
+								<td align="right" class="data"><%= show_2_decimal_places(round_to_2decimal(@user_commission_summary.available || 0).to_s) || 0%></td>
+							</tr>
+						</table>
+					 </td>
+                    </tr>
+                    <tr>
+                    <td colspan="4" style="background-color: rgb(123, 175, 216);"><img src="/images/transparent.gif" height="5" width="1"></td>
+                    </tr>
+					<tr>
+						<td class="fineprint" align="right">*cashback from online purchases generally take up to 7 days to appear in your account</td>
+					</tr>
+					<tr>
+                      <td style="vertical-align: top;">
+                        <table style="border-collapse: collapse; text-align: left; width: 500px;" border="0" bordercolor="#cccccc" cellpadding="0" cellspacing="0">
+                          <tbody>
+                            <tr>
+                             <td style="text-align: left;vertical-align:middle;">
+                                <span class="labels2"><br>
+                                
+                                    <% form_tag :controller=>"account", :action=>"balance" do -%>  Monthly Account Details: 
+								  	<%= select_tag(:month_to_view,options_for_select(get_months_options(),params[:month_to_view]));%>								
+                                  <input value="View" type="submit">
+                                  <% end -%>  </span>
+							  </td>
+                            </tr>
+                          </tbody>
+                        </table></td>
+                    </tr>
+                    
+					<!-- %= debug(params)% -->
+                    
+                    <tr>
+                      <td class ="labels2">Pending Cash Back  </td>
+                    </tr>
+                    <tr>
+                      <td style="vertical-align: top;">
+                        <table style="text-align: left;width: 600px;" border="1" bordercolor="#c5cbd7" cellpadding="2" cellspacing="0">
+                          <tbody>
+                            <tr>
+                              <td style="background-color: rgb(204, 204, 204);" class="columnheading">
+                                Date</td>
+                              <td style="background-color: rgb(204, 204, 204);" class="columnheading">
+                                Store</td>
+                              <td style="background-color: rgb(204, 204, 204);" class="columnheading"> Order
+                                No.&nbsp;&nbsp;</td>
+                              <td style="background-color: rgb(204, 204, 204);" class="columnheading"> Purchase
+                                Amount&nbsp;&nbsp;</td>
+                              <td style="background-color: rgb(204, 204, 204);" class="columnheading">
+                                Commission %&nbsp;&nbsp;</td>
+                              <td style="background-color: rgb(204, 204, 204); text-align: right;" class="columnheading">
+                                Commission</td>
+                            </tr>
+							<% for c in @user_transactions_pending -%>
+							<tr>
+                              <td class="data" align="left"><%= c.date.strftime('%B %d, %Y') %></td>
+                              <td class="data" align="left"><%= c.name %></td>
+                              <td class="data" align="left"><%= c.action_id %></td>
+                              <td class="data" align="left"><%= c.sale_amount %></td>
+                              <td class="data" align="left">< %= to_percent(c.commission_to_members.to_s) % >%</td>
+                              <td class="data" style="text-align: right;"><%= show_2_decimal_places(round_to_2decimal(c.user_commission).to_s) %></td>
+                            </tr>
+							<% end -%>
+                        
+                          </tbody>
+                        </table>
+						
+                       </td>
+                    </tr>
+					<tr><td><br /></td></tr>
+                    <tr>
+                      <td class ="labels2">Earned Cash Back </td>
+                    </tr>
+                    <tr>
+                      <td style="vertical-align: top;">
+                        <table style="width: 600px; text-align: left;" border="1" bordercolor="#c5cbd7" cellpadding="2" cellspacing="0">
+                          <tbody>
+                            <tr>
+                              <td style="background-color: rgb(204, 204, 204);" class="columnheading">
+                                Date</td>
+                              <td style="background-color: rgb(204, 204, 204);" class="columnheading">
+                                Store</td>
+                              <td style="background-color: rgb(204, 204, 204);" class="columnheading"> Order
+                                No.&nbsp;&nbsp;</td>
+                              <td style="background-color: rgb(204, 204, 204);" class="columnheading"> Purchase
+                                Amount&nbsp;&nbsp;</td>
+                              <td style="background-color: rgb(204, 204, 204);" class="columnheading">
+                                Commission %&nbsp;&nbsp;</td>
+                              <td style="background-color: rgb(204, 204, 204); text-align: right;" class="columnheading">
+                                Commission</td>
+                            </tr>
+                            <% for c in @user_transactions_earned -%>
+							<tr>
+                              <td class="data" align="left"><%= c.date.strftime('%B %d, %Y') %></td>
+                              <td class="data" align="left"><%= c.name %></td>
+                              <td class="data" align="left"><%= c.action_id %></td>
+                              <td class="data" align="left"><%= c.sale_amount %></td>
+                              <td class="data" align="left">< %= to_percent(c.commission_to_members.to_s) % >%</td>
+                              <td class="data" style="text-align: right;"><%= show_2_decimal_places(round_to_2decimal(c.user_commission).to_s) %></td>
+                            </tr>
+							<% end -%>
+                        
+                          </tbody>
+                        </table>
+					  </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <br></td>
+            </tr>
+          </tbody>
+        </table>
+        <br></td>
+    </tr>
+  </tbody>
+</table>

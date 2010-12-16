@@ -1,0 +1,1854 @@
+.clear {
+  clear: both; }
+
+.right {
+  float: right; }
+
+.grey {
+  color: #666; }
+
+.em {
+  font-style: italic; }
+
+.strong {
+  font-weight: 700; }
+
+button {
+  cursor: pointer; }
+
+.cao-green, .text-green {
+  color: #447505; }
+
+.cao-lite-green, .text-lite-green {
+  color: #599a06; }
+
+.cao-blue {
+  color: #3c7099; }
+
+a {
+  color: #3c7099; }
+  a:hover {
+    color: #ff8c00; }
+
+.error, .notice, .success {
+  padding: .8em;
+  margin-bottom: 1em;
+  border: 2px solid #ddd; }
+
+.error {
+  background: #FBE3E4;
+  color: #8a1f11;
+  border-color: #FBC2C4; }
+  .error a {
+    color: #8a1f11; }
+
+.notice {
+  background: #FFF6BF;
+  color: #514721;
+  border-color: #FFD324; }
+  .notice a {
+    color: #514721; }
+
+.success {
+  background: #E6EFC2;
+  color: #264409;
+  border-color: #C6D880; }
+  .success a {
+    color: #264409; }
+
+#notice {
+  border: 2px solid #ccc;
+  background-color: #f3f3f3;
+  color: #333;
+  margin-bottom: 10px;
+  padding: 3px 6px;
+  font-size: 13px;
+  font-weight: 700; }
+
+h1#page-title {
+  display: none; }
+
+.form-field-error label {
+  font-weight: 700;
+  color: #c00; }
+
+.form-field-error input {
+  border: 2px solid #FBC2C4; }
+
+.errorExplanation, div.form-field-error {
+  font-size: 13px;
+  color: #8a1f11;
+  border: 2px solid #FBC2C4;
+  background: #FBE3E4 url(../images/cancel.png) 15px center no-repeat;
+  padding-left: 60px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 3px;
+  margin-bottom: 15px; }
+  .errorExplanation h2, div.form-field-error h2 {
+    color: #cc0000; }
+  .errorExplanation ul, div.form-field-error ul {
+    list-style: circle inside;
+    color: #cc0000; }
+
+.errorExplanation h2 {
+  display: none; }
+
+.cloudp-250 .body, .cloud-250 .body, .cloudp-650 .body, .cloudp-550 .body {
+  border-left: 2px solid #E0E0E0;
+  border-right: 2px solid #E0E0E0; }
+
+.cloudp-550 {
+  width: 550px; }
+
+.cloudp-650 {
+  width: 650px; }
+
+.cloudp-250, .cloud-250 {
+  width: 250px; }
+
+.cloudp-250 .start {
+  background: transparent url(../images/cloudp-250.gif) bottom left no-repeat;
+  height: 12px; }
+.cloudp-250 .end {
+  background: transparent url(../images/cloudp-250.gif) top left no-repeat;
+  height: 12px; }
+
+.cloud-250 .start {
+  background: transparent url(../images/cloud-250.gif) bottom left no-repeat;
+  height: 27px; }
+.cloud-250 .end {
+  background: transparent url(../images/cloud-250.gif) top left no-repeat;
+  height: 12px; }
+
+.cloudp-650 .start {
+  background: transparent url(../images/cloudp-650.gif) bottom left no-repeat;
+  height: 12px; }
+.cloudp-650 .end {
+  background: transparent url(../images/cloudp-650.gif) top left no-repeat;
+  height: 12px; }
+
+.cloudp-550 .start {
+  background: transparent url(../images/cloudp-550.gif) bottom left no-repeat;
+  height: 12px; }
+.cloudp-550 .end {
+  background: transparent url(../images/cloudp-550.gif) top left no-repeat;
+  height: 12px; }
+
+body {
+  margin: 0;
+  background-color: white;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  background: white url(../images/grass.png) bottom center repeat-x;
+  background-attachment: fixed; }
+
+textarea, input, select {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px; }
+
+#page {
+  margin: 5px auto;
+  width: 950px; }
+
+#header-hp {
+  background: transparent url(../images/cashaddon-hdr.png) top left no-repeat;
+  height: 73px; }
+
+#header {
+  background: transparent url(../images/cashaddon-hdrs.png) top left no-repeat;
+  height: 113px; }
+
+#header, #header-hp {
+  font-size: 12px; }
+  #header a, #header-hp a {
+    color: white;
+    text-decoration: none; }
+    #header a:hover, #header-hp a:hover {
+      color: yellow; }
+  #header #logo, #header-hp #logo {
+    display: block;
+    width: 205px;
+    height: 27px;
+    font-weight: bold;
+    padding-top: 46px;
+    padding-left: 85px; }
+  #header #loginbox00, #header-hp #loginbox00 {
+    float: right;
+    color: #DCF3B9;
+    margin-top: 8px;
+    margin-right: 3px;
+    font-size: 12px;
+    font-weight: 700; }
+    #header #loginbox00 li, #header-hp #loginbox00 li {
+      float: left; }
+      #header #loginbox00 li a, #header-hp #loginbox00 li a {
+        color: #DCF3B9;
+        border: 1px solid transparent;
+        padding: 0 3px 3px 3px; }
+        #header #loginbox00 li a:hover, #header-hp #loginbox00 li a:hover {
+          background-color: #6FA4CD;
+          border-bottom: 2px solid #587E9B; }
+    #header #loginbox00 #welcome, #header-hp #loginbox00 #welcome {
+      background: transparent url(../images/ico-welcome.gif) 0px 0px no-repeat;
+      padding-left: 18px; }
+    #header #loginbox00 #welcome, #header #loginbox00 #cash, #header-hp #loginbox00 #welcome, #header-hp #loginbox00 #cash {
+      padding-bottom: 2px;
+      padding-right: 5px;
+      margin-right: 5px;
+      border-right: 1px solid #cfcfcf; }
+    #header #loginbox00 .cashback-quickview, #header-hp #loginbox00 .cashback-quickview {
+      color: #DCF3B9; }
+      #header #loginbox00 .cashback-quickview:hover, #header-hp #loginbox00 .cashback-quickview:hover {
+        color: #BFF4FF; }
+  #header #loginbox0, #header-hp #loginbox0 {
+    background: #3f719a url(../images/loginbox.gif) bottom left no-repeat;
+    float: right;
+    margin-top: 4px; }
+    #header #loginbox0 a, #header-hp #loginbox0 a {
+      display: block;
+      color: #D6E1E9;
+      padding: 3px 17px 5px 10px;
+      background: transparent url(../images/loginbox-bullet.gif) right center no-repeat; }
+      #header #loginbox0 a:hover, #header-hp #loginbox0 a:hover {
+        color: yellow; }
+  #header #loginbox, #header-hp #loginbox {
+    float: right;
+    margin-top: 6px;
+    margin-right: 3px; }
+    #header #loginbox td, #header-hp #loginbox td {
+      font-size: 11px;
+      color: #e3e3e3; }
+    #header #loginbox .loginbox-input, #header-hp #loginbox .loginbox-input {
+      font-size: 11px;
+      border: 1px solid #ccc;
+      background-color: #f3f3f3;
+      width: 120px;
+      margin-right: 5px;
+      margin-top: 1px; }
+      #header #loginbox .loginbox-input:hover, #header-hp #loginbox .loginbox-input:hover {
+        background-color: white; }
+      #header #loginbox .loginbox-input:focus, #header-hp #loginbox .loginbox-input:focus {
+        background-color: white; }
+    #header #loginbox #loginbox-submit, #header-hp #loginbox #loginbox-submit {
+      font-size: 11px;
+      border: 1px solid #ccc;
+      margin-right: 8px;
+      margin-top: 1px; }
+    #header #loginbox #loginbox-close, #header-hp #loginbox #loginbox-close {
+      float: right;
+      text-align: right;
+      display: inline;
+      font-size: 9px;
+      color: #ffd3d3; }
+  #header #get-cashaddon, #header-hp #get-cashaddon {
+    float: right; }
+  #header #topnav, #header-hp #topnav {
+    float: right;
+    clear: right;
+    background: transparent url(../images/topnav-end.gif) 100% -1px no-repeat;
+    padding-right: 8px;
+    height: 26px; }
+    #header #topnav li, #header-hp #topnav li {
+      float: left;
+      font-weight: 700;
+      padding: 8px 16px;
+      border-top: 1px solid #bed5e7;
+      background: #5e8aad url(../images/topnav-pipe.gif) right center no-repeat; }
+      #header #topnav li a, #header-hp #topnav li a {
+        color: #f3f3f3; }
+        #header #topnav li a:hover, #header-hp #topnav li a:hover {
+          color: yellow; }
+    #header #topnav #start, #header-hp #topnav #start {
+      padding: 8px 0;
+      border: 0;
+      background: transparent url(../images/topnav-start.gif) top left no-repeat; }
+    #header #topnav #end, #header-hp #topnav #end {
+      background: #5e8aad;
+      padding-right: 13px; }
+    #header #topnav #ico, #header-hp #topnav #ico {
+      padding-left: 8px; }
+      #header #topnav #ico span, #header-hp #topnav #ico span {
+        background: transparent url(../images/topnav-forums.gif) left center no-repeat;
+        padding-left: 20px; }
+    #header #topnav #search, #header-hp #topnav #search {
+      padding-top: 7px;
+      padding-bottom: 5px;
+      padding-left: 10px;
+      background: #5e8aad;
+      padding-right: 7px; }
+
+#breadcrumbs {
+  position: relative;
+  float: right;
+  color: #666;
+  font-size: 10px;
+  margin-right: 10px;
+  margin-bottom: -10px; }
+  #breadcrumbs a {
+    text-decoration: none;
+    color: #3c7099; }
+    #breadcrumbs a:hover {
+      color: #ff8c00; }
+  #breadcrumbs .crumb-link {
+    background: transparent url(../images/crumb-bullet.gif) left center no-repeat;
+    padding-left: 9px;
+    margin-left: 4px; }
+
+#title-breadcrumbs {
+  margin-top: -36px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 24px; }
+  #title-breadcrumbs p {
+    font-size: 18px; }
+    #title-breadcrumbs p a {
+      color: #447505;
+      text-decoration: none; }
+      #title-breadcrumbs p a:hover {
+        text-decoration: underline; }
+    #title-breadcrumbs p #crumb-hp, #title-breadcrumbs p #first-crumb {
+      background: transparent url(../images/hp-bullet.gif) left center no-repeat;
+      padding-left: 18px; }
+    #title-breadcrumbs p .crumb-link, #title-breadcrumbs p #crumb-title, #title-breadcrumbs p #last-crumb {
+      background: transparent url(../images/title-bullet.gif) left center no-repeat;
+      padding-left: 12px;
+      margin-left: 6px; }
+    #title-breadcrumbs p #crumb-title, #title-breadcrumbs p #last-crumb {
+      color: #447505;
+      font-weight: 700; }
+  #title-breadcrumbs #hello-user {
+    float: right;
+    color: white;
+    font-size: 13px; }
+    #title-breadcrumbs #hello-user a {
+      background: transparent url(../images/cao-avatar-nav.gif) left 2px no-repeat;
+      text-decoration: none;
+      color: #447505;
+      height: 22px;
+      padding-left: 30px;
+      padding-top: 4px;
+      padding-bottom: 3px; }
+      #title-breadcrumbs #hello-user a:hover {
+        text-decoration: underline; }
+  #title-breadcrumbs #search {
+    float: right;
+    margin-top: -4px;
+    margin-right: -5px; }
+    #title-breadcrumbs #search li {
+      float: left; }
+    #title-breadcrumbs #search #query, #title-breadcrumbs #search #section, #title-breadcrumbs #search #submit {
+      font-size: 14px;
+      font-weight: 700;
+      border: 2px solid #A8CF74;
+      background: #efefef;
+      color: #333; }
+    #title-breadcrumbs #search #query {
+      width: 180px;
+      border-right: 0;
+      padding: 3px;
+      padding-left: 22px;
+      background: #efefef url(../images/search-icon.gif) 6px 5px no-repeat; }
+    #title-breadcrumbs #search #section, #title-breadcrumbs #search #submit {
+      padding: 2px; }
+    #title-breadcrumbs #search #query:hover, #title-breadcrumbs #search #query:focus, #title-breadcrumbs #search #section:hover, #title-breadcrumbs #search #submit:hover {
+      background-color: #ffffea;
+      border-top: 2px solid #9BBF6B;
+      border-left: 2px solid #9BBF6B;
+      border-bottom: 2px solid #9BBF6B; }
+
+#search-panel {
+  display: none;
+  background: transparent url(../images/search-panel.png) top left no-repeat;
+  width: 950px;
+  height: 63px;
+  margin-top: -44px;
+  margin-left: -15px;
+  margin-bottom: 10px;
+  font-size: 12px; }
+  #search-panel #container {
+    position: relative;
+    top: 16px;
+    clear: both;
+    padding: 0 25px; }
+  #search-panel li {
+    float: left; }
+  #search-panel select {
+    background: #eee;
+    font-size: 12px;
+    border: 1px solid #888;
+    color: #333; }
+    #search-panel select:hover {
+      background-color: #ecf7fc; }
+  #search-panel #options {
+    float: left; }
+    #search-panel #options li {
+      margin-right: 10px; }
+    #search-panel #options #category {
+      font-weight: 700; }
+  #search-panel form {
+    float: right;
+    margin-top: -1px; }
+    #search-panel form #q {
+      width: 200px;
+      border: 0;
+      border-top: 1px solid #888;
+      border-left: 1px solid #888;
+      border-bottom: 1px solid #888;
+      padding: 2px;
+      padding-left: 20px;
+      background: #eee url(../images/search-icon.gif) 5px 4px no-repeat;
+      font-size: 12px; }
+    #search-panel form #section {
+      padding: 1px 0;
+      margin-right: 2px;
+      margin-top: 0; }
+    #search-panel form #submit {
+      border: 1px solid #888;
+      background: #eee;
+      color: #333;
+      padding: 1px 4px;
+      font-size: 12px; }
+    #search-panel form #q:hover, #search-panel form #q:focus, #search-panel form #submit:hover {
+      background-color: #ecf7fc; }
+
+#footer {
+  clear: both;
+  border-top: 1px solid #D0F4FE;
+  background: transparent url(../images/trans-btm.png) top left no-repeat;
+  padding-top: 10px;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-bottom: 30px;
+  margin-bottom: 80px;
+  font-size: 11px; }
+  #footer a {
+    text-decoration: none;
+    color: black; }
+    #footer a:hover {
+      text-decoration: underline;
+      color: #ff8c00; }
+  #footer .right a {
+    background: transparent url(../images/social-icons.png) top left no-repeat;
+    margin-left: 6px;
+    padding: 2px 0; }
+  #footer .right #twitter {
+    background: transparent url(../images/twitter-bird.gif) 0px 0px no-repeat;
+    padding-left: 30px; }
+  #footer .right #facebook {
+    background-position: 0px 1px;
+    padding-left: 18px; }
+  #footer .right #digg {
+    background-position: 0px -37px;
+    padding-left: 20px; }
+  #footer .right #stumble {
+    background-position: 0px -57px;
+    padding-left: 20px; }
+  #footer .right #all {
+    background: transparent url(../images/ico-share.gif) 0px 0px no-repeat;
+    padding-left: 18px;
+    margin-left: 3px; }
+
+.tag-cloud-style .level-1 {
+  font-size: 0.8em; }
+.tag-cloud-style .level-2 {
+  font-size: 1em; }
+.tag-cloud-style .level-3 {
+  font-size: 1.2em; }
+.tag-cloud-style .level-4 {
+  font-size: 1.4em; }
+.tag-cloud-style .level-5 {
+  font-size: 1.6em; }
+.tag-cloud-style .level-6 {
+  font-size: 1.8em; }
+
+#hp-main {
+  background: transparent url(../images/hp-cashback-made-easy.png) top left no-repeat;
+  width: 950px;
+  height: 275px;
+  margin-top: 15px; }
+  #hp-main ul {
+    padding-top: 73px;
+    padding-left: 35px;
+    line-height: 180%;
+    font-size: 16px;
+    font-weight: 700;
+    color: #2a3f50;
+    list-style-image: url(../images/hpbullet.gif);
+    list-style-position: inside; }
+    #hp-main ul a {
+      color: #2a3f50;
+      text-decoration: none; }
+      #hp-main ul a:hover {
+        text-decoration: underline; }
+    #hp-main ul #h1 {
+      display: none; }
+  #hp-main #download {
+    background: transparent url(../images/hp-download-cashaddon.png) top left no-repeat;
+    display: block;
+    position: relative;
+    top: 131px;
+    left: 78px;
+    width: 472px;
+    height: 141px;
+    color: transparent; }
+    #hp-main #download span {
+      visibility: hidden; }
+    #hp-main #download:hover {
+      background: transparent url(../images/hp-download-cashaddon-hov.png) top left no-repeat; }
+
+#hp-savings {
+  background: transparent url(../images/hp-blackbar.gif) top left no-repeat;
+  width: 950px;
+  height: 38px;
+  text-align: center; }
+
+#hp-links {
+  width: 950px;
+  height: 83px;
+  background: transparent url(../images/hp-links-bg.gif) top left no-repeat;
+  padding-top: 15px; }
+  #hp-links a {
+    display: block;
+    text-decoration: none; }
+  #hp-links a#video, #hp-links a#forum {
+    width: 266px;
+    height: 22px;
+    margin-left: 15px;
+    padding-top: 7px;
+    padding-left: 35px;
+    color: #365268;
+    font-weight: 700;
+    font-size: 14px; }
+  #hp-links a#deals, #hp-links a#coupons {
+    width: 259px;
+    height: 25px;
+    margin-left: 15px;
+    padding-top: 10px;
+    padding-left: 42px;
+    color: #365268;
+    font-weight: 700;
+    font-size: 14px; }
+  #hp-links a#video {
+    background: transparent url(../images/but-hpvideo.gif) top left no-repeat;
+    margin-bottom: 7px; }
+    #hp-links a#video:hover {
+      background: transparent url(../images/but-hpvideo-hov.gif) top left no-repeat; }
+  #hp-links a#forum {
+    background: transparent url(../images/but-hpforum.gif) top left no-repeat; }
+    #hp-links a#forum:hover {
+      background: transparent url(../images/but-hpforum-hov.gif) top left no-repeat; }
+  #hp-links a#deals {
+    background: transparent url(../images/but-hp-deals.png) top left no-repeat;
+    margin-top: -5px;
+    margin-bottom: 7px; }
+    #hp-links a#deals:hover {
+      background: transparent url(../images/but-hp-deals-hov.png) top left no-repeat; }
+  #hp-links a#coupons {
+    background: transparent url(../images/but-hp-deals.png) top left no-repeat; }
+    #hp-links a#coupons:hover {
+      background: transparent url(../images/but-hp-deals-hov.png) top left no-repeat; }
+  #hp-links a#refer, #hp-links a#tour {
+    float: right;
+    display: block;
+    width: 145px;
+    line-height: 100%;
+    color: #447505;
+    font-size: 20px; }
+    #hp-links a#refer span, #hp-links a#tour span {
+      color: #599a06;
+      font-size: 12px;
+      font-weight: 700; }
+  #hp-links a#refer {
+    height: 51px;
+    padding-left: 70px;
+    padding-top: 12px;
+    background: transparent url(../images/but-hprefer.gif) top left no-repeat; }
+    #hp-links a#refer:hover {
+      background: transparent url(../images/but-hprefer-hov.gif) top left no-repeat; }
+  #hp-links a#tour {
+    margin-top: -8px;
+    height: 51px;
+    padding-left: 75px;
+    padding-top: 22px;
+    background: transparent url(../images/but-hptour.png) top left no-repeat; }
+    #hp-links a#tour:hover {
+      background: transparent url(../images/but-hptour-hov.png) top left no-repeat; }
+    #hp-links a#tour span {
+      padding-left: 20px; }
+  #hp-links #pipe {
+    float: right;
+    height: 55px;
+    width: 1px;
+    background-color: #ccc;
+    margin: 4px 30px; }
+  #hp-links #news {
+    float: right;
+    width: 310px;
+    margin-right: 15px;
+    font-size: 12px; }
+    #hp-links #news h3 {
+      margin-bottom: 3px; }
+    #hp-links #news p {
+      line-height: 135%; }
+    #hp-links #news a {
+      display: inline;
+      color: #146634; }
+      #hp-links #news a:hover {
+        text-decoration: underline; }
+
+#page-header {
+  margin-top: 3px; }
+
+#transparent {
+  background-color: #fff;
+  filter: alpha(opacity=60);
+  opacity: 0.6; }
+
+#page-content {
+  background: transparent url(../images/trans-bg.png) left repeat-y;
+  padding: 5px 15px 20px 15px;
+  min-height: 300px;
+  line-height: 18px; }
+
+
+#policies {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  width: 600px; }
+  #policies h1, #policies .strong {
+    color: #447505; }
+  #policies h1 {
+    font-size: 16px;
+    margin-top: 30px;
+    margin-bottom: 15px; }
+  #policies p {
+    line-height: 130%;
+    margin-bottom: 15px; }
+  #policies .strong {
+    margin-bottom: 6px; }
+  #policies .footer {
+    margin-top: 25px; }
+    #policies .footer a {
+      margin-right: 10px;
+      padding: 3px 10px;
+      border: 1px solid #ccc;
+      color: #23618F;
+      text-decoration: none;
+      background-color: #FFFFEA;
+      font-weight: 700; }
+      #policies .footer a:hover {
+        color: #ff8c00;
+        background-color: #D1F5FE;
+        border: 1px solid grey; }
+  #policies #last-updated {
+    float: right;
+    font-size: 13px;
+    color: #555; }
+    #policies #last-updated span {
+      font-weight: 700; }
+
+#login-form legend {
+  color: #666;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 5px;
+  padding-bottom: 20px; }
+#login-form ol {
+  margin-bottom: 20px; }
+  #login-form ol li {
+    clear: both;
+    margin: 0 0 .75em; }
+#login-form label {
+  display: block;
+  float: left;
+  line-height: 1.6em;
+  margin-right: 10px;
+  text-align: right;
+  width: 90px;
+  color: #365268;
+  font-weight: 700; }
+  #login-form label:after {
+    content: ':'; }
+#login-form input[type="text"], #login-form input[type="password"] {
+  width: 250px;
+  padding: 3px;
+  border: 2px solid #c6c6c6; }
+  #login-form input[type="text"]:focus, #login-form input[type="password"]:focus {
+    background: #ffffee;
+    border: 2px solid #BBDAFD; }
+#login-form input[type="checkbox"] {
+  margin-left: 100px;
+  float: left; }
+#login-form input[type="submit"] {
+  cursor: pointer;
+  background: #F0F0F0 url(../images/raquo.gif) 93px 8px no-repeat;
+  border: 2px solid #666;
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: .3em;
+  margin-left: 100px;
+  margin-right: 70px;
+  padding: 3px 15px 3px 6px;
+  text-transform: uppercase; }
+  #login-form input[type="submit"]:hover {
+    background: #ffd100 url(../images/raquo.gif) 93px 8px no-repeat; }
+#login-form #remember-me p {
+  padding-top: 1px;
+  color: #365268;
+  font-size: 12px;
+  font-weight: 700; }
+  #login-form #remember-me p span {
+    margin-left: 3px;
+    padding: 2px 5px;
+    background-color: #f7f7f7;
+    border-left: 2px solid #ccc;
+    border-top: 1px solid #e7e7e7;
+    border-right: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7; }
+#login-form #forgot {
+  font-size: 12px;
+  font-weight: 700; }
+#login-form #register {
+  margin-top: 60px;
+  margin-bottom: 40px;
+  margin-left: 10px;
+  font-weight: 700; }
+  #login-form #register p {
+    margin-top: 6px; }
+  #login-form #register #why-no-reg {
+    font-size: 12px;
+    margin-left: 3px; }
+
+#resetpw-form legend {
+  border: 1px solid red;
+  font-size: 18px;
+  padding: 5px;
+  padding-bottom: 20px; }
+#resetpw-form p {
+  border: 1px solid red;
+  padding: 15px 0 20px 15px;
+  width: 530px; }
+#resetpw-form ol {
+  border: 1px solid orange;
+  margin-bottom: 20px; }
+  #resetpw-form ol li {
+    border: 1px solid green;
+    clear: both;
+    margin: 0 0 .75em; }
+#resetpw-form label {
+  border: 1px solid blue;
+  width: 300px;
+  float: left;
+  line-height: 1.6em;
+  margin-right: 10px;
+  text-align: right; }
+  #resetpw-form label:after {
+    content: ':'; }
+#resetpw-form input[type="text"] {
+  width: 250px;
+  padding: 3px;
+  border: 2px solid #c6c6c6; }
+  #resetpw-form input[type="text"]:focus {
+    background: #ffffee;
+    border: 2px solid #BBDAFD; }
+#resetpw-form button {
+  background: #F0F0F0 url(../images/raquo.gif) 253px 9px no-repeat;
+  border: 2px solid #666;
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: .3em;
+  margin-left: 100px;
+  margin-right: 80px;
+  padding: 3px 15px 3px 6px;
+  text-transform: uppercase; }
+  #resetpw-form button:hover {
+    background: #ffd100 url(../images/raquo.gif) 253px 9px no-repeat; }
+#resetpw-form #login {
+  margin-top: 35px;
+  margin-bottom: 25px; }
+  #resetpw-form #login p {
+    margin-top: 6px; }
+
+#contact-form abbr[title="required"] {
+  display: none; }
+#contact-form div.form-field-error {
+  width: 500px; }
+#contact-form .error {
+  color: #8a1f11;
+  border: 0;
+  background: transparent;
+  padding: 0; }
+  #contact-form .error label {
+    color: #c00; }
+  #contact-form .error input[type="text"], #contact-form .error textarea, #contact-form .error select {
+    border: 2px solid #FBC2C4; }
+#contact-form ul {
+  width: 620px; }
+#contact-form #ttl {
+  padding: 5px 0;
+  font-weight: 400;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.3em;
+  margin-bottom: 10px; }
+#contact-form li {
+  margin: 0 0 .75em; }
+#contact-form label {
+  display: block;
+  float: left;
+  line-height: 1.6;
+  margin-right: 10px;
+  text-align: right;
+  width: 120px; }
+  #contact-form label:after {
+    content: ':'; }
+#contact-form input[type="text"], #contact-form textarea, #contact-form select {
+  width: 400px;
+  padding: 3px;
+  border: 2px solid #c6c6c6; }
+  #contact-form input[type="text"]:focus, #contact-form textarea:focus, #contact-form select:focus {
+    background: #ffffee;
+    border: 2px solid #BBDAFD; }
+#contact-form select {
+  width: 410px; }
+#contact-form textarea {
+  line-height: 1.3em;
+  padding: 0 3px;
+  height: 200px; }
+#contact-form input[type="submit"] {
+  background: #F0F0F0 url(../images/raquo.gif) 70px 8px no-repeat;
+  border: 2px solid #666;
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: .3em;
+  margin-left: 130px;
+  padding: 3px 15px 3px 6px;
+  text-transform: uppercase; }
+  #contact-form input[type="submit"]:hover {
+    background: #ffd100 url(../images/raquo.gif) 70px 8px no-repeat; }
+#contact-form #thank-you {
+  color: #666;
+  margin-top: 50px; }
+  #contact-form #thank-you #ttl {
+    color: #3c7099;
+    margin-bottom: 0;
+    font-weight: 700;
+    font-size: 28px; }
+  #contact-form #thank-you #reply {
+    font-size: 20px;
+    padding-left: 3px; }
+  #contact-form #thank-you #download {
+    padding-left: 3px;
+    margin-top: 60px;
+    font-weight: 700;
+    font-size: 15px; }
+
+#about-content {
+  background: transparent url(../images/cao-hills.png) top right no-repeat;
+  height: 450px; }
+  #about-content #take-tour, #about-content #download-cashaddon {
+    display: block;
+    width: 295px;
+    height: 31px;
+    margin: 25px 0;
+    padding-top: 11px;
+    padding-left: 25px;
+    font-size: 18px;
+    text-decoration: none; }
+  #about-content #take-tour {
+    background: transparent url(../images/tour-button.gif) left center no-repeat; }
+  #about-content #download-cashaddon {
+    background: transparent url(../images/dlcao-button.gif) left center no-repeat;
+    margin-bottom: 5px; }
+  #about-content #free-addon {
+    width: 320px;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    color: #447505; }
+    #about-content #free-addon span {
+      display: block;
+      color: #666;
+      font-size: 12px; }
+  #about-content #cao-hills {
+    float: right; }
+
+#tour-nav {
+  width: 801px;
+  height: 50px;
+  background: transparent url(../images/tour-nav-bg.gif) top left repeat-x;
+  margin: 25px auto 10px auto; }
+  #tour-nav li {
+    float: left;
+    margin-right: 35px;
+    height: 50px; }
+    #tour-nav li a {
+      display: block;
+      width: 159px;
+      padding-top: 10px;
+      padding-left: 15px;
+      font-size: 18px;
+      background: #f3f3f3 url(../images/tour-nav-button.gif) top left no-repeat;
+      color: #505050;
+      height: 29px;
+      text-decoration: none; }
+      #tour-nav li a:hover {
+        background: #e3e3e3 url(../images/tour-nav-button-hov.gif) top left no-repeat;
+        color: #000; }
+    #tour-nav li#on {
+      background: #ccc url(../images/tour-nav-button-on.gif) bottom left no-repeat;
+      font-weight: 700; }
+    #tour-nav li.last {
+      margin-right: 0px; }
+
+#tour-content #download-cashaddon {
+  float: right;
+  clear: right;
+  margin-top: 20px;
+  margin-right: 50px; }
+#tour-content #find-out-more {
+  margin: 0 auto;
+  display: block;
+  width: 298px;
+  height: 31px;
+  padding-top: 11px;
+  padding-left: 22px;
+  font-size: 18px;
+  text-decoration: none;
+  background: transparent url(../images/tour-button.gif) left center no-repeat; }
+
+#tour-content div, #about-content div {
+  margin-bottom: 12px; }
+  #tour-content div.split, #about-content div.split {
+    width: 440px; }
+#tour-content p, #about-content p {
+  font-weight: 400; }
+#tour-content a, #about-content a {
+  color: #3c7099; }
+  #tour-content a:hover, #about-content a:hover {
+    color: #ff8c00; }
+#tour-content .ttl, #about-content .ttl {
+  font-size: 17px;
+  line-height: 1.1em; }
+#tour-content .p, #about-content .p {
+  color: #444;
+  line-height: 1.4em; }
+#tour-content .lg, #about-content .lg {
+  font-size: 16px; }
+#tour-content .xl, #about-content .xl {
+  font-size: 19px; }
+#tour-content .xxl, #about-content .xxl {
+  font-size: 24px; }
+#tour-content .lite, #about-content .lite {
+  color: #666; }
+#tour-content .dark, #about-content .dark {
+  color: #323232; }
+#tour-content .strong, #about-content .strong {
+  font-weight: 700; }
+#tour-content .green, #about-content .green {
+  color: #4c9758; }
+#tour-content .lite-green, #about-content .lite-green {
+  color: #5caf6a; }
+#tour-content .blue, #about-content .blue {
+  color: #4b81ab; }
+#tour-content .green-xl, #about-content .green-xl {
+  color: #5caf6a;
+  font-size: 28px;
+  font-variant: small-caps;
+  font-style: italic;
+  padding-left: 50px;
+  padding-bottom: 8px; }
+#tour-content #cashaddon-leaf, #about-content #cashaddon-leaf {
+  background: transparent url(../images/cashaddon-leaf.png) top left no-repeat;
+  padding-top: 10px; }
+#tour-content .cao, #about-content .cao {
+  color: #444;
+  font-weight: 700;
+  font-variant: small-caps; }
+#tour-content .note, #about-content .note {
+  color: #666;
+  font-size: 12px;
+  line-height: 1.2em; }
+#tour-content .m, #about-content .m {
+  margin-left: 8px; }
+#tour-content .m-lg, #about-content .m-lg {
+  margin-left: 18px; }
+#tour-content #screencast, #about-content #screencast {
+  float: right; }
+#tour-content #cashback-plus, #about-content #cashback-plus {
+  float: right;
+  width: 420px;
+  height: 306px;
+  background: #f3f3f3 url(../images/cash-back-plus-box.gif) top left no-repeat; }
+  #tour-content #cashback-plus p, #about-content #cashback-plus p {
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 140%; }
+  #tour-content #cashback-plus h3, #about-content #cashback-plus h3 {
+    color: white;
+    padding: 8px 12px;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase; }
+    #tour-content #cashback-plus h3 span, #about-content #cashback-plus h3 span {
+      font-weight: 700;
+      color: #CEE9FF; }
+  #tour-content #cashback-plus ul, #about-content #cashback-plus ul {
+    margin: 3px; }
+    #tour-content #cashback-plus ul li, #about-content #cashback-plus ul li {
+      padding: 11px 3px 11px 40px;
+      border-top: 1px solid #656565; }
+    #tour-content #cashback-plus ul #plus-active, #about-content #cashback-plus ul #plus-active {
+      background: transparent url(../images/plus-active.gif) 10px center no-repeat; }
+    #tour-content #cashback-plus ul #plus-standby, #about-content #cashback-plus ul #plus-standby {
+      background: transparent url(../images/plus-standby.gif) 10px center no-repeat; }
+    #tour-content #cashback-plus ul #plus-error, #about-content #cashback-plus ul #plus-error {
+      background: transparent url(../images/plus-error.gif) 10px center no-repeat; }
+  #tour-content #cashback-plus #screenshot, #about-content #cashback-plus #screenshot {
+    display: block;
+    font-size: 13px;
+    color: #666;
+    padding-top: 5px;
+    padding-left: 12px; }
+#tour-content #faq, #about-content #faq {
+  font-size: 13px;
+  margin-bottom: 20px; }
+
+#cao-reminder {
+  padding: 8px 10px;
+  font-weight: 700;
+  text-align: center;
+  border: 1px dashed #86c732;
+  background-color: #ffe;
+  margin-bottom: 10px;
+  color: #666; }
+  #cao-reminder span {
+    color: #3c7099; }
+  #cao-reminder a {
+    text-decoration: none;
+    color: #3c7099;
+    background: transparent url(../images/crumb-bullet.gif) right center no-repeat;
+    margin-left: 5px;
+    padding-right: 8px; }
+    #cao-reminder a:hover {
+      color: #ff8c00; }
+
+#cashback-shopping a, #tag-page a {
+  text-decoration: none;
+  color: #3c7099; }
+  #cashback-shopping a:hover, #tag-page a:hover {
+    color: #ff8c00; }
+#cashback-shopping h2, #tag-page h2 {
+  font-size: 12px;
+  color: #555;
+  padding: 3px;
+  border-bottom: 1px solid #ccc; }
+#cashback-shopping #bg-end, #tag-page #bg-end {
+  float: right;
+  background: transparent url(../images/cb-sect-bg-right.gif) top left no-repeat;
+  width: 10px;
+  height: 23px; }
+#cashback-shopping #links, #tag-page #links {
+  line-height: 1em;
+  float: right;
+  background: #effbf9 url(../images/cb-links-box.gif) top left no-repeat;
+  font-size: 13px;
+  width: 280px;
+  height: 70px; }
+  #cashback-shopping #links a:hover, #tag-page #links a:hover {
+    text-decoration: underline;
+    color: #3c7099; }
+  #cashback-shopping #links #ttl, #tag-page #links #ttl {
+    color: #666;
+    background-color: #DCDCDC;
+    font-weight: 700;
+    font-size: 10px;
+    padding-left: 3px;
+    display: none; }
+  #cashback-shopping #links ul, #tag-page #links ul {
+    padding-top: 2px;
+    padding-left: 20px; }
+    #cashback-shopping #links ul li, #tag-page #links ul li {
+      padding: 3px 15px;
+      background: transparent url(../images/cb-links-bullet2.gif) left 5px no-repeat; }
+  #cashback-shopping #links #get-cao, #tag-page #links #get-cao {
+    display: block;
+    padding: 5px 0px 5px 15px;
+    font-weight: 700;
+    background: transparent url(../images/cb-links-bullet.gif) right 8px no-repeat;
+    width: 235px; }
+#cashback-shopping #h1, #tag-page #h1 {
+  background: transparent url(../images/cb-h1-box.gif) top left no-repeat;
+  height: 63px;
+  margin-bottom: 10px;
+  padding-top: 7px;
+  padding-left: 15px; }
+  #cashback-shopping #h1 h1, #tag-page #h1 h1 {
+    font-size: 17px;
+    color: #365d03; }
+  #cashback-shopping #h1 #abstract, #tag-page #h1 #abstract {
+    margin-top: 2px;
+    margin-left: 5px;
+    color: #666;
+    font-size: 13px;
+    font-weight: 700; }
+#cashback-shopping #stores, #cashback-shopping #deals, #cashback-shopping #coupons, #tag-page #stores, #tag-page #deals, #tag-page #coupons {
+  float: left; }
+#cashback-shopping #stores, #tag-page #stores {
+  width: 424px;
+  margin-right: 22px; }
+  #cashback-shopping #stores li, #tag-page #stores li {
+    padding: 10px 5px;
+    border-top: 1px solid #ccc; }
+    #cashback-shopping #stores li span, #tag-page #stores li span {
+      float: right;
+      color: #ff8c00;
+      font-weight: 700; }
+    #cashback-shopping #stores li a, #tag-page #stores li a {
+      text-decoration: none;
+      color: #255a85; }
+      #cashback-shopping #stores li a:hover, #tag-page #stores li a:hover {
+        font-weight: 700; }
+    #cashback-shopping #stores li:hover, #tag-page #stores li:hover {
+      font-weight: 700;
+      background-color: #F1F8E9; }
+  #cashback-shopping #stores #ttl, #tag-page #stores #ttl {
+    color: #555;
+    font-weight: 700;
+    border: 0;
+    padding: 3px 5px 3px 10px;
+    font-size: 12px;
+    background: #d7edf9 url(../images/ico-merchant.gif) left center no-repeat; }
+  #cashback-shopping #stores #ttl span, #tag-page #stores #ttl span {
+    color: #555; }
+  #cashback-shopping #stores #bg-end, #tag-page #stores #bg-end {
+    margin-top: -3px;
+    margin-right: -5px; }
+#cashback-shopping #deals, #cashback-shopping #coupons, #tag-page #deals, #tag-page #coupons {
+  width: 230px; }
+  #cashback-shopping #deals ul, #cashback-shopping #coupons ul, #tag-page #deals ul, #tag-page #coupons ul {
+    padding: 3px; }
+#cashback-shopping #deals, #tag-page #deals {
+  margin-right: 10px; }
+  #cashback-shopping #deals h2, #tag-page #deals h2 {
+    background: #d7edf9 url(../images/ico-dealbag.gif) top left no-repeat;
+    padding-left: 25px; }
+#cashback-shopping #coupons h2, #tag-page #coupons h2 {
+  background: #d7edf9 url(../images/ico-scissors.gif) top left no-repeat;
+  padding-left: 25px; }
+#cashback-shopping #popular-stores, #tag-page #popular-stores {
+  float: right;
+  clear: right;
+  width: 474px;
+  margin-bottom: 10px; }
+  #cashback-shopping #popular-stores h2, #tag-page #popular-stores h2 {
+    padding-left: 25px;
+    background: #d7edf9 url(../images/ico-star.gif) top left no-repeat; }
+  #cashback-shopping #popular-stores ul li, #tag-page #popular-stores ul li {
+    float: left;
+    padding: 3px;
+    text-align: center; }
+    #cashback-shopping #popular-stores ul li a, #tag-page #popular-stores ul li a {
+      display: block;
+      border: 1px solid #86c732;
+      height: 60px;
+      width: 150px;
+      font-size: 13px;
+      padding-top: 5px; }
+      #cashback-shopping #popular-stores ul li a img, #tag-page #popular-stores ul li a img {
+        margin-bottom: 5px; }
+#cashback-shopping #tag-cloud, #cashback-shopping #deals-coupons, #tag-page #tag-cloud, #tag-page #deals-coupons {
+  float: right;
+  clear: right;
+  margin-bottom: 10px;
+  width: 472px; }
+  #cashback-shopping #tag-cloud .end, #cashback-shopping #deals-coupons .end, #tag-page #tag-cloud .end, #tag-page #deals-coupons .end {
+    height: 12px; }
+  #cashback-shopping #tag-cloud .body, #cashback-shopping #deals-coupons .body, #tag-page #tag-cloud .body, #tag-page #deals-coupons .body {
+    padding: 10px;
+    padding-bottom: 0;
+    border-left: 2px solid #E0E0E0;
+    border-right: 2px solid #E0E0E0; }
+  #cashback-shopping #tag-cloud .ttl, #cashback-shopping #deals-coupons .ttl, #tag-page #tag-cloud .ttl, #tag-page #deals-coupons .ttl {
+    padding: 5px;
+    color: #555;
+    font-size: 12px;
+    font-weight: 700; }
+    #cashback-shopping #tag-cloud .ttl a, #cashback-shopping #deals-coupons .ttl a, #tag-page #tag-cloud .ttl a, #tag-page #deals-coupons .ttl a {
+      float: right;
+      font-weight: 400;
+      margin-right: 10px; }
+#cashback-shopping #tag-cloud .end, #tag-page #tag-cloud .end {
+  background: transparent url(../images/tagcloud-472.gif) top left no-repeat; }
+#cashback-shopping #tag-cloud .ttl, #tag-page #tag-cloud .ttl {
+  padding-left: 40px;
+  background: transparent url(../images/tagcloud-472.gif) bottom left no-repeat; }
+#cashback-shopping #deals-coupons .end, #tag-page #deals-coupons .end {
+  background: transparent url(../images/cloud-472.gif) top left no-repeat; }
+#cashback-shopping #deals-coupons .ttl, #tag-page #deals-coupons .ttl {
+  background: transparent url(../images/cloud-472.gif) bottom left no-repeat; }
+  #cashback-shopping #deals-coupons .ttl span, #tag-page #deals-coupons .ttl span {
+    padding-left: 25px;
+    background: transparent url(../images/ico-deals.gif) 5px center no-repeat; }
+
+#deals-coupons-pages #links {
+  line-height: 1em;
+  float: right;
+  background: #effbf9 url(../images/cb-links-box.gif) top left no-repeat;
+  font-size: 13px;
+  width: 280px;
+  height: 70px; }
+  #deals-coupons-pages #links a:hover {
+    text-decoration: underline;
+    color: #3c7099; }
+  #deals-coupons-pages #links #ttl {
+    color: #666;
+    background-color: #DCDCDC;
+    font-weight: 700;
+    font-size: 10px;
+    padding-left: 3px;
+    display: none; }
+  #deals-coupons-pages #links ul {
+    padding-top: 2px;
+    padding-left: 20px; }
+    #deals-coupons-pages #links ul li {
+      padding: 3px 15px;
+      background: transparent url(../images/cb-links-bullet2.gif) left 5px no-repeat; }
+  #deals-coupons-pages #links #get-cao {
+    display: block;
+    padding: 5px 0px 5px 15px;
+    font-weight: 700;
+    background: transparent url(../images/cb-links-bullet.gif) right 8px no-repeat;
+    width: 235px; }
+#deals-coupons-pages #h1 {
+  background: transparent url(../images/cb-h1-box.gif) top left no-repeat;
+  height: 63px;
+  margin-bottom: 10px;
+  padding-top: 7px;
+  padding-left: 15px; }
+  #deals-coupons-pages #h1 h1 {
+    font-size: 17px;
+    color: #365d03; }
+  #deals-coupons-pages #h1 #abstract {
+    margin-top: 2px;
+    margin-left: 5px;
+    color: #666;
+    font-size: 13px;
+    font-weight: 700; }
+#deals-coupons-pages #deals-coupons {
+  width: 546px; }
+  #deals-coupons-pages #deals-coupons #ttl {
+    font-size: 20px;
+    margin-bottom: 15px;
+    padding-top: 5px;
+    padding-left: 10px; }
+  #deals-coupons-pages #deals-coupons li {
+    padding: 20px 0;
+    border-top: 1px solid #ccc; }
+    #deals-coupons-pages #deals-coupons li table {
+      width: 550px; }
+      #deals-coupons-pages #deals-coupons li table td {
+        vertical-align: top;
+        padding: 0 10px; }
+        #deals-coupons-pages #deals-coupons li table td a {
+          text-decoration: none; }
+      #deals-coupons-pages #deals-coupons li table .image {
+        text-align: right; }
+      #deals-coupons-pages #deals-coupons li table .title a {
+        font-weight: 700; }
+      #deals-coupons-pages #deals-coupons li table .cashback, #deals-coupons-pages #deals-coupons li table .priceline, #deals-coupons-pages #deals-coupons li table .description, #deals-coupons-pages #deals-coupons li table .discounts, #deals-coupons-pages #deals-coupons li table .coupon-title, #deals-coupons-pages #deals-coupons li table .coupon-description, #deals-coupons-pages #deals-coupons li table .meta, #deals-coupons-pages #deals-coupons li table .logo-cashback {
+        font-size: 13px; }
+      #deals-coupons-pages #deals-coupons li table .cashback {
+        margin-top: 2px; }
+        #deals-coupons-pages #deals-coupons li table .cashback a {
+          font-weight: 700;
+          color: #447505; }
+          #deals-coupons-pages #deals-coupons li table .cashback a:hover {
+            color: #ff8c00; }
+      #deals-coupons-pages #deals-coupons li table .priceline {
+        color: #999;
+        margin-top: 5px; }
+        #deals-coupons-pages #deals-coupons li table .priceline .msrp {
+          color: #666;
+          text-decoration: line-through; }
+        #deals-coupons-pages #deals-coupons li table .priceline .price, #deals-coupons-pages #deals-coupons li table .priceline .cashback-price {
+          color: red; }
+        #deals-coupons-pages #deals-coupons li table .priceline .price {
+          font-weight: 700; }
+      #deals-coupons-pages #deals-coupons li table .discounts {
+        color: #ccc; }
+        #deals-coupons-pages #deals-coupons li table .discounts .rebate {
+          color: green; }
+        #deals-coupons-pages #deals-coupons li table .discounts .free-shipping {
+          color: blue; }
+        #deals-coupons-pages #deals-coupons li table .discounts .end-date {
+          color: #999;
+          font-weight: 400; }
+      #deals-coupons-pages #deals-coupons li table .tags {
+        font-size: 12px;
+        margin: 10px 0;
+        background: transparent url(../images/ico-tag.gif) 0px 2px no-repeat;
+        padding-left: 33px; }
+      #deals-coupons-pages #deals-coupons li table .description {
+        color: #333; }
+      #deals-coupons-pages #deals-coupons li table .coupon-title {
+        font-weight: 700; }
+      #deals-coupons-pages #deals-coupons li table .coupon-description {
+        color: #555; }
+      #deals-coupons-pages #deals-coupons li table .meta {
+        color: #ccc; }
+        #deals-coupons-pages #deals-coupons li table .meta .end-date {
+          color: #666; }
+        #deals-coupons-pages #deals-coupons li table .meta .stackable {
+          color: green; }
+      #deals-coupons-pages #deals-coupons li table .coupon-code a {
+        display: block;
+        border: 2px dashed #A8CF74;
+        padding: 5px;
+        font-weight: 700px;
+        width: 250px;
+        margin-bottom: 5px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 700;
+        color: #96BF5F; }
+        #deals-coupons-pages #deals-coupons li table .coupon-code a:hover {
+          color: #ff8c00;
+          border: 2px dashed #ff8c00; }
+      #deals-coupons-pages #deals-coupons li table .logo-cashback {
+        font-weight: 700;
+        line-height: 200%; }
+#deals-coupons-pages #deals-coupons-sidebar {
+  width: 345px;
+  float: right; }
+  #deals-coupons-pages #deals-coupons-sidebar .cloud {
+    margin-bottom: 10px; }
+    #deals-coupons-pages #deals-coupons-sidebar .cloud .end {
+      background: transparent url(../images/cloud-345.gif) top left no-repeat;
+      height: 12px; }
+    #deals-coupons-pages #deals-coupons-sidebar .cloud .body {
+      padding: 10px;
+      padding-bottom: 0;
+      border-left: 2px solid #E0E0E0;
+      border-right: 2px solid #E0E0E0;
+      line-height: 1.4em; }
+    #deals-coupons-pages #deals-coupons-sidebar .cloud .ttl {
+      background: transparent url(../images/cloud-345.gif) bottom left no-repeat;
+      padding: 5px;
+      color: #555;
+      font-size: 12px;
+      font-weight: 700; }
+      #deals-coupons-pages #deals-coupons-sidebar .cloud .ttl a {
+        float: right;
+        font-weight: 400;
+        margin-right: 10px; }
+  #deals-coupons-pages #deals-coupons-sidebar #dealbox .ttl span {
+    padding-left: 30px;
+    background: transparent url(../images/ico-tag.gif) 0px 1px no-repeat; }
+  #deals-coupons-pages #deals-coupons-sidebar #storebox .ttl span {
+    padding-left: 30px;
+    padding-top: 2px;
+    background: transparent url(../images/ico-pop.gif) 5px 1px no-repeat; }
+  #deals-coupons-pages #deals-coupons-sidebar #storebox #popular-stores {
+    margin-bottom: 10px; }
+    #deals-coupons-pages #deals-coupons-sidebar #storebox #popular-stores h2 {
+      padding-left: 25px;
+      background: #d7edf9 url(../images/ico-star.gif) top left no-repeat; }
+    #deals-coupons-pages #deals-coupons-sidebar #storebox #popular-stores ul li {
+      float: left;
+      padding: 3px;
+      text-align: center; }
+      #deals-coupons-pages #deals-coupons-sidebar #storebox #popular-stores ul li a {
+        display: block;
+        border: 1px solid #86c732;
+        height: 60px;
+        width: 150px;
+        font-size: 13px;
+        padding-top: 5px;
+        text-decoration: none; }
+        #deals-coupons-pages #deals-coupons-sidebar #storebox #popular-stores ul li a img {
+          margin-bottom: 5px; }
+  #deals-coupons-pages #deals-coupons-sidebar #storebox #store-tags .tagttl {
+    background-color: #D8EEF9;
+    padding: 2px 7px;
+    margin: 5px -7px;
+    color: #555;
+    font-size: 12px;
+    font-weight: 700; }
+    #deals-coupons-pages #deals-coupons-sidebar #storebox #store-tags .tagttl:after {
+      content: ':'; }
+
+#cashback-shops h2 {
+  font-size: 16px;
+  color: #365d03; }
+#cashback-shops #left {
+  width: 180px; }
+#cashback-shops #right {
+  width: 200px; }
+#cashback-shops #left, #cashback-shops #right {
+  float: left; }
+  #cashback-shops #left .cao, #cashback-shops #right .cao {
+    font-variant: small-caps;
+    font-weight: 700; }
+  #cashback-shops #left ul, #cashback-shops #right ul {
+    padding-top: 2px;
+    padding-left: 8px;
+    font-size: 15px;
+    margin-bottom: 20px; }
+    #cashback-shops #left ul li, #cashback-shops #right ul li {
+      margin: 4px 0; }
+    #cashback-shops #left ul a, #cashback-shops #right ul a {
+      text-decoration: none;
+      color: #3c7099; }
+      #cashback-shops #left ul a:hover, #cashback-shops #right ul a:hover {
+        color: #ff8c00; }
+    #cashback-shops #left ul #learn-more, #cashback-shops #right ul #learn-more {
+      display: block;
+      margin-top: 5px;
+      width: 82px;
+      background: transparent url(../images/crumb-bullet.gif) right center no-repeat; }
+#cashback-shops #mid {
+  float: left;
+  width: 475px;
+  margin-right: 65px; }
+  #cashback-shops #mid a {
+    text-decoration: none;
+    color: #3c7099; }
+    #cashback-shops #mid a:hover {
+      color: #ff8c00; }
+  #cashback-shops #mid #abstract {
+    margin-top: 4px;
+    margin-left: 20px;
+    color: #666;
+    font-size: 13px;
+    font-weight: 700; }
+  #cashback-shops #mid #popular-stores {
+    margin-top: 10px; }
+    #cashback-shops #mid #popular-stores ul li {
+      float: left;
+      padding: 3px;
+      text-align: center; }
+      #cashback-shops #mid #popular-stores ul li a {
+        display: block;
+        border: 1px solid #86c732;
+        height: 60px;
+        width: 150px;
+        font-size: 13px;
+        padding-top: 5px; }
+        #cashback-shops #mid #popular-stores ul li a img {
+          margin-bottom: 5px; }
+  #cashback-shops #mid #search {
+    clear: both;
+    padding: 10px 0; }
+    #cashback-shops #mid #search #q {
+      width: 346px;
+      border: 0;
+      border-top: 1px solid #86c732;
+      border-left: 1px solid #86c732;
+      border-bottom: 1px solid #86c732;
+      padding: 3px;
+      padding-left: 22px;
+      background: transparent url(../images/search-icon.gif) left center no-repeat; }
+    #cashback-shops #mid #search #submit {
+      border: 1px solid #86c732;
+      background-color: #DCF3B9;
+      color: #365d03;
+      padding: 2px 4px; }
+    #cashback-shops #mid #search #q:hover, #cashback-shops #mid #search #q:focus {
+      background-color: #ffffea; }
+    #cashback-shops #mid #search #view {
+      border: 1px solid #86c732;
+      background: #DCF3B9 url(../images/ico-list.gif) 3px 3px no-repeat;
+      color: #365d03;
+      margin-top: 5px;
+      font-size: 12px;
+      padding-left: 18px; }
+      #cashback-shops #mid #search #view option {
+        padding: 2px 0 0px 18px; }
+      #cashback-shops #mid #search #view .list {
+        background: transparent url(../images/ico-list.gif) 2px 3px no-repeat; }
+      #cashback-shops #mid #search #view .gallery {
+        background: transparent url(../images/ico-gallery.gif) 2px 3px no-repeat; }
+    #cashback-shops #mid #search #alpha {
+      float: right;
+      margin-top: 6px;
+      margin-right: 3px;
+      border-left: 0px solid #ccc;
+      font-size: 12px; }
+      #cashback-shops #mid #search #alpha a {
+        text-decoration: none;
+        padding: 0 2px;
+        border-right: 0px solid #ccc; }
+  #cashback-shops #mid #featured {
+    float: right;
+    width: 0px;
+    text-align: center;
+    padding-top: 15px; }
+  #cashback-shops #mid #stores {
+    width: 475px;
+    margin-bottom: 15px; }
+    #cashback-shops #mid #stores li {
+      padding: 10px 5px;
+      border-top: 1px solid #ccc; }
+      #cashback-shops #mid #stores li span {
+        float: right;
+        color: #ff8c00;
+        font-weight: 700; }
+      #cashback-shops #mid #stores li a {
+        text-decoration: none;
+        color: #255a85; }
+        #cashback-shops #mid #stores li a:hover {
+          font-weight: 700; }
+      #cashback-shops #mid #stores li:hover {
+        font-weight: 700;
+        background-color: #F1F8E9; }
+    #cashback-shops #mid #stores #ttl {
+      border: 2px solid #eee;
+      padding: 3px 5px 3px 23px;
+      background: #e3e3e3 url(../images/ico-merchant.gif) 3px center no-repeat; }
+    #cashback-shops #mid #stores #ttl, #cashback-shops #mid #stores #ttl span {
+      color: #555;
+      font-weight: 700;
+      font-size: 13px; }
+    #cashback-shops #mid #stores #ttl span {
+      background: transparent url(../images/ico-cashback.gif) left center no-repeat;
+      padding-left: 18px; }
+  #cashback-shops #mid #legend {
+    width: 275px;
+    padding: 5px;
+    margin: 10px 0;
+    background-color: #f3f3f3;
+    color: #444;
+    border-top: 1px solid #ccc; }
+
+#help-nav {
+  float: right;
+  width: 280px;
+  padding-bottom: 9px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  background: #f7f7f7 url(../images/helpbox-btm.gif) bottom left no-repeat; }
+  #help-nav p {
+    background: transparent url(../images/helpbox-top.gif) top left no-repeat;
+    height: 29px;
+    color: #3c7099;
+    font-size: 15px;
+    font-weight: 700;
+    padding-top: 6px;
+    padding-left: 10px; }
+  #help-nav ul {
+    background: transparent url(../images/helpbox-bg.gif) left repeat-y;
+    line-height: 220%;
+    padding-left: 4px;
+    padding-right: 4px; }
+    #help-nav ul li {
+      border-bottom: 1px dashed #ccc;
+      padding-left: 15px; }
+      #help-nav ul li a {
+        text-decoration: none; }
+      #help-nav ul li span {
+        color: #3c7099;
+        font-weight: 700; }
+      #help-nav ul li:last-child {
+        border: 0; }
+
+#tag-page .big-cloud {
+  margin: 0 auto;
+  width: 850px;
+  margin-bottom: 25px; }
+  #tag-page .big-cloud .end {
+    height: 12px;
+    background: transparent url(../images/tagcloud-850.gif) top left no-repeat; }
+  #tag-page .big-cloud .body {
+    padding: 10px;
+    padding-bottom: 0;
+    border-left: 2px solid #E0E0E0;
+    border-right: 2px solid #E0E0E0;
+    line-height: 200%; }
+  #tag-page .big-cloud .ttl {
+    background: transparent url(../images/tagcloud-850.gif) bottom left no-repeat;
+    padding: 5px;
+    padding-left: 40px;
+    color: #555;
+    font-size: 12px;
+    font-weight: 700; }
+    #tag-page .big-cloud .ttl a {
+      float: right;
+      font-weight: 400;
+      margin-right: 10px; }
+#tag-page #results {
+  margin-bottom: 20px;
+  background: transparent url(../images/ico-tag.gif) 3px 2px no-repeat;
+  padding-left: 35px;
+  font-weight: 700;
+  color: #555; }
+  #tag-page #results span {
+    color: #3c7099;
+    font-style: italic; }
+#tag-page #view-all {
+  float: right;
+  font-size: 13px;
+  background: transparent url(../images/crumb-bullet.gif) 80px center no-repeat;
+  padding: 0px 15px 1px 5px;
+  border: 1px solid #ccc; }
+  #tag-page #view-all:hover {
+    color: #3c7099;
+    background-color: #E5F9FB;
+    border: 1px solid #666; }
+#tag-page #no-stores, #tag-page #no-deals-coupons {
+  font-style: italic;
+  font-weight: 700;
+  color: #333;
+  padding: 10px; }
+#tag-page #no-deals-coupons {
+  float: right;
+  width: 462px;
+  padding-left: 0; }
+
+#cashback-store-page #left-col {
+  float: right; }
+#cashback-store-page #h1 {
+  color: #447505;
+  font-size: 22px;
+  font-weight: 700;
+  padding: 5px 0; }
+  #cashback-store-page #h1 a {
+    font-size: 13px;
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 1px solid #ccc; }
+#cashback-store-page #description {
+  color: #666;
+  font-size: 13px;
+  line-height: 1.1em;
+  margin: 15px;
+  margin-top: 0; }
+#cashback-store-page #store-details {
+  text-align: center;
+  margin-bottom: 15px; }
+  #cashback-store-page #store-details div {
+    line-height: 1.3em; }
+  #cashback-store-page #store-details #cashback {
+    color: #333;
+    background-color: #E7FFB9;
+    margin: 10px 5px;
+    padding: 10px 0 5px 0;
+    font-size: 20px;
+    font-weight: 700; }
+    #cashback-store-page #store-details #cashback a {
+      font-size: 34px;
+      text-decoration: none; }
+  #cashback-store-page #store-details #tags {
+    font-size: 13px; }
+    #cashback-store-page #store-details #tags span {
+      font-weight: 700;
+      color: #333;
+      margin-right: 5px; }
+  #cashback-store-page #store-details #shop-now {
+    padding: 20px 0 10px 0; }
+    #cashback-store-page #store-details #shop-now a {
+      display: block;
+      height: 31px;
+      padding-top: 11px;
+      padding-right: 15px;
+      font-size: 18px;
+      text-decoration: none;
+      background: transparent url(../images/shop-now-button.gif) center center no-repeat; }
+  #cashback-store-page #store-details #terms {
+    text-align: left;
+    font-size: 12px; }
+    #cashback-store-page #store-details #terms span {
+      display: block;
+      padding-left: 15px;
+      padding-top: 10px;
+      color: #333;
+      font-weight: 700; }
+    #cashback-store-page #store-details #terms ul {
+      padding-left: 15px;
+      color: #666;
+      font-size: 11px;
+      width: 200px; }
+      #cashback-store-page #store-details #terms ul li {
+        list-style: square inside; }
+#cashback-store-page #tag-cloud .start #ttl {
+  font-size: 13px;
+  font-weight: 700;
+  color: #555;
+  background: transparent url(../images/ico-tag.gif) 8px 6px no-repeat;
+  padding-top: 4px;
+  padding-left: 40px; }
+#cashback-store-page #tag-cloud .body {
+  padding: 5px 8px;
+  line-height: 180%; }
+#cashback-store-page #deals-coupons {
+  float: left; }
+  #cashback-store-page #deals-coupons .body {
+    padding: 0 10px; }
+    #cashback-store-page #deals-coupons .body #section1, #cashback-store-page #deals-coupons .body #section2 {
+      width: 300px;
+      display: block;
+      float: left;
+      margin: -10px 0; }
+    #cashback-store-page #deals-coupons .body #section1 {
+      margin-right: 10px;
+      padding-right: 10px;
+      border-right: 2px solid #E0E0E0; }
+    #cashback-store-page #deals-coupons .body #ttl {
+      font-size: 18px;
+      padding: 8px 0; }
+    #cashback-store-page #deals-coupons .body ul {
+      padding-bottom: 10px; }
+
+#faq-page #ttl {
+  padding: 10px;
+  width: 605px;
+  height: 60px;
+  background: transparent url(../images/faq-ttl-box.gif) top left no-repeat;
+  color: #2f2f2f; }
+#faq-page #question-answer {
+  width: 620px;
+  margin-bottom: 25px; }
+  #faq-page #question-answer .question {
+    margin-top: 20px;
+    font-weight: 700;
+    padding: 2px; }
+  #faq-page #question-answer .answer {
+    margin-left: 10px; }
+#faq-page #totop {
+  font-size: 13px; }
+
+#sitemap ul {
+  float: left;
+  margin-right: 13px; }
+  #sitemap ul li {
+    margin-bottom: 10px; }
+    #sitemap ul li a {
+      font-weight: 700; }
+
+#download-page h1, #firstrun-page h1 {
+  font-size: 34px;
+  margin: 40px 0 30px 10px;
+  color: #555; }
+
+#download-page #click-allow {
+  position: fixed;
+  top: 0;
+  right: 3px;
+  display: none; }
+#download-page #required {
+  background: #E9FAD0 url(../images/message_info.png) 20px center no-repeat;
+  border-top: 1px solid #AEE756;
+  border-bottom: 1px solid #AEE756;
+  padding: 10px;
+  padding-left: 75px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #555;
+  margin-bottom: 20px; }
+#download-page .step {
+  margin: 10px; }
+  #download-page .step .ttl {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 6px 35px; }
+  #download-page .step .do {
+    padding: 5px 40px; }
+  #download-page .step .img {
+    float: right; }
+  #download-page .step p {
+    padding-bottom: 5px; }
+#download-page #s1 .ttl {
+  background: transparent url(../images/blue_1.png) left center no-repeat; }
+#download-page #s2 .ttl {
+  background: transparent url(../images/blue_2.png) left center no-repeat; }
+#download-page #s3 .ttl {
+  background: transparent url(../images/blue_3.png) left center no-repeat; }
+#download-page #s2 .img, #download-page #s3 .img {
+  padding-top: 20px; }
+#download-page #after-restart {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 20px;
+  background-color: #f3f3f3;
+  margin-top: 30px;
+  margin-left: -35px;
+  width: 490px;
+  font-weight: 700;
+  font-size: 13px; }
+
+#firstrun-page #last-step {
+  background: #E9FAD0 url(../images/message_info.png) 20px center no-repeat;
+  border-top: 1px solid #AEE756;
+  border-bottom: 1px solid #AEE756;
+  padding: 15px;
+  padding-left: 75px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #555;
+  margin-bottom: 20px; }
+  #firstrun-page #last-step span {
+    color: #447505;
+    font-size: 22px; }
+#firstrun-page #signup {
+  float: right;
+  padding-left: 15px; }
+#firstrun-page #panel {
+  margin-left: 10px;
+  color: #555;
+  font-size: 13px; }
+  #firstrun-page #panel div, #firstrun-page #panel p {
+    margin-bottom: 10px; }
+  #firstrun-page #panel #do, #firstrun-page #panel #register {
+    line-height: 150%; }
+  #firstrun-page #panel #do, #firstrun-page #panel #register {
+    font-weight: 700;
+    font-size: 16px; }
+    #firstrun-page #panel #do span, #firstrun-page #panel #register span {
+      margin-left: 90px; }
+  #firstrun-page #panel #sub {
+    padding: 5px;
+    font-size: 13px;
+    background: transparent url(../images/plus-standby.gif) 343px 5px no-repeat; }
+    #firstrun-page #panel #sub span {
+      margin-left: 10px; }
+  #firstrun-page #panel #done {
+    font-weight: 700; }
+  #firstrun-page #panel #account {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 10px;
+    background-color: #f3f3f3;
+    margin-top: 25px;
+    margin-left: -20px;
+    width: 460px; }
+#firstrun-page #screenshot, #firstrun-page #explained {
+  margin-top: 20px; }
+#firstrun-page #screenshot {
+  float: right; }
+#firstrun-page #explained {
+  background: transparent url(../images/blueback.gif) top left no-repeat;
+  height: 29px;
+  width: 370px;
+  padding: 6px 10px;
+  font-weight: 700;
+  font-size: 20px;
+  color: #006f97; }
+#firstrun-page #icons {
+  font-weight: 700;
+  color: #555;
+  margin-left: 10px; }
+  #firstrun-page #icons div {
+    margin-bottom: 20px; }
+  #firstrun-page #icons #p1 {
+    font-size: 16px;
+    color: #333;
+    margin-top: 15px; }
+  #firstrun-page #icons #p3 span {
+    color: #999; }

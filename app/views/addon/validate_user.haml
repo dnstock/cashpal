@@ -1,0 +1,12 @@
+<%= error_messages_for 'users' %>
+<% form_tag  :controller => "addon" , :action => "validate_user" do %>
+<span id="top_label_span" class ="text">To Sign In, enter your User ID here: </span><br/>
+<%= text_field("users", "login") %><%= error_message_on(:users,:login) %><%= submit_tag "Sign In"%>
+<div id="sign_up_div">
+    	<span class ="text">If you don't have an account, just 
+		<u><%= link_to "Sign Up", { :controller => "addon" , :action => "register" }, :class=>"green_underlined"  %></u>
+		to get one.</span>
+	</div>
+<% end -%>
+
+		

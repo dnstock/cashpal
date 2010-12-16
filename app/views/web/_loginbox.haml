@@ -1,0 +1,15 @@
+#loginbox{:style=>'display:none'}
+  - form_for @login do |f|
+    %table{:cellpadding=>'0', :cellspacing=>'0', :border=>'0'}
+      %tr
+        %td{:valign=>'bottom'}
+          %strong> Username
+          = " (#{link_to('new?', '#', :onclick=>"alert('Please download the addon to register')")})<br/>"
+          = f.text_field :login, :id=>'loginbox-username', :class=>'loginbox-input', :tabindex=>'500'
+        %td{:valign=>'bottom'}
+          %strong> Password
+          = " (#{link_to('forgot?', forgotpw_url)})<br/>"
+          = f.password_field :password, :id=>'loginbox-password', :class=>'loginbox-input', :tabindex=>'501'
+        %td{:valign=>'top'}
+          = "#{link_to('Close', '#', :id=>'loginbox-close', :onclick=>'showlogin(0)')}&nbsp;<br/>"
+          = f.submit 'Sign In', :id=>'loginbox-submit', :tabindex=>'502'

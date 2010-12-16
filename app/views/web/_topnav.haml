@@ -1,0 +1,16 @@
+= get_cao_link
+= render_userbox
+%ul#topnav
+  %li#start<
+    = spacer 6
+  %li= link_to 'Tour <em><strong>!</strong></em>', tour_url
+  %li= link_to 'Cash Back Shopping', shopping_url(nil)
+  %li= link_to 'Deals', deal_url
+  %li= link_to 'Coupons', coupon_url
+  -#%li#ico<
+  -#  %span= link_to 'Start Earning More', web_url(:referrals)
+  %li= link_to 'Tags', tag_url
+  %li= link_to 'Our Blog', 'http://blog.cashaddon.com'
+  %li#end= link_to 'Help', help_url
+  -#%li#search<
+  -#  %a{:href=>'#'}= image_tag('/images/nav-search.gif', :size => '15x14', :alt => 'Search', :title => 'Search deals, coupons and stores')

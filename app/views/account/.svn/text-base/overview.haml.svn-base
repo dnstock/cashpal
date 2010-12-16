@@ -1,0 +1,51 @@
+-# include DynamicDrive tooltip script
+- content_for :head, javascript_include_tag('dd_tooltips')
+#TipLayer{:style=>'visibility:hidden;position:absolute;z-index:1000;top:-100;'}
+= javascript_include_tag('dd_tooltips_style')
+#account-profile
+  #cashback-summary
+    %ul
+      %li#ttl Cash Back Earnings
+      %li<
+        = link_to('?', '#', {:onMouseover => 'stm(Text[0],Style[1])', :onMouseout => 'htm()'})
+        = "<span>#{number_to_currency(@user_commission_summary.pending || 0)}</span>Pending:"
+      %li<
+        = link_to('?', '#', {:onMouseover => 'stm(Text[1],Style[1])', :onMouseout => 'htm()'})
+        = "<span>#{number_to_currency(@user_commission_summary.available || 0)}</span>Available:"
+      %li<
+        = link_to('?', '#', {:onMouseover => 'stm(Text[2],Style[1])', :onMouseout => 'htm()'})
+        = "<span>#{number_to_currency(@user_commission_summary.available || 0)}</span>Requested:"
+      %li<
+        = link_to('?', '#', {:onMouseover => 'stm(Text[3],Style[1])', :onMouseout => 'htm()'})
+        = "<span>#{number_to_currency(@user_commission_summary.paid || 0)}</span>Cashed Out:"
+      %li#lifetime<
+        = link_to('?', '#', {:onMouseover => 'stm(Text[4],Style[1])', :onMouseout => 'htm()'})
+        = "<span>#{number_to_currency(@user_commission_summary.earned || 0)}</span>Lifetime Earned:"
+    - unless(@cao_installed)
+      = link_to('Earn cash back on every computer. Install CashAddOn.', web_url(:download), :id=>'download')
+  %h2= "Hello, #{current_user.login}"
+  #member-since= "<span>Member Since:</span> #{current_user.created_at.strftime('%B %Y')}"
+  - unless(@cao_installed)
+    #cao-not-installed
+      #ttl CashAddOn is not installed on this web browser.
+      %p You are not earning cash back from this browser.
+      %p= link_to('Grab your free copy for each computer you use.', web_url(:download))
+  - else
+    #cao-installed
+      #ttl CashAddOn is installed on this web browser.
+      %p Keep the cash back savings coming. Yea, baby.
+  #member-info
+    = link_to('update', account_url(:profile), :id=>'update')
+    #ttl Your Information
+    %p= "<span>Username:</span> #{current_user.login}"
+    %p= "<span>Name:</span> <em>CashAddOnAtor</em> " + link_to('(add your name...)', account_url(:profile))
+    %p= "<span>Email:</span> #{current_user.email}"
+    %p= "<span>Password:</span> " + link_to('change your password', account_url(:profile))
+    %p= "<span>PayPal Email:</span> #{current_user.payment_email.blank? ? 'Oops. We don\'t have a payment email for you yet.' : current_user.payment_email}<br/><usedfor>(used for getting you paid)</usedfor>"
+  #birthday
+    = link_to('update', account_url(:profile), :id=>'update')
+    #ttl Birthday Specials
+    %p <span>Your Birthday:</span> You haven't told us your birthday.
+    %p Tell us what month &amp; day you were born and we'll send you special savings on each birthday.
+
+  -##nothing{:style=>'margin-top: 20px'}= show_current_user

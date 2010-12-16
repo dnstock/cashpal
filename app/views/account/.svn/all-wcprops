@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/cashaddon_website/!svn/ver/12/app/views/account
+END
+balance.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/cashaddon_website/!svn/ver/7/app/views/account/balance.html.erb
+END
+request_payment.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/cashaddon_website/!svn/ver/7/app/views/account/request_payment.html.erb
+END
+updatePassword.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/cashaddon_website/!svn/ver/7/app/views/account/updatePassword.html.erb
+END
+cashback.haml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/cashaddon_website/!svn/ver/24/app/views/account/cashback.haml
+END
+update_payment_email.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/cashaddon_website/!svn/ver/7/app/views/account/update_payment_email.html.erb
+END
+profile.haml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/cashaddon_website/!svn/ver/24/app/views/account/profile.haml
+END
+leftnavbox.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/cashaddon_website/!svn/ver/12/app/views/account/leftnavbox.html.erb
+END
+_menu.haml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/cashaddon_website/!svn/ver/24/app/views/account/_menu.haml
+END
+updateEmail.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/cashaddon_website/!svn/ver/7/app/views/account/updateEmail.html.erb
+END
+overview.haml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/cashaddon_website/!svn/ver/24/app/views/account/overview.haml
+END
+update_show_balance_in_addon.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/cashaddon_website/!svn/ver/7/app/views/account/update_show_balance_in_addon.html.erb
+END

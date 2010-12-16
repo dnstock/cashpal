@@ -1,0 +1,6 @@
+%ul#tour-nav
+  %li{@what || ''}= link_to 'How It Helps', tour_url(:what)
+  -#%li{@how || ''}= link_to 'How It Works', tour_url(:how)
+  %li{@features || ''}= link_to 'Cool Features', tour_url(:features)
+  %li{@screenshots || ''}= link_to 'Screenshots', tour_url(:screenshots)
+  %li.last{@join || ''}= link_to 'Get in the Action', tour_url(:screenshots)

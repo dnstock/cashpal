@@ -1,0 +1,9 @@
+#account-menu
+  #container
+    %ul
+      %li= link_to 'Account Overview', account_path(:overview)
+      %li= link_to 'Cash Back Summary', account_path(:cashback)
+      %li= link_to 'Recent Activity', account_path(:activity)
+      %li= link_to 'Request Payment', account_path(:payments)
+      %li= link_to 'Update My Profile', account_path(:profile)
+      %li= link_to 'Account Help', account_path(:help)

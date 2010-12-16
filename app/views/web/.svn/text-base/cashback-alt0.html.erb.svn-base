@@ -1,0 +1,86 @@
+<%#= install_cao_reminder %>
+<div id="cashback-shops">
+  <div id="left">
+    <h2>Hot Savings</h2>
+    <ul>
+      <li><a href="#">Recent Deals</a></li>
+      <li><a href="#">Recent Coupons</a></li>
+      <li><a href="#">All Recent Offers</a></li>
+    </ul>
+    <h2>Shop by Category</h2>
+    <ul>
+      <li><a href="#">All Stores</a></li>
+      <li><a href="#">Apparel</a>
+      <li><a href="#">Auction</a>
+      <li><a href="#">Computers</a>
+      <li><a href="#">Electronics</a>
+      <li><a href="#">Health & Beauty</a>
+      <li><a href="#">Home & Garden</a>
+      <li><a href="#">Pets</a>
+      <li><a href="#">Travel</a>
+    </ul>
+  </div>
+  <div id="mid">
+    <div>
+      <h2>Earn cash back on every purchase. Automatically.</h2>
+      <p id="abstract">Download <a href="#">CashAddon</a> then shop at one of the stores below. <br/>It's really that simple.</p>
+    </div>
+    <div id="popular-stores">
+      <h2>Popular Stores</h2>
+      <ul>
+        <li><a href="#"><img border="0" src="images/stores/small/ebay.gif" alt="eBay.com"/><br/>eBay <span>(1.5%)</span></a></li>
+        <li><a href="#"><img border="0" src="images/stores/small/drugstore.gif" alt="drugstore.com"/><br/>drugstore.com (7%)</a></li>
+        <li><a href="#"><img border="0" src="images/stores/small/priceline.gif" alt="Priceline.com"/><br/>Priceline.com (1%)</a></li>
+        <li><a href="#"><img border="0" src="images/stores/small/buy.gif" alt="Buy.com"/><br/>Buy.com (2%)</a></li>
+        <li><a href="#"><img border="0" src="images/stores/small/shutterfly.gif" alt="Shutterfly.com"/><br/>Shutterfly (4%)</a></li>
+        <li><a href="#"><img border="0" src="images/stores/small/mcafee.gif" alt="McAfee.com"/><br/>McAfee (10%)</a></li>
+      </ul>
+    </div>
+    <div id="search">
+      <p><input id="q" type="text"/><input type="submit" id="submit" value="Search Stores"/></p>
+      <%= store_alpha_search %>
+      <select id="view">
+        <option value="list" class="list">List View</option>
+        <option value="gallery" class="gallery">Gallery View</option>
+      </select>
+    </div>
+    <%
+    #<div id="featured">
+    #  <p><img src="images/featured_stores.png"/></p>
+    #</div>
+    %>
+    <ul id="stores">
+      <li id="ttl"><span>Cash Back</span>Click on a store to view deals and coupons</li>
+      <li><a href="#"><span>8%</span>1-800 PetMeds</a></li>
+      <li><a href="#"><span>5%</span>Bare Necessities</a></li>
+      <li><a href="#"><span>2%</span>Buy.com USA and Buy.com CA</a></li>
+      <li><a href="#"><span>7%</span>drugstore.com</a></li>
+      <li><a href="#"><span>1.5%</span>eBay</a></li>
+      <li><a href="#"><span>4%</span>Florsheim.com</a></li>
+      <li><a href="#"><span>14%</span>Flower.com</a></li>
+      <li><a href="#"><span>1.4%</span>Fujitsu Computer Systems Corporation</a></li>
+      <li><a href="#"><span>5%</span>LandscapeUSA.com</a></li>
+      <li><a href="#"><span>7%</span>Luggage OnLine</a></li>
+      <li><a href="#"><span>2.5%</span>Lumber Liquidators</a></li>
+      <li><a href="#"><span>10%</span>McAfee</a></li>
+      <li><a href="#"><span>1%</span>Priceline</a></li>
+      <li><a href="#"><span>4%</span>Shutterfly.com</a></li>
+      <li><a href="#"><span>2%</span>TechDepot.com</a></li>
+    </ul>
+    <%#<p id="legend">* additional restrictions apply.</p>%>
+  </div>
+  <div id="right">
+    <h2>Need Assistance?</h2>
+    <ul>
+      <li><a href="#">How does cash back work?</a></li>
+      <li><a href="#">Frequently asked questions</a></li>
+      <li><a href="#">CashBack Glossary</a></li>
+    </ul>
+    <h2>Get Cash<span class="cao-blue">Add</span>On</h2>
+    <ul>
+      <li>Don't forget to grab your free copy <!--of <span class="cao">cash<span class="cao-blue">add</span>on</span>--> and automatically earn cash back savings while you shop.
+      <a href="#" id="learn-more">Learn More</a></li>
+    </ul>
+  </div>
+  <div class="clear"></div>
+</div>

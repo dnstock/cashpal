@@ -1,0 +1,28 @@
+#download-page
+  #click-allow= image_tag('click-allow.gif', :size => '130x69', :alt => 'Click "Allow" to install CashAddOn')
+  %h1 You're now installing CashAddOn
+  #required= "You should get a message from Firefox to install CashAddOn within a few seconds, or you can #{link_to('try again', download_url)}.<br/>CashAddOn requires #{link_to('Firefox 3', 'http://www.firefox.com')} or newer."
+  .step#s1
+    .ttl Allow the CashAddOn installation
+    .do If you see a yellow bar at the top of this webpage, click '<strong>Allow</strong>' to allow Firefox to install the <strong>CashAddOn</strong> add-on.
+    .img= image_tag('install-on-firefox.png', :size => '619x36', :alt => 'yellow Firefox plugin toolbar')
+    .clear
+  .step#s2
+    .img= image_tag('install-now.png', :size => '419x281', :alt => 'install CashAddOn window')
+    .ttl Install CashAddon as a Firefox add-on
+    .do 
+      %p Once you click 'Allow' a window will pop up to install the <strong>CashAddOn</strong> Firefox add-on. Click '<strong>Install Now</strong>'.
+    .clear
+  .step#s3
+    .img= image_tag('install-restart.png', :size => '348x257', :alt => 'Firefox add-ons window')
+    .ttl Restart Firefox
+    .do 
+      %p Now you will see your Firefox Add-ons window.<br/><strong>CashAddOn</strong> should finish installing in a few seconds.
+      %p Once complete, you will be asked to restart Firefox.<br/>Click '<strong>Restart Firefox</strong>'.
+      #after-restart
+        %p After you restart Firefox, CashAddOn will open so that you can register.
+        %p Our website will also display a page to help you get started.
+    .img
+    .clear
+:javascript
+  install()

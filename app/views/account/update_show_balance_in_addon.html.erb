@@ -1,0 +1,26 @@
+<%= form_remote_tag( 
+	:update => "updateShowBalanceInAddonFlagDIV", 
+	:url => { :controller => "account" , :action => "update_show_balance_in_addon" } , 
+	:html => { :id => "update_show_balance_in_addonForm" },
+	:complete => "if(request.status==403){alert('your session has expired, please login'); window.location.reload();}") 
+
+%>
+			
+<table style ="text-align: middle;" border="0" cellspacing="0" cellpadding="5" width="100%">
+    <tbody>
+    	<tr>
+    		<td>
+    			<span class ="blackheader">CashAddOn Settings</span>
+			&nbsp;<hr align="left" width="280px" size="1" color="#94a4b1">
+			<span class="text">Display earnings in CashAddOn </span>
+			<%if h(params[:showBalanceInAddonFlag]).eql?('Y') -%>
+				<input type="checkbox" id="showBalanceInAddonFlag" name="showBalanceInAddonFlag" checked="true" value="Y">
+			<%else -%>
+				<input type="checkbox" id="showBalanceInAddonFlag" name="showBalanceInAddonFlag" value="Y">
+			<%end -%>
+			<input type="submit" value="Save" onclick="this.disabled=true; $('update_show_balance_in_addonForm').onsubmit();"/>			
+  	 		</td>
+    	</tr>
+    </tbody>
+</table>
+</form>

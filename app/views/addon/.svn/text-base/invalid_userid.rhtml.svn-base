@@ -1,0 +1,4 @@
+
+<p>User ID not found, please Sign In or Sign Up.</p>
+<%= error_messages_for 'users' %>
+<%= render_component(:controller => 'addon', :action => 'invisible_validate_user') %>

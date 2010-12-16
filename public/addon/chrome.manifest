@@ -1,0 +1,4 @@
+#content	cao	jar:chrome/cao.jar!/content/
+content cao chrome/content/
+overlay	chrome://browser/content/browser.xul chrome://cao/content/cao.xul
+skin cao classic/1.0 chrome/skin/

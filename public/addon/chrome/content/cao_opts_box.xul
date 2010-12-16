@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<window 
+  id="caoOptionsWindow" 
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" 
+  title="CashAddOn Options"
+  xmlns:html="http://www.w3.org/1999/xhtml"
+  width="540"
+  height="545">   
+<script type="application/x-javascript" src="chrome://cao/content/common.js" /> 
+<script type="application/x-javascript" src="chrome://cao/content/merchants.js" /> 
+<script type="application/x-javascript" src="chrome://cao/content/prototype.js" /> 
+<hbox>
+<image src="chrome://cao/content/cashAddOn_logo-small.png"/>
+</hbox>
+<tabbox id="mainTabbox">
+  <tabs>
+    
+    <tab label="User Information" linkedpanel="signin_register_tabpanel" id="signin_register_tab" ordinal="1" first-tab="true"/>
+    <tab label="Account" linkedpanel="main_tabpanel" id="main_tab" hidden="true" ordinal="1"/>
+    <tab label="Feedback" linkedpanel="feedback_tabpanel" id="feedback_tab"  hidden="true" ordinal="1"/>
+    <tab label="About" linkedpanel="about_tabpanel" id="about_tab" ordinal="1" last-tab="true"/>
+  </tabs>
+    <tabpanels>
+      
+      <tabpanel id="signin_register_tabpanel" orient="vertical">
+        <groupbox>
+          <caption label="CashAddOn" id="cashaddon_label_id"/>
+          <hbox align="center">
+            <label id="user_id_caption" control="userid" value="User ID"/>
+            <label id="userid" style="font-weight:900;"/>
+            <button id="remove_button" label="Remove" 
+              onclick="try{document.getElementById('userid').value='';
+                       writeBoolToPrefs('alreadyShowedOptionsBox',false);
+                       writeBoolToPrefs('loadedStartPage',false);}catch(e){alert(e);}" hidden="true"/>
+          </hbox>
+          <hbox align="center">
+            <checkbox id="showstatusicon_cbox" label="Display Icon in Firefox Status Bar" inverted="false" hidden="false" />
+<image src="chrome://cao/content/icon-small-tracking.png"/><image src="chrome://cao/content/transparent.gif" width="5" height="1"/>
+<image src="chrome://cao/content/icon-small.png"/>            
+<checkbox id="notifyuser_cbox" label="Notification" inverted="false" hidden="true"/>
+            <!-- onsynctopreference="return this.checked;"                 onsyncfrompreference=""                          onsynctopreference="return document.getElementById('notifyuser_cbox') ? 'true':'false';"                          -->               
+          </hbox>
+        </groupbox>
+        <hbox align="center"><label value="Important: You are currently not earning Cash Back - Please Sign Up/Sign In Below" style="color:red; font-family:Arial; font-size:12px" hidden="true" id="warningLabel"/></hbox>
+        <tabbox id="signInUpTabbox" selectedIndex="1">
+          <tabs>
+            <tab label="Sign Up" linkedpanel="signup_subtabpanel" id="signup_subtab" ordinal="1" first-tab="true"/>
+            <tab label="Sign In" linkedpanel="signin_subtabpanel" id="signin_subtab" ordinal="1" last-tab="true"/>
+          </tabs>
+          <tabpanels>
+            <tabpanel id="signup_subtabpanel" orient="vertical">
+              <iframe src="chrome://cao/content/loading.xul" width="400" height="230" style="overflow:-moz-scrollbars-vertical" id="iframe_signup" /> <!-- src="http://test.cashaddon.com/addon/register"  -->
+            </tabpanel>
+            <tabpanel id="signin_subtabpanel" orient="vertical">
+              <iframe src="chrome://cao/content/loading.xul"  width="400" height="230" style="overflow:-moz-scrollbars-vertical" id="iframe_signin" /> <!-- src="http://test.cashaddon.com/addon/validate_user"  -->
+            </tabpanel>
+          </tabpanels>
+        </tabbox>
+        
+      </tabpanel>
+      <tabpanel id="about_tabpanel" hidden="false"><iframe src="chrome://cao/content/loading.xul" width="400" height="200" style="overflow:-moz-scrollbars-none" id="iframe_about"/></tabpanel>
+      <tabpanel id="main_tabpanel" orient="vertical"  hidden="false">
+        <!-- Create a new pane (tab) for CashBack Add-On -->
+        
+            <!-- 
+            <preferences>
+              <preference id="userID" name="extensions.cao.userID" type="string" />
+              <preference id="notifyuser_pref" name="extensions.cao.notifyuser" type="string" />
+            </preferences>
+    
+            <stringbundleset>
+          	  <stringbundle id="bundlePreferences" src="chrome://cao/locale/cao.properties"/>
+          	</stringbundleset>
+          	-->
+          	
+            
+         <groupbox >
+           <caption label="Account Information" />
+            <iframe src="chrome://cao/content/loading.xul"  width="400" height="350" style="overflow:-moz-scrollbars-none" id="iframe_account">    <!-- src="http://test.cashaddon.com/addon/verify_password" -->
+            </iframe>
+        </groupbox>
+         
+      </tabpanel> 
+      <tabpanel id="feedback_tabpanel" orient="vertical"  hidden="true">
+        <iframe  src="chrome://cao/content/loading.xul"  width="400" height="350" style="overflow:-moz-scrollbars-none" id="iframe_feedback" /> <!-- src="http://test.cashaddon.com/addon/feedback" -->
+        <!--
+        <vbox>
+          <label value="Feedback" class="header"/>
+          <label>
+          We would like to hear from you.<html:br/>
+          Please tell us how you like using CashAddOn and how we can improve it.<html:br/>
+          If you had problems using this, found a bug, or have a suggested website to add to the affiliate list, please email in and let us know.<html:br/>
+          Thanks,<html:br />
+          The Management<html:br />
+          Email to: <html:a href='mailto:feedback@cashaddon.com'>feedback@cashaddon.com</html:a>
+          </label>
+        </vbox>
+        -->
+      </tabpanel>
+  </tabpanels>
+</tabbox>
+<hbox orient="horizontal">
+<hbox align="left">
+    
+<html:table border="0" width="540" style="background-color: rgb(123, 175, 216);">
+  <html:tr>
+    <html:td align="left" >
+      <button label="CashAddOn.com" onclick="window.parent.open('http://www.cashaddon.com/');" hidden="true"/>
+      <button label="Go to My Account" onclick="window.parent.open('http://cashaddon.com/account/balance');" hidden="true"/>
+      <label onclick="window.parent.open('http://cashaddon.com/account/balance');" class="text-link" 
+      style="text-decoration: none; color: white; font-family: verdana,helvetica,arial,sans-serif; font-size:12px;" value="Go to My Account"/>
+
+    </html:td>
+    <html:td align="right">
+      <button label="Close" onclick="window_close_event(null); window.close();" hidden="true"/>
+      <label onclick="window_close_event(null); window.close();"  class="text-link" 
+      style="text-decoration: none; color: white; font-family: verdana,helvetica,arial,sans-serif; font-size:12px;" value="Close"/>
+    </html:td>
+  </html:tr>
+</html:table>
+</hbox>
+
+<hbox align="right"></hbox>
+</hbox>
+
+
+<script type="application/x-javascript" src="chrome://cao/content/options_box.js" /> 
+</window>

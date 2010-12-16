@@ -1,0 +1,78 @@
+-# include DynamicDrive tooltip script
+- content_for :head, javascript_include_tag('dd_tooltips')
+#TipLayer{:style=>'visibility:hidden;position:absolute;z-index:1000;top:-100;'}
+= javascript_include_tag('dd_tooltips_style')
+#account-summary
+  #readout
+    %table
+      %tr
+        %th{:width=>150}= link_to('<span>?</span>Pending', '#', {:onMouseover => 'stm(Text[0],Style[0])', :onMouseout => 'htm()'})
+        %th{:width=>150}= link_to('<span>?</span>Available', '#', {:onMouseover => 'stm(Text[1],Style[0])', :onMouseout => 'htm()'})
+        %th{:width=>150}= link_to('<span>?</span>Requested', '#', {:onMouseover => 'stm(Text[2],Style[0])', :onMouseout => 'htm()'})
+        %th{:width=>150}= link_to('<span>?</span>Cashed Out', '#', {:onMouseover => 'stm(Text[3],Style[0])', :onMouseout => 'htm()'})
+        %th= link_to('<span>?</span>Lifetime Cash Back', '#', {:onMouseover => 'stm(Text[4],Style[0])', :onMouseout => 'htm()'})
+      %tr
+        %td= number_to_currency(@user_commission_summary.pending || 0)
+        %td= number_to_currency(@user_commission_summary.available || 0)
+        %td= number_to_currency(@user_commission_summary.paid || 0)
+        %td= number_to_currency(@user_commission_summary.earned || 0)
+        %td.strong $0.00
+    %p#pending-cashback cash back from online purchases generally take up to 7 days to appear in your account
+  - form_tag account_path(:balance), :id => 'month-lookup' do
+    %p
+      Monthly Account Details:
+      = select_tag(:month_to_view,options_for_select(get_months_options(),params[:month_to_view]))
+      = submit_tag 'View'
+      = link_to('View Payment History', account_url(:payments), :id => :payments)
+  .history
+    %p.ttl Pending Cash Back
+    %table
+      %tr
+        %th Date
+        %th Store
+        %th Order No.
+        %th Purchase Amount
+        %th Comission %
+        %th Comission
+      - if @user_transactions_pending.blank?
+        %tr
+          %td#no-records{:colspan => 20} No records found
+      - else
+        - for c in @user_transactions_pending
+          %tr
+            %td= c.date.strftime('%B %d, %Y')
+            %td= c.name
+            %td= c.action_id
+            %td= c.sale_amount
+            %td= to_percent(c.commission_to_members.to_s)
+            %td= show_2_decimal_places(round_to_2decimal(c.user_commission).to_s)
+  .history
+    %p.ttl Earned Cash Back
+    %table
+      %tr
+        %th Date
+        %th Store
+        %th Order No.
+        %th Purchase Amount
+        %th Comission %
+        %th Comission
+      - if @user_transactions_earned.blank?
+        %tr
+          %td#no-records{:colspan => 20}
+            %p No records found
+            
+      - else
+        - for c in @user_transactions_earned
+          %tr
+            %td= c.date.strftime('%B %d, %Y')
+            %td= c.name
+            %td= c.action_id
+            %td= c.sale_amount
+            %td= to_percent(c.commission_to_members.to_s)
+            %td= show_2_decimal_places(round_to_2decimal(c.user_commission).to_s)
+  %p#start-saving Look for the <a href="">CashAddOn Plus</a> in Firefox's statusbar when <a href="">shopping</a> and earn cash back on every purchase!
+  #help
+    #ttl Got questions?
+    %ul
+      %li= link_to 'How do I earn cash back from my online purchases?', web_url(:help)
+      %li= link_to 'Can you explain this page to me?', web_url(:help)

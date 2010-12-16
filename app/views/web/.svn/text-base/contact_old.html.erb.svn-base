@@ -1,0 +1,102 @@
+<% # save: ip, host, browser, res, os, username (if logged in)
+   form_tag(:controller => "addon", :action => "feedback") do %>
+<table>
+  <tr>
+    <br>
+    <h1>Contact</h1><br>
+    <td colspan="2" class ="text">Let us know what you think, ways to improve the product or report any issues you may be having.  We'd love to hear from you! <br/><br></td>
+  </tr>
+</table>
+
+<table>
+  <%if current_user -%>
+  <tr>
+    <td class ="blackheader">User ID</td>
+    <td class ="text"><div id="view_user_id"></div>
+      <%= hidden_field("feedback", "user_id") %>
+      <span class="red12"><%= error_message_on(:feedback,:user_id) %></span>
+    </td>
+  </tr>
+  <script type="text/javascript">
+    $('view_user_id').innerHTML = <%= "'" + h(current_user.login) + "'" %>;
+    $('feedback_user_id').value = <%= "'" + h(current_user.login) + "'" %>;
+  </script>
+  <%end -%>
+  <tr>
+    <td class ="blackheader">Subject/Bug Report</td>
+    <td class ="text"><%= text_field("feedback", "msg_subject") %>
+      <span class="red12"><%= error_message_on(:feedback,:msg_subject) %></span>
+    </td>
+  </tr>
+  <tr>
+    <td class ="blackheader">Browser Version</td>
+    <td class ="text">
+      <%= select("feedback", "browser", [
+                        ['Other','OTHER'],
+                        ['FireFox 3','FF3'],
+                        ['FireFox 2','FF2'],
+                        ['FireFox 1','FF1'],
+                        ['IE7','IE7'],
+                        ['IE6','IE6'],
+                        ['IE5','IE5'],
+                      ])
+      %>
+      <span class="red12"><%= error_message_on(:feedback,:browser) %></span>
+      <!-- select name="browser">
+        <option SELECTED value="other" >other</option>
+        <option value="FF2005">FireFox 2.0.0.5</option>
+        <option value="FF2004">FireFox 2.0.0.4</option>
+        <option value="FF2003">FireFox 2.0.0.3</option>
+        <option value="FF2002">FireFox 2.0.0.2</option>
+        <option value="FF2001">FireFox 2.0.0.1</option>
+        <option value="ie7">IE7</option>
+        <option value="ie6">IE6</option>
+        <option value="ie5">IE5</option>
+      </select -->
+    </td>
+  </tr>
+  <tr>
+    <td class ="blackheader">Operating System Version</td>
+    <td class ="text">
+      <%= select("feedback", "os", [
+                        ['Other','other'],
+                        ['Windows Vista','vista'],
+                        ['Windows XP','xp'],
+                        ['Windows 2003','w2003'],
+                        ['Windows 2000','w2000'],
+                        ['Mac','mac']
+                      ])
+      %>
+      <span class="red12"><%= error_message_on(:feedback,:os) %></span>
+      <!-- select name="OS">
+        <option value="vista">Windows Vista</option>
+        <option value="xp">Windows XP</option>
+        <option value="w2000">Windows 2000</option>
+        <option value="w2003">Windows 2003</option>
+        <option value="Mac">Mac</option>
+        <option value="other">Other</option>
+      </select -->
+    </td>
+  </tr>
+  <tr><td></td></tr>
+  <tr>
+    <td class ="blackheader" valign ="top">Message or Bug Description</td>
+    <td class ="text">
+      <%= text_area("feedback", "message", { :cols=>40, :rows=>5 } ) %>
+      <span class="red12"><%= error_message_on(:feedback,:message) %></span>
+    </td>
+  </tr>
+  <tr>
+      <td></td>
+      <td align="right"><%= submit_tag "Submit"%>
+      <%= hidden_field_tag("nextURL","/") %>
+    </td>
+  </tr>
+</table>
+<%= error_messages_for 'feedback' %>
+<p class="flash">
+<% if flash[:notice]  -%>
+<%= flash[:notice] %>
+<% end -%>
+</p>
+<% end -%>

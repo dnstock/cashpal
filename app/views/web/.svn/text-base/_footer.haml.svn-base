@@ -1,0 +1,3 @@
+= '&copy; ' + Time.now.strftime('%Y') + ' CashAddOn, LLC &nbsp; &nbsp;'
+= nav_links 'Write Us, FAQ, Press, Privacy Policy, Terms &amp; Conditions, Glossary, Site Map', '&nbsp; - &nbsp;'
+

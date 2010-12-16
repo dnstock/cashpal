@@ -1,0 +1,10 @@
+= "&copy; #{Time.now.strftime('%Y')} CashAddOn, LLC &nbsp; &nbsp;"
+- footer = Array.new
+- footer << link_to('Write Us', contact_url)
+- footer << link_to('About Us', web_url(:company))
+- footer << link_to('FAQ', help_url)
+- footer << link_to('Press', 'mailto:press@cashaddon.com')
+- footer << link_to('Privacy Policy', web_url(:privacy))
+- footer << link_to('User Agreement', web_url(:terms))
+- footer << link_to('Site Map', web_url(:sitemap))
+= footer.join('&nbsp; - &nbsp;')

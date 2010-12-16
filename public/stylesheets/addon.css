@@ -1,0 +1,503 @@
+.clear {
+  clear: both; }
+
+.right {
+  float: right; }
+
+.grey {
+  color: #666; }
+
+.em {
+  font-style: italic; }
+
+.strong {
+  font-weight: 700; }
+
+button {
+  cursor: pointer; }
+
+
+body, td {
+  margin: 0;
+  background-color: white;
+  color: black;
+  font-family: Helvetica, Arial, Sans-Serif;
+  font-size: 12px;
+  font-weight: 400;
+  /* background: white url(../images/grass.png) bottom center repeat-x; */
+  background-attachment: fixed; }
+
+a.blue:link  { text-decoration: none; color: rgb(123, 175, 216); font-family: verdana,helvetica,arial,sans-serif; font-size:12px;}
+a.blue:visited  { text-decoration: none; color: rgb(123, 175, 216); font-family: verdana,helvetica,arial,sans-serif; font-size:12px;}
+
+
+textarea, input, select {
+  font-family: Helvetica, Arial, Sans-Serif;
+  font-size: 12px; }
+
+#page {
+  margin: 5px auto;
+  width: 950px; }
+
+#header {
+  background: transparent url(../images/cashaddon-hdr.png) top left no-repeat;
+  height: 73px; }
+  #header a {
+    color: white;
+    text-decoration: none; }
+    #header a:hover {
+      color: yellow; }
+  #header #logo {
+    display: block;
+    width: 205px;
+    height: 27px;
+    font-weight: bold;
+    padding-top: 46px;
+    padding-left: 85px; }
+  #header #loginbox00 {
+    float: right;
+    color: #f3f3f3;
+    margin-top: 7px;
+    margin-right: 8px; }
+  #header #loginbox0 {
+    background: #3f719a url(../images/loginbox.gif) bottom left no-repeat;
+    float: right;
+    margin-top: 4px; }
+    #header #loginbox0 a {
+      display: block;
+      color: #D6E1E9;
+      padding: 3px 17px 5px 10px;
+      background: transparent url(../images/loginbox-bullet.gif) right center no-repeat; }
+      #header #loginbox0 a:hover {
+        color: yellow; }
+  #header #loginbox {
+    float: right;
+    margin-top: 6px;
+    margin-right: 3px; }
+    #header #loginbox td {
+      font-size: 11px;
+      color: #e3e3e3; }
+    #header #loginbox .loginbox-input {
+      font-size: 11px;
+      border: 1px solid #ccc;
+      background-color: #f3f3f3;
+      width: 120px;
+      margin-right: 5px;
+      margin-top: 1px; }
+      #header #loginbox .loginbox-input:hover {
+        background-color: white; }
+      #header #loginbox .loginbox-input:focus {
+        background-color: white; }
+    #header #loginbox #loginbox-submit {
+      font-size: 11px;
+      border: 1px solid #ccc;
+      margin-right: 8px;
+      margin-top: 1px; }
+    #header #loginbox #loginbox-close {
+      float: right;
+      text-align: right;
+      display: inline;
+      font-size: 9px;
+      color: #ffd3d3; }
+  #header #get-cashaddon {
+    float: right; }
+  #header #topnav {
+    float: right;
+    clear: right;
+    background: transparent url(../images/topnav-end.gif) 100% -1px no-repeat;
+    padding-right: 8px;
+    height: 26px; }
+    #header #topnav li {
+      float: left;
+      padding: 8px 16px;
+      border-top: 1px solid #bed5e7;
+      background: #5e8aad url(../images/topnav-pipe.gif) right center no-repeat; }
+    #header #topnav #start {
+      padding: 8px 0;
+      border: 0;
+      background: transparent url(../images/topnav-start.gif) top left no-repeat; }
+    #header #topnav #end {
+      background: #5e8aad;
+      padding-right: 13px; }
+    #header #topnav #ico {
+      padding-left: 8px; }
+      #header #topnav #ico span {
+        background: transparent url(../images/topnav-forums.gif) left center no-repeat;
+        padding-left: 20px; }
+
+#breadcrumbs {
+  position: relative;
+  float: right;
+  color: #666;
+  font-size: 10px;
+  margin-bottom: -10px;
+  margin-right: 10px; }
+  #breadcrumbs a {
+    text-decoration: none;
+    color: #3c7099; }
+    #breadcrumbs a:hover {
+      color: #ff8c00; }
+  #breadcrumbs .crumb-link {
+    background: transparent url(../images/crumb-bullet.gif) left center no-repeat;
+    padding-left: 9px;
+    margin-left: 4px; }
+
+#footer {
+  margin-top: 6px;
+  margin-left: 6px;
+  margin-right: 6px;
+  margin-bottom: 100px;
+  font-size: 11px; }
+  #footer a {
+    text-decoration: none;
+    color: black; }
+    #footer a:hover {
+      text-decoration: underline;
+      color: #ff8c00; }
+
+#hp-main {
+  background: transparent url(../images/hp-cashback-made-easy.png) top left no-repeat;
+  width: 950px;
+  height: 275px;
+  margin-top: 15px; }
+  #hp-main ul {
+    padding-top: 73px;
+    padding-left: 35px;
+    line-height: 180%;
+    font-size: 16px;
+    font-weight: 700;
+    color: #2a3f50;
+    list-style-image: url(../images/hpbullet.gif);
+    list-style-position: inside; }
+    #hp-main ul a {
+      color: #2a3f50;
+      text-decoration: none; }
+      #hp-main ul a:hover {
+        text-decoration: underline; }
+    #hp-main ul #h1 {
+      display: none; }
+  #hp-main a#download {
+    display: block;
+    position: relative;
+    top: 12px;
+    left: 16px;
+    width: 315px;
+    height: 60px;
+    color: transparent; }
+    #hp-main a#download span {
+      visibility: hidden; }
+
+#hp-savings {
+  background: transparent url(../images/hp-blackbar.gif) top left no-repeat;
+  width: 950px;
+  height: 38px;
+  text-align: center; }
+
+#hp-links {
+  width: 950px;
+  height: 78px;
+  background: transparent url(../images/hp-links-bg.gif) top left no-repeat;
+  padding-top: 10px; }
+  #hp-links a {
+    display: block;
+    text-decoration: none; }
+  #hp-links a#video, #hp-links a#forum {
+    width: 266px;
+    height: 22px;
+    margin-left: 15px;
+    padding-top: 7px;
+    padding-left: 35px;
+    color: #365268;
+    font-weight: 700;
+    font-size: 14px; }
+  #hp-links a#video {
+    background: transparent url(../images/but-hpvideo.gif) top left no-repeat;
+    margin-bottom: 7px; }
+    #hp-links a#video:hover {
+      background: transparent url(../images/but-hpvideo-hov.gif) top left no-repeat; }
+  #hp-links a#forum {
+    background: transparent url(../images/but-hpforum.gif) top left no-repeat; }
+    #hp-links a#forum:hover {
+      background: transparent url(../images/but-hpforum-hov.gif) top left no-repeat; }
+  #hp-links a#refer {
+    float: right;
+    display: block;
+    width: 145px;
+    height: 51px;
+    line-height: 100%;
+    background: transparent url(../images/but-hprefer.gif) top left no-repeat;
+    color: #447505;
+    font-size: 20px;
+    padding-left: 70px;
+    padding-top: 12px; }
+    #hp-links a#refer:hover {
+      background: transparent url(../images/but-hprefer-hov.gif) top left no-repeat; }
+    #hp-links a#refer span {
+      color: #599a06;
+      font-size: 12px;
+      font-weight: 700; }
+  #hp-links #pipe {
+    float: right;
+    height: 55px;
+    width: 1px;
+    background-color: #ccc;
+    margin: 4px 30px; }
+  #hp-links #news {
+    float: right;
+    width: 310px;
+    margin-right: 15px; }
+    #hp-links #news h3 {
+      margin-bottom: 3px; }
+    #hp-links #news p {
+      line-height: 135%; }
+    #hp-links #news a {
+      display: inline;
+      color: #146634; }
+      #hp-links #news a:hover {
+        text-decoration: underline; }
+
+#page-header {
+  margin-top: 3px; }
+
+#page-content {
+  background: transparent url(../images/page-bg.png) left repeat-y;
+  padding: 5px 15px;
+  min-height: 300px;
+  color: 920px; }
+
+
+#policies {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 15px; }
+  #policies p {
+    line-height: 150%;
+    font-size: 1.1em;
+    margin-bottom: 12px; }
+  #policies .strong {
+    color: #447505;
+    font-size: 1.2em; }
+  #policies .footer {
+    margin-top: 25px; }
+    #policies .footer a {
+      margin-right: 10px;
+      padding: 3px 10px;
+      border: 1px solid #ccc;
+      color: #23618F;
+      text-decoration: none;
+      background-color: #FFFFEA;
+      font-weight: 700;
+      font-size: 1.2em; }
+      #policies .footer a:hover {
+        color: #ff8c00;
+        background-color: #D1F5FE;
+        border: 1px solid grey; }
+
+#contact-form {
+  margin-top: 5px; }
+  #contact-form ol, #contact-form ul, #contact-form p {
+    font-size: 1.2em;
+    line-height: 1.5; }
+  #contact-form legend {
+    font-size: 1.7em;
+    line-height: 1.8;
+    padding-bottom: .5em; }
+  #contact-form li {
+    clear: both;
+    margin: 0 0 .75em; }
+  #contact-form label {
+    display: block;
+    float: left;
+    line-height: 1.6;
+    margin-right: 10px;
+    text-align: right;
+    width: 120px; }
+    #contact-form label:after {
+      content: ':'; }
+  #contact-form input, #contact-form textarea {
+    background: #ddd;
+    width: 250px;
+    padding: 1px 3px; }
+    #contact-form input:focus,     #contact-form textarea:focus {
+      background: #fff; }
+  #contact-form textarea {
+    line-height: 1.3em;
+    padding: 0 3px; }
+  #contact-form button {
+    background: #ffd100;
+    border: 2px outset #333;
+    color: #333;
+    font-size: .9em;
+    font-weight: bold;
+    letter-spacing: .3em;
+    margin-left: 130px;
+    padding: .2em .5em;
+    text-transform: uppercase; }
+
+#tour-content div {
+  margin-bottom: 12px; }
+#tour-content p {
+  font-weight: 400; }
+#tour-content a {
+  color: #3c7099; }
+  #tour-content a:hover {
+    color: #ff8c00; }
+#tour-content .p {
+  color: #444;
+  line-height: 1.4em; }
+#tour-content .lg {
+  font-size: 15px; }
+#tour-content .xl {
+  font-size: 19px; }
+#tour-content .lite {
+  color: #666; }
+#tour-content .dark {
+  color: #323232; }
+#tour-content .strong {
+  font-weight: 700; }
+#tour-content .green {
+  color: #4c9758; }
+#tour-content .lite-green {
+  color: #5caf6a; }
+#tour-content .blue {
+  color: #4b81ab; }
+#tour-content .green-xl {
+  color: #5caf6a;
+  font-size: 28px;
+  font-variant: small-caps;
+  font-style: italic;
+  padding-left: 50px; }
+#tour-content .ttl {
+  font-size: 17px;
+  line-height: 1.1em; }
+#tour-content #cashaddon-leaf {
+  background: transparent url(../images/cashaddon-leaf.png) top left no-repeat;
+  padding-top: 10px; }
+#tour-content .cao {
+  color: #444;
+  font-weight: 700;
+  font-variant: small-caps; }
+#tour-content .cao-blue {
+  color: #3c7099; }
+#tour-content .note {
+  color: #666;
+  font-size: 12px;
+  line-height: 1.2em; }
+#tour-content .m {
+  margin-left: 8px; }
+#tour-content .m-lg {
+  margin-left: 15px; }
+#tour-content #download-cashaddon {
+  float: right;
+  clear: right;
+  margin-top: 20px;
+  margin-right: 50px; }
+#tour-content #screencast {
+  float: right; }
+
+#cao-reminder {
+  padding: 8px 10px;
+  font-weight: 700;
+  text-align: center;
+  border: 1px dashed #86c732;
+  background: #ffffee url(../images/cao-icons.gif) 10px center no-repeat;
+  margin-bottom: 10px;
+  color: #666; }
+  #cao-reminder span {
+    color: #3c7099; }
+  #cao-reminder a {
+    text-decoration: none;
+    color: #3c7099;
+    background: transparent url(../images/crumb-bullet.gif) right center no-repeat;
+    margin-left: 5px;
+    padding-right: 8px; }
+    #cao-reminder a:hover {
+      color: #ff8c00; }
+
+#cashback-shops h2 {
+  font-size: 16px;
+  color: #365d03; }
+#cashback-shops #left {
+  width: 180px; }
+#cashback-shops #right {
+  width: 200px; }
+#cashback-shops #left, #cashback-shops #right {
+  float: left; }
+  #cashback-shops #left ul,   #cashback-shops #right ul {
+    padding-top: 2px;
+    padding-left: 8px;
+    font-size: 15px; }
+    #cashback-shops #left ul li,     #cashback-shops #right ul li {
+      margin: 4px 0; }
+    #cashback-shops #left ul a,     #cashback-shops #right ul a {
+      text-decoration: none;
+      color: #3c7099; }
+      #cashback-shops #left ul a:hover,       #cashback-shops #right ul a:hover {
+        color: #ff8c00; }
+#cashback-shops #mid {
+  float: left;
+  width: 540px; }
+  #cashback-shops #mid #search #q {
+    width: 346px;
+    border: 0;
+    border-top: 1px solid #86c732;
+    border-left: 1px solid #86c732;
+    border-bottom: 1px solid #86c732;
+    padding: 3px;
+    padding-left: 22px;
+    background: transparent url(../images/search-icon.gif) left center no-repeat; }
+  #cashback-shops #mid #search #submit {
+    border: 1px solid #86c732;
+    background-color: #DCF3B9;
+    color: #365d03;
+    padding: 2px 4px; }
+  #cashback-shops #mid #search #q:hover, #cashback-shops #mid #search #q:focus {
+    background-color: #ffffea; }
+  #cashback-shops #mid #search #alpha {
+    margin-top: 5px;
+    border-left: 1px solid #ccc; }
+    #cashback-shops #mid #search #alpha a {
+      text-decoration: none;
+      color: #3c7099;
+      padding: 0 4px;
+      border-right: 1px solid #ccc; }
+      #cashback-shops #mid #search #alpha a:hover {
+        color: #ff8c00; }
+  #cashback-shops #mid #featured {
+    float: right;
+    padding: 20px; }
+  #cashback-shops #mid #stores {
+    margin-top: 10px;
+    width: 340px; }
+    #cashback-shops #mid #stores li {
+      padding: 10px 5px;
+      border-top: 1px solid #ccc; }
+      #cashback-shops #mid #stores li span {
+        float: right;
+        color: #ff8c00;
+        font-weight: 700; }
+      #cashback-shops #mid #stores li a {
+        text-decoration: none;
+        color: #255a85; }
+        #cashback-shops #mid #stores li a:hover {
+          font-weight: 700; }
+      #cashback-shops #mid #stores li:hover {
+        font-weight: 700;
+        background-color: #F1F8E9; }
+    #cashback-shops #mid #stores #ttl {
+      border: 2px solid #eee;
+      padding: 6px 5px 6px 20px;
+      background: #e3e3e3 url(../images/ico-merchant.gif) left center no-repeat; }
+    #cashback-shops #mid #stores #ttl, #cashback-shops #mid #stores #ttl span {
+      color: #555;
+      font-weight: 700; }
+    #cashback-shops #mid #stores #ttl span {
+      background: transparent url(../images/ico-cashback.gif) left center no-repeat;
+      padding-left: 18px; }
+  #cashback-shops #mid #legend {
+    width: 340px;
+    padding: 5px;
+    margin: 10px 0;
+    background-color: #f3f3f3;
+    color: #444;
+    border-top: 1px solid #ccc; }

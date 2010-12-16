@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/cashaddon_website/!svn/ver/21/app/views/addon
+END
+about.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/cashaddon_website/!svn/ver/7/app/views/addon/about.rhtml
+END
+invisible_validate_user.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/cashaddon_website/!svn/ver/16/app/views/addon/invisible_validate_user.rhtml
+END
+verify_password.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/cashaddon_website/!svn/ver/17/app/views/addon/verify_password.html.erb
+END
+account.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/cashaddon_website/!svn/ver/16/app/views/addon/account.rhtml
+END
+register_success.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/cashaddon_website/!svn/ver/7/app/views/addon/register_success.rhtml
+END
+login_success.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/cashaddon_website/!svn/ver/7/app/views/addon/login_success.rhtml
+END
+invalid_userid.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/cashaddon_website/!svn/ver/7/app/views/addon/invalid_userid.rhtml
+END
+feedback.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/cashaddon_website/!svn/ver/16/app/views/addon/feedback.rhtml
+END
+register.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/cashaddon_website/!svn/ver/24/app/views/addon/register.rhtml
+END
+refreshMerchants.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/cashaddon_website/!svn/ver/15/app/views/addon/refreshMerchants.erb
+END
+validate_user.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/cashaddon_website/!svn/ver/19/app/views/addon/validate_user.rhtml
+END
+login.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/cashaddon_website/!svn/ver/21/app/views/addon/login.rhtml
+END

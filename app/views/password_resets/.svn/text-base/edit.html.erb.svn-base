@@ -1,0 +1,12 @@
+<h1>Set My New Password</h1>
+
+<% form_for @user, :url => password_reset_path, :method => :put do |f| %>
+  <%= f.error_messages %>
+  New Password<br />
+  <%= f.password_field :password , :autocomplete => 'off'  %><br />
+  <br />
+  <%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation , :autocomplete => 'off' %><br />
+  <br />
+  <%= f.submit "Update my password and log me in" %>
+<% end %>

@@ -1,0 +1,23 @@
+= get_cao_link
+%ul#topnav
+  %li#start<
+    = spacer 6
+<<<<<<< .mine
+  - if(current_user)
+=======
+    
+  - if (current_user)
+>>>>>>> .r11
+    %span<
+      ='Welcome ' + current_user.login
+    %li= link_to "Sign Out", user_session_path, :method => :delete, :confirm => "Are you sure you want to Sign Out?"
+    %li= link_to "Edit Profile", :controller=>:account, :action=>:update
+    %li= link_to 'Account', :controller=>:account, :action=>:balance
+  - else
+    %li= link_to 'Sign In', :controller=>:user_sessions, :action=>:new
+  %li= link_to 'Learn More', web_url(:learn_more)
+  %li#forums<
+    %span= link_to 'CashBack Forums', web_url(:forums)
+  %li= link_to 'CashBack Stores', :stores
+  %li= link_to 'Refer Someone', web_url(:referrals)
+  %li#end= link_to 'Help', web_url(:help)

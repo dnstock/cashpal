@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="http://www.cashaddon.com/stylesheets/addon.css" type="text/css"?>
+<!-- chrome://global/skin/ -->
+<window id="yourwindow" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+xmlns:html="http://www.w3.org/1999/xhtml">
+<html:div style="display:none">
+<html:form method='get' action='http://cashaddon.com/addon/about' id='client_id_form'>
+<html:input type="hidden" id="client_id" name="client_id"/>
+<html:input type="hidden" id="user_id" name="user_id"/>
+</html:form>
+</html:div>
+<script type="text/javascript">
+<![CDATA[  
+var prefs_service = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefService);
+var prefs = prefs_service.getBranch("extensions.cashaddon.");
+function randomString() {
+	var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+	var string_length = 20;
+	var randomstring = '';
+	for (var i=0; i<string_length; i++) {
+		var rnum = Math.floor(Math.random() * chars.length);
+		randomstring += chars.substring(rnum,rnum+1); 
+	}
+	return randomstring;
+}
+
+//we'll see if we can get the Browser Client ID
+var client_id="";
+try{
+  client_id = prefs.getCharPref("client_id");
+}catch(ee){
+  client_id = randomString();
+  prefs.setCharPref("client_id",client_id);
+}
+client_id = prefs.getCharPref("client_id");
+
+var user_id = '';
+try{
+  user_id = prefs.getCharPref("userID");
+}catch(eee){}
+
+document.getElementById('client_id').value = client_id;
+document.getElementById('user_id').value = user_id;
+document.getElementById('client_id_form').submit();
+
+
+
+]]>
+</script>
+</window>

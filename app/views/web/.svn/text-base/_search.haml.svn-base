@@ -1,0 +1,10 @@
+- form_tag( :onsubmit=>'return false' ) do
+  %ul
+    %li= text_field_tag 's', nil, :maxlength => 100, :id => 'query'
+    %li<
+      %select{:name=>'section', :id=>'section'}
+        %option Deals
+        %option Coupons
+        %option Stores
+    %li= submit_tag('Search', :id=>'submit')
+  

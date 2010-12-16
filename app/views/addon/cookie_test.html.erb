@@ -1,0 +1,62 @@
+<html>
+<head>
+<script type="text/javascript">
+<!---
+// Courtesy of SimplytheBest.net - http://simplythebest.net/scripts/
+function getCookie(name)
+{ var pos
+  var token = name + "=";
+  var tnlen = token.length;
+  var cklen = document.cookie.length;
+  var i = 0;
+  var j;
+  while (i < cklen)
+  { j = i + tnlen;
+    if (document.cookie.substring(i, j) == token)
+    { pos = document.cookie.indexOf (";", j);
+      if (pos == -1)
+        pos = document.cookie.length;
+      return unescape(document.cookie.substring(j, pos));
+    }
+    i = document.cookie.indexOf(" ", i) + 1;
+    if (i == 0) break;
+  } //End While
+  return null;
+}
+function setCookie(name, value)
+{ document.cookie = name + "=" + escape(value)
+}
+function deleteCookie(name)
+{ var exp = new Date();
+  exp.setTime (exp.getTime() - 1);
+  var cval = getCookie (name);
+  document.cookie = name + "=" + cval + "; expires=" + exp.toGMTString();
+
+}
+
+var gCookieName;
+var gCookieValueRet;
+gCookieName="STBCOOKIETEST";
+gCookieValue="STB_TESTING_COOKIE";
+gCookieValueRet="???"
+setCookie(gCookieName,gCookieValue);
+gCookieValueRet=getCookie(gCookieName);
+var browserAcceptsCookies = true;
+if (gCookieValueRet==null){
+	//alert("CashAddOn: Your browser is not accepting cookies, please adjust your privacy settings to accept cookies.  Cash back cannot be earned unless the browser can accept cookies.");
+	browserAcceptsCookies=false;
+}else{
+	browserAcceptsCookies=true;
+}
+deleteCookie(gCookieName);
+// -->
+</script>
+<!-- META http-equiv="refresh" content="0;URL=http://cashaddon.com/website/index" / -->
+</head>
+<body>
+<input type="hidden" id="doesAcceptCookies" name="doesAcceptCookies" value="null" />
+<script type="text/javascript">
+	document.getElementById('doesAcceptCookies').value=browserAcceptsCookies;
+</script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+#loginbox00
+  %ul
+    %li#welcome= "Welcome, <strong>#{current_user.login}</strong>"
+    %li#cash= get_user_cashback_summary
+    %li= link_to('My Account', account_path)
+    %li= link_to('Logout', logout_path)

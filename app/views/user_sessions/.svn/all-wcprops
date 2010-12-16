@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/cashaddon_website/!svn/ver/21/app/views/user_sessions
+END
+new.haml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/cashaddon_website/!svn/ver/24/app/views/user_sessions/new.haml
+END
+_loginbox.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/cashaddon_website/!svn/ver/24/app/views/user_sessions/_loginbox.html.erb
+END

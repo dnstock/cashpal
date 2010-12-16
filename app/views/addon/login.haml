@@ -1,0 +1,25 @@
+= error_messages_for 'users'
+- form_tag  :controller => "addon" , :action => "login" do
+  %table{:border=>"0", :style=>"width:500px"}
+    %tr
+      %td{:colspan=>"2"}
+        %img{:src=>"/images/transparent.gif", :height=>"1", :width=>"500"}
+    %tr
+      %td{:colspan=>"2"}
+      %b
+        %span{:class=>"text"} Sign In
+      %span{:class=>"text"} below to get started with your CashAddOn!
+    If you don't have an account, just </span><u><%= link_to "Sign Up", { :controller => "addon" , :action => "register" }, :class=>"green_underlined"  %></u><span class="text"> to get one.</span>
+  %tr
+    %td{:class=>"blackheader"} User ID
+    %td{:align=>"right"}= text_field("users", "login") + error_message_on(:users,:login)
+  %tr
+    %td{:class=>"blackheader"} Password
+    %td{:align=>"right"}= password_field("users", "password") + error_message_on(:users,:password)
+  %tr
+    %td{:class=>"blackheader"}
+    %td{:align=>"right"}= submit_tag "Sign In"
+  - if flash[:notice]
+    %tr
+      %td{:colspan=>"2"}
+        %p{:class=>"flash"}= flash[:notice]

@@ -1,0 +1,14 @@
+-# save: ip, host, browser, res, os, username (if logged in)
+- form_tag({:action => :feedback}, :id => 'contact-form') do
+  - field_set_tag("We're interested in your opinion. Please let us know your suggestions.") do
+    %ol
+      %li= label_tag('contact-name', 'Name') + text_field_tag(:name, '', :id => 'contact-name')
+      %li= label_tag('contact-email', 'Email') + text_field_tag(:email, '', :id => 'contact-email')
+      -#%li= label_tag('contact-subject', 'Subject') + text_field_tag(:subject, '', :id => 'contact-subject')
+      %li
+        = label_tag('contact-subject', 'Subject')
+        = select_tag(:subject, [ ['I noticed a website error', 'error'], |
+            ['I have a question', 'question'],                             |
+            ['Other', 'other'] ], :html => { :id => 'contact-subject' } )
+      %li= label_tag('contact-message', 'Message') + text_area_tag(:message, '', :id => 'contact-message', :rows => 4, :cols => 30)
+    %button{:type=>:submit} Connect with us

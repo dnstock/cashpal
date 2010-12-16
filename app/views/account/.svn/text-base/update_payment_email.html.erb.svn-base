@@ -1,0 +1,63 @@
+<%= form_remote_tag( 
+	:update => "updatePayDIV", 
+	:url => { :controller => "account" , :action => "update_payment_email" } , 
+	:html => { :id => "updatePayForm" },
+	:complete => "if(request.status==403){alert('your session has expired, please login'); window.location.reload();}")
+%>
+
+<!--
+<table style ="text-align: left;" border="0" cellspacing="0" cellpadding="0">
+    <tbody>
+    <tr>
+    <td>
+    <span class="labels">PayPal Email:</span><span class ="labels">< %= @users.pay_email% ></span></td>
+    </tr>
+    <tr>
+    <td>
+	<span class="labels">New PayPal Email: </span>< %= text_field_tag("tf_newpayemail",params[:tf_newpayemail],{ :style=>"size:18;" , :onclick=>"this.value='';" }) % >< %= error_message_on :users,:payemail % ></td>
+	<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= @output %><input type="submit" value="Save">
+    <br/>
+	<br/>
+    </tbody>
+</table>-->
+<table style ="text-align: left;" border="0" cellspacing="0" cellpadding="5" >
+    <tbody>
+    	<tr>
+    		<td>
+    			<span class ="blackheader">&nbsp;Change PayPal Email</span>
+				<hr align="left" width="280px" size="1" color="#94a4b1">
+				<span class="text">Your PayPal email address is used to pay you.</span><br>
+				<span class="text">Your PayPal email address must always be valid.</span><br><br>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td style="padding-right:10px;">
+			<span class="labels">&nbsp;Paypal Email: </span>
+			<span class ="labels"><%= @users.payment_email%></span></td>
+		</tr>
+		<tr>
+			<td><span class="labels">New PayPal Email: </span>
+			<%= text_field_tag("tf_newpaymentemail",params[:tf_newpaymentemail],{ :style=>"size:18;" , :onclick=>"this.value='';" }) %>
+			<!-- /td>
+			<td -->
+			<span class="red12"/><%= @error_message_newpaymentemail %></span></td>
+		</tr>
+		<tr>
+			<td align="right">
+				<table border="0" cellspacing="0" cellpadding="0" width="100%">
+					<tr><td align="left"><span class="green12"/><%= @output %></span>
+										 <span class="red12"/><%= @output_error %></span>
+						</td>
+						<td align="right">
+							<input type="submit" value="Save" onclick="this.disabled=true; $('updatePayForm').onsubmit();" />
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+    </tbody>
+</table>
+	    	
+</form>
