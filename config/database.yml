@@ -3,7 +3,7 @@ defaults: &defaults
   adapter: mysql
   encoding: utf8
   username: root
-  password: dariela
+  password: 
 
 development:
   database: cao_dev
